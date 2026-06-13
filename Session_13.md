@@ -1,0 +1,64 @@
+# SESSION 13 — Day 13, Saturday, November 8, 1862
+
+*Write-once dated archive. Never edited after creation; corrections go to `resolved_threads.md`'s errata block. Voice per game_bible §2. The current "story so far" lives in `campaign_state.md`, not here.*
+
+**Location:** New Abilene. **Weather:** first hard cold, holding all day; clear, dusk near 5.
+**Health:** healthy, no wounds, well-rested. **Core:** closed (unawakened).
+
+---
+
+## Summary
+
+The day Bill's father answered. Bill ran his own stacked docket — the tinsmith die, the gunsmith bench, the mercantile, the coat — and walked into the loaded Calloway beat in the afternoon: a keyed reply wire from Malcolm (agreement, money "in parcels," signed Q), a **5,000-credit gift** cleared whole into trust, and a **furnished house** closing the same day. Bill decided to collapse to his true name eventually but keep it for last; for now the trust holds the deed and Wyatt is the dull tenant. He stocked the house the quiet way, got Arrowood's spoken blessing on the first-aid kit, and turned the new house into warm shelter for the firm's children overnight while he slept his last night at Maddox's so he could tell Sarah Maddox the news straight in the morning.
+
+---
+
+## What happened, in order
+
+**Morning, Maddox House.** Bill woke to the hard cold with the day's only fixed peg being the gunsmith's mid-morning bench. Everything else was hand-offs and walk-ins.
+
+**The tinsmith — the Quest die commissioned.** Bill (as Wyatt) priced the struck die. He considered a fancy raised-script version (roughly 200–225 cr, the showy parlor tier) and declined it, holding to the plain block-letter top band, *QUEST* — the dull workaday mark that protects the forgettable face. Terms: 80 cr for the die payable on collection, no money down for plain work, lids near-free by the dozen after. The die lives on the tinsmith's floor by his fly-press, shelved under "Wyatt" (Bill owns the steel, the tinsmith owns the press to drive it). Cut takes about three days. Bill is to return around Day 16 (Tuesday) to see the proof lid and set his first run — two to three dozen discussed as a proving run, scaled up later if the forecast holds. Closed on a handshake. New exposure: the tinsmith now knows a "Quest" makes enough tinned goods to want its own mark, filed under Wyatt.
+
+**Min and Tatch sent out.** Min carried the tightened Compact amendment (the mutual book-inspection right) to Calloway, then went on to buy the wool and line up the sewing hands for the coats. Tatch was keyed to follow once the paper came back clean — carry it to Pem to read on his own time, no sit-down. Routing: Min → Calloway → back clean → Tatch → Pem.
+
+**The Clarion.** Bill bought the paper and read the northwest-rush items: the editor's scolding piece on parties outfitting on a classification and little else; a paid Coulter & Reese notice warning that their NW-road parcels are private ground and trespass will be answered (the land company guarding the ground out loud now); a priced line that rooms, feed, and cartridges are firming; the Bureau's "guidance in due course" on Special Delve sites; and a rumor of a Bureau inspector riding the Cinder district before the passes close, no dates.
+
+**Wandering the town.** With time before the gunsmith, Bill explored parts of town he hadn't stood in: the low/south end (shacks, a chop-house, a wheelwright, a working blacksmith/farrier distinct from the gunsmith); the first rush strangers working out a NW route through the lower lanes; the Argent freight yard seen at a distance; the depot busier than its size with new faces at the wire window; and a plain Protestant meeting-house, distinct from the Catholic mission. Texture only.
+
+**The gunsmith bench day (mid-morning to 1:00 PM).** Bill took the standing arrangement — bench work counts against the 100-cr kit debt, the gunsmith keeps the licensed heart-and-license jobs. He cleaned a fouled teamster's revolver (his Engineering caught a worn cylinder bolt the owner hadn't named; small stoning fixed it), worked a lever gun (faster than Friday's, the geometry known), and a sprung shotgun extractor. A NW-bound customer talked up the treasure hole while collecting. Firearm-mechanism skill climbed on the second solid bench day; the witness-mark habit is reflex now. A fair piece came off the kit debt. No cash either way. Broke at 1:00.
+
+**Runner to Arrowood.** A one-cent message asked when the doctor would have a quarter-hour; the answer came back: come about four, the tail of surgery hours.
+
+**The mercantile.** Bill tried Yost's stall first for a coat and found it picked over by the rush. At the mercantile the valley freight had run, with a few cakes of beeswax in against the Quest account. Reasoning against the road closing rather than against the sales forecast, Bill laid in a doubled batch's worth of makings — wax laid in heavy, comfrey and yarrow doubled for a production run — roughly 60–70 cr on the Quest account, due monthly. He bought a plain heavy wool town coat, about 7 cr, paid cash as a personal purchase.
+
+**Min's first report.** The Compact amendment landed clean at Calloway (he was expecting it, added the book-inspection right, sent the clean copy back; Tatch's leg to Pem now live). The wool was bought; sewing hands lined up to cover all eleven kids inside a week. And Calloway sent word back: come see him today, he has something for Bill's own hand.
+
+**Calloway's office — the loaded beat.** Door shut, three things delivered:
+- **The wire from Malcolm.** Terse, keyed, on its face a freight man's cold business wire: *"QUEST. AGREED. NOT ONE CHARGE — SET IN PARCELS. SOUND GROUND FIRST. — Q."* Under the key: agreement to the ask; the money will come in parcels, not one lump (blasting idiom); caution handed over as method, not worry; signed Q, the cipher key and his mother's word for him — *I know exactly who this is.* No sentiment a wire could leak.
+- **The gift: 5,000 credits**, cleared whole into trust at Calloway's, a true gift — not lent, not contingent, separate from anything owed. Bill drew 400 cr cash for walking-around money; the rest stays in trust, drawn deliberately for stated purposes. The wire's "in parcels" signals a further staged sum still to come.
+- **The house.** Calloway was instructed to find a house held in trust, no Weaver name on the deed; he already held the right property (a probate he could move clean), so it closes the same day. A small furnished frame house on a respectable, settled street — working iron cookstove, kitchen table and chairs, some crockery and pots, a front-room settle and chairs and small table, a rope bedstead, a washstand, lamps. Keys handed over.
+
+**The cover decision.** Calloway named the cost unprompted: a householder has a deed and a tax line where a boarder has none, and a quiet laborer who comes to own a house is a question a curious man might ask. Bill chose to collapse to his real name — Bill Weaver, one man, openly — but to keep that for last, on his own word, when the season is right and the bunch of new things has gone cold. For now the trust holds the deed and Wyatt takes the lease as the dull tenant. Calloway's framing: let the house, the money, and the name land apart, slow and dull, so no watcher sees three remarkable things arrive on one man at once. He set the coal load and the lease papering on his end; Bill to sign in a day or two.
+
+**Squaring with Min, and the house for the firm.** Bill repaid the 100-cr firm draw into the treasury and gave Min the rest of the coat money, fully funding the coats. He told her the house is "mine to keep, theirs to use" — his asset, cost, and risk, the firm getting the use without owing for it — and to run it past Tatch. Min, who refuses charity in any wrapper, could accept it on the firm's behalf because it was named that way.
+
+**Walking the house as a works.** Bill laid the house out by use: the kitchen and its cookstove as the workshop hot-side (salve and chemistry, the least remarkable thing a tradesman does), a dry bench by a window for fine metal work; the front parlor as the meeting room; his own room upstairs for sleeping and the notebooks; and quiet capacity to shelter kids at need (ticks and blankets stored, never a displayed barracks). He started a stocking list and split it the dull way.
+
+**Stocking the house.** Bill sent the household goods through the mercantile by a kid on the Quest account (bedding, two wool blankets, straw ticks, lamp oil, candles, soap, a broom, a good lock and a strongbox), kept the fuel and the trust draw with Calloway, and went himself to the auction house at the low end for the furniture. There he dealt the way he watched his father deal — opening a little under fair and going quiet to let the dealer climb, using a real flaw in the goods as leverage — and took a work table, an iron vise, a lockable trunk, chairs, and a cupboard for about 26 cr, both sides a touch pleased. He paid a few cents to have it carted round.
+
+**The firm at the house; the kids housed.** Tatch came first and cased the house like a guard — two doors, low windows, the back one his worry. Bill set him to show the others, lock up, run the mercantile list, and find Bill after at the doctor's and then the auction house. Bill handed Tatch a key. Returning at dusk, Bill found the house warm and lamplit — Calloway's coal had come, the stove was lit, the goods stacked, the firm had swept it. Bill told Tatch everyone sleeps there tonight in the warm and to round up as many other children as he can find, the little ones first. Bill kept the key with Tatch. He chose to sleep his last night at Maddox's so he could tell Sarah Maddox the news straight in the morning, mindful that the house brushes her standing conditions (the kitchen his hot work ran on, the gate every firm child is met at).
+
+**Arrowood — the kit blessed.** At four, at the tail of surgery hours, Bill pitched the first-aid kit as a layman asking the doctor to keep him honest, not a tinker teaching medicine. Arrowood confirmed what Bill had right (clean first, then close — build the tin to force the order), corrected where he was dangerous (the cleaning agent must do the work the eye can't check — spirits or tincture of iodine, with words on how to use it; clean cloth and lint, plenty of it), and drew his line hard: the kit closes and protects, it never treats — nothing to stitch, nothing to physic, nothing that tells a man he is his own doctor; the balms ride only if marked so a scared man can't confuse yarrow-for-skin with knitbone-for-ache, and neither ever goes into an open wound. His blessing: he will vouch the kit by mouth to teamsters and delver crews who ask, but will not print his name on it, conditional on Bill holding the line — and he wants to see a marked tin before he vouches. Bill thanked him and offered to fix anything in the surgery that sticks; Arrowood accepted the footing.
+
+**Close.** Bill returned to Maddox's for one last night in the end room, updated his ciphered notebooks (the house, the gift, the wire, the kit, the die — split and keyed, straight versions only in Calloway's sealed box), did his reading, and slept. The firm's children slept warm in Bill's new house, Tatch holding the key.
+
+---
+
+## End-of-day state (see `campaign_state.md` for live detail)
+
+- **Pocket:** ~234 cr (reconciled — see closeout). **In trust at Calloway's:** ~4,600 cr (5,000 gift less the 400 drawn). **Firm treasury:** ~422 cr (the 100-cr draw repaid; cleared). **Quest account:** +~60–70 cr doubled batch makings, due monthly.
+- **New:** a furnished house (trust-held, Wyatt the tenant, name-collapse deferred); a plain wool town coat (personal); workshop furniture (work table, iron vise, lockable trunk, chairs, cupboard); household goods (bedding, blankets, ticks, lamp oil, candles, soap, lock, strongbox); the Quest die commissioned (collect ~Day 16).
+- **Skill:** Engineering — firearm mechanism 3 → 4 (second solid bench day; varied jobs, root-cause fix, witness-mark reflex).
+- **Advances:** Malcolm's reply received (yes, by parcels); the 5,000 gift and the house delivered; the first-aid kit blessed by Arrowood by mouth on his terms; the Compact amendment moving clean to Pem; the kids' coats funded and in motion.
+- **Still open:** the structured 5,000 loan (separate, scattered, ~Day 17, Calloway's locked payoff intact); Pem's reading + his two unfired pieces; the lease to sign; the die to collect; a marked tin to show Arrowood; the Day-14 re-measure window; the gauge setback owed; the Maddox morning conversation.
+- **Exposure lines added:** an owned address (held in trust, but a deed and tax line exist); the tinsmith holding a piece of the Quest name; the firm shown the house openly in daylight; the house's location now known to the firm and to a furniture carter.
