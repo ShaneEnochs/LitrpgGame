@@ -241,4 +241,30 @@ Fixed so clues can be planted coherently; pace across the whole campaign. Each t
 - **Assay/legal lines:** update to reflect awakened-core detectability and whatever the licensing paperwork shows at that point in time. Keep the clean-specimen flip (truth file) in view when sequencing.
 - The spoiler-free exception line lives in `game_bible.md` §13; everything else about the System lives here.
 
+## S21 ADDENDUM — AWAKENING FIRED; MAKER-CORE, SUPPRESSION WEAVE, WEAVE-COPYING (Day 21, locked with the player)
+
+**Awakening is now LIVE, not dormant.** Bill's core opened Day 21 in the special Foundation delve (first kills: construct sentinels, then a forge-gatekeeper — trigger 1, the standard road). The System booted as specified above. He is **System Engineer, Lv. 1, Delver Level 1**, Mana 210/210 (Intellect 21). At boot he took the intrinsic **Forceread** from the choosing (Inspect[Items] and Surefoot locked forever); completion granted the starter intrinsic **Schematic**. He cultivated on the forge's concentrated essence and **deliberately held his first essence gate unopened** (the patient play — he uniquely sees the Intellect-indexed gate value and chooses to lock it later at a higher mind). The assay-clock consequence is live: the old "tested closed" paper is now wrong; legal re-registration is owed Day 22.
+
+### A. THE MAKER-CORE (the great forge-core, once bound)
+The class-resonant great forge-core Bill recovered is a **growth item** that BINDS INTO HIM as a **second core** — a maker-core — alongside (never replacing) his primary essence core. This is the System Engineer's signature object power made flesh, and it sits comfortably beside Drafting (it *is* fabrication, in essence rather than steel).
+- **Function:** builds and animates CONSTRUCTS from essence Bill banks into it.
+- **Fuel:** filled by (a) feeding it monster/essence cores and (b) meditating essence into it. Banked essence lives here — withdrawable, unlike the primary core (see `essence_aspects_v1.md` §3).
+- **Build spec = understanding (Schematic / the knowledge gate):** Bill can only build constructs he has STUDIED/read-apart. Known now: sentinel, 4-limb gatekeeper, forge digger-tools (all studied S21). Repertoire grows by studying more mechanisms — the same comprehension-is-the-currency discipline the whole class runs on.
+- **Scale:** construct size/durability scales with essence poured into the build.
+- **Bleed → trainable:** new constructs bleed essence and dissipate; Bill can train the bleed down (explicitly like the suppression weave) so they last longer.
+- **Reclaim/recall loop:** on a construct's death the maker-core reabsorbs some remaining essence; Bill can recall a standing construct's essence into himself at will.
+- **Capacity — soft-ceilinged, GROWS, NOT bottomless:** expands the more Bill cultivates it directly + the more/richer cores he feeds it. "Vast/near-limitless" is the long-arc endpoint, never the unlock. **Design rule (preserve):** maker-core capacity grows by a DIFFERENT AXIS than the primary core (which is locked to Intellect/gates). They do not cannibalize — this keeps the primary core's gate scarcity sacred.
+- **Limiters (keep — make use a real choice):** fielding/sustaining constructs DRAWS ON THE MAKER-CORE (depleted = no constructs; over-fielding leaves Bill tapped). Using constructs openly is LOUD & INCRIMINATING — a man fielding constructs is not a dull surveyor; it torches cover (powerful precisely when Bill has chosen to stop hiding).
+- **Binding PENDING:** still inert. Needs the right working + study + likely a level or two + probably PEARCE (or Bill's own bench post-study). Starts MINIMAL when first bound and grows.
+- **Optional long-arc thread (offered, not ruled in/out):** can a System Engineer's bound forge make something BETTER than the mindless guard-things it was built to make? Quietly rhymes with the Mirrorwell's making-of-copies; the game may someday ask what KIND of maker Bill is.
+
+### B. SUPPRESSION WEAVE (learned S21)
+Bill learned to damp his open-core spiritual-pressure field by watching Doss flare/damp twice and reading the WORKS (not copying hers — weaves are fingerprint-individual; his runs lattice-like/ordered, a maker's grain). Schematic kept the geometry; that night he solved his OPTIMAL weave (efficiency knee — max concealment per unit cost — following his field-grain). Status: from "ringing beacon" to "not broadcasting," but still LEAKS at the seams (a deep core reaching for him can feel him); holding costs a continuous light essence draw; needs practice to seal seams / hold tireless / pass fully unread. (Took Doss ~a season; Bill solved it in one evening — a flag for "exceptional even among the exceptional.")
+
+### C. WEAVE-COPYING APTITUDE (Bill's signature arc — pointer)
+SEE → STORE → REPLICATE → UPGRADE the essence-weaves of abilities and essence-touched items — specified in `essence_aspects_v1.md` §5. It is PACED, not brake-gated: let Bill be a special snowflake among special snowflakes. He is the engineer who reverse-engineers — and improves — magic itself. This is a deepening of the same faculty as Examine + the knowledge gate, pointed at essence-structure rather than physical structure.
+
+---
+
+
 *Where any session file's flavor text conflicts with this document on the System's workings, memory adjusts to this document. Where this document conflicts with `game_bible.md` outside the single screens exception for Bill Weaver, the Bible wins. The reveal is epistemic, the horror is family, and the class is the campaign's question wearing a tool-roll: whether understanding a thing is mastery of it, or the door it walks through.*
