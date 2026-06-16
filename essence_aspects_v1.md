@@ -60,3 +60,20 @@ The recovered great forge-core is **sapient and slowly waking** (the full arc li
 - **The core has a PREFERENCE, felt not spoken.** It "leans toward" **aspected, forge-kin essence** — fire/earth and forge-resonant cores read *richer* to it; a matching aspected draught binds and feeds it better than neutral banked essence (the soul-forge-runs-best-on-fire-essence logic, §1/§2 applied to the maker-core). This is consistent with the binding wanting "aspected if possible" (§A condition 3).
 - **Play it as a NUDGE, never an instruction.** When Bill feeds or cycles the core, he may get a faint wordless *sense* of preference — the dull warmth of a fed-right core vs. the cold of a starved or ill-matched one. It points him toward the delves and loot his build already needs (earth for the filter, fire/earth/forge-kin for the binding) — a quiet alignment of appetite and advantage, NOT a quest-giver. Never let it name a target, answer a question, or hand Bill intelligence; it only ever feels *more right* or *less right*.
 - **Discipline:** keep it SLOW and faint (the impression floor — see §D step 2). The preference is the earliest readable face of the core's sapience; do not let it graduate to words or directives early. It is fuel-economy flavor that happens to also be the first thread of a relationship.
+
+## 8. RARITY GRADE — HOW CORES & MATERIALS ARE GRADED (player-authored canon, Day 25)
+A standing classification for the *quality/scarcity* of a core or dungeon material, distinct from a dungeon's tier/grade (which rates *sites*, `game_bible.md` §12) and from a Skill orb's level (1–5). **Assayers grade on this scale from here on** — a licensed read returns **aspect + rarity grade** at whatever depth the reader's skill allows.
+
+**The grades:**
+- **Common** — the overwhelming majority of cores and materials. Ordinary banking fuel, floor-priced. (A damaged/cracked core reads *Common, damaged* — at or below floor.)
+- **Uncommon** — a real, notable step up; draws a premium above floor (the gatekeeper core sits here — Pearce's believed-price ran above a factor's stamp).
+- **Rare** — genuinely scarce; specialist money.
+- **Epic · Legendary · Mythic** — exceptional, the stuff of stories and one-buyer deals; vanishingly seldom seen on a frontier counter.
+
+**UNIQUE — a separate grade, off the ladder, for GROWTH ITEMS (and genuine one-of-ones).** A Unique item has **no reference class** — there is only the one, keyed to a single delver — so it **cannot be fully graded.** A licensed read returns its **family/category, not its contents.** *This is the mechanical reason the great forge-core "wouldn't close" to Pearce's read (Day 24): he could confirm it a class-resonant growth item of the binding family — Unique grade — and name the category of its threshold, but not the number, because there is nothing to grade it against.* Reading a Unique item to its contents needs either a far higher license (Saint Orison) or a reader native to the item's own grammar (Bill's Forceread, which out-resolves any western license on this class — `system_engineer_truth_v1.md`).
+
+**Aspect** rides alongside the grade: *unaspected*, or the named aspect (earth, fire, electric/storm, poison, beast, ghost, … list open). A *made/worked* resonance (e.g. the great core's **forge-resonant** quality, or the frame-metal's "made stock") is noted as such rather than as a clean elemental aspect.
+
+**Skill orbs keep their LEVEL (1–5)** as their grade — the rarity scale is for cores and materials, not orbs. (So: "a Lv.3 combat orb," but "an Uncommon earth core.")
+
+**Bill's holdings under the scale (Day 25):** great forge-core = *forge-resonant · Unique*; gatekeeper core = *unaspected · Uncommon*; one strong common core, a run of common/floor cores, one cracked dud = *unaspected · Common*; the sensor chip = *Common*. (Both clean earth-aspected cores were spent whole into the earth filter Day 23.) Warmstone & Cleardraw = Lv.1 utility orbs (weaves replicated; orbs intact).
