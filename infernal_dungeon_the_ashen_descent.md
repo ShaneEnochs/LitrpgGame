@@ -1,5 +1,7 @@
 # THE ASHEN DESCENT — Special Platinum+ Infernal Dungeon (compiled)
 
+> **★ LIVE STATUS (S29 close, Day 28):** This is now the **ACTIVE delve.** The Emberwaste is cleared and `emberwaste_delve_team_prep.md` is DELETED. The crew (Fortune's Folly + the bound maker-core, "the sixth member") **entered the Ashen Descent** and stand on the **lip of Floor 1 (The Smoldering Wastes)**, Myles deferring the opening read to Bill. **The Achievement HAS FIRED** (First Double Platinum — see that section, now past-tense): every entrant took their +1 (Bill: Hell Grenade Lv.1→2), and Bill's class boon, the **Crafting Table, landed AND EXPANDED to alchemy** (Alchemy Lv.1). Run the floors below straight. **Single-entry: a wipe is final; no resupply, no retreat to town.** Internal Charred Chapels / bonfires work inside the run. Win = depose Azazel (Floor 5). Delete this file once its consequences land.
+
 *The inner half of a **double dungeon**, reached at the end of the Emberwaste. After the Ember-Colossus falls and the Emberwaste pays out, a second arch appears — the first nested dungeon on record. Through it is the Ashen Descent: an off-ladder Special dungeon, single-entry per person, harder than anything cleared. Five floors descend to the throne of Azazel, the Ashen Sovereign; each floor is gated by its boss.*
 
 ---
@@ -31,25 +33,25 @@ Examining the new arch returns a window — but not the clean requirements box a
 
 ---
 
-## The Achievement — a new system change
+## The Achievement — a new system change [FIRED S29 on entry]
 
-Crossing the threshold trips something the system has never done before. The cores' reshaping takes another step toward the authored and the game-like: **Achievements.** Every delver who enters earns the same one, rendered on each delver's own window:
+Crossing the threshold tripped something the system had never done before. The cores' reshaping took another step toward the authored and the game-like: **Achievements.** Every delver who entered earned the same one, rendered on each delver's own window:
 
 > **ACHIEVEMENT UNLOCKED — FIRST DOUBLE PLATINUM**
 > *First to ever enter a double Platinum delve.*
 > **Reward:** +1 to any one non-mundane skill, ability, or spell — choose below.
 > **Reward:** a boon to your class.
 
-- **The upgrade window.** A list unfolds of every non-mundane thing the delver can raise — Skills, abilities, learned spells, auras — and they pick one to take +1. Mundane skills don't appear. The pick is the player's, made in play.
+- **The upgrade window.** A list unfolds of every non-mundane thing the delver can raise — Skills, abilities, learned spells, auras — and they pick one to take +1. Mundane skills don't appear. The pick is the player's, made in play. *(S29: the crew each pointed their own; Jason a low mobility/dash from his chest, etc. — flavor as needed; only Bill's is load-bearing.)*
 - **The class boon.** A second reward lands, shaped to the delver's class — a permanent boon, one per class, the same for everyone of that class.
 
-**For Bill** *(the achievement renders on his System the way the choosing and the quests box do — see the DM note):*
+**For Bill — RESOLVED (S29):**
 
-- *The +1* lists his non-mundane holdings — his **drafted abilities** and his **universal Skills/weaves** (he has no spells). He raises one of them a level; the player chooses which in play.
-- *The class boon — the Crafting Table.* His mental drafting space gains a new fixture: a crafting table. Feed it a **blueprint he holds**, the **materials it calls for**, and the **crafting skill at the level it needs**, and the table assembles the finished item directly in the drafting space — no forge, no workshop, no hours of handwork, drawn out complete.
-  - **The three gates the boon keeps:** the blueprint (the knowledge gate stands — he can only craft what he has understood well enough to draft), the materials (the economy stands — no conjuring from nothing; he must own the stock), and the crafting skill (the skill ceiling stands — the table won't make what his skill can't).
-  - **What it removes:** the manual build — his own hands, his tools, the hours, the frontier-supplied workshop. Precision no longer caps execution; a forge is no longer needed.
-  - *Suggested cost (DM):* it runs on his mana like the rest of the System — a draw scaled to the work, so a fine piece is a real expenditure rather than free.
+- **The +1 — TAKEN: HELL GRENADE Lv.1 → Lv.2.** (Lifts the old ≤25-mana charge cap, steadies it under combat load, and upgraded every grenade-round already built.) *(Note: Hell Grenade and Spirit Gun level independently — the +1 went to Hell Grenade only, the skill the new ammo system rides on.)*
+- **The class boon — THE CRAFTING TABLE, established AND EXPANDED to alchemy.** His drafting space gained the table fixture: feed it a **blueprint he holds**, the **materials it calls for**, and the **crafting skill at the level it needs**, and the table assembles the finished item directly in the drafting space — no forge, no workshop, no hours, drawn out complete. **Bill chose to take the boon's broadening as ALCHEMICAL TRANSFORMATION** (reagents, elixirs, coatings, material-transmutation) rather than a duplicate fixture — this **established ALCHEMY as a leveled non-mundane skill (Lv.1).**
+  - **The three gates the boon keeps:** the blueprint/recipe (knowledge), the materials (economy — no conjuring; he owns the stock; raw refining still routes through the world, BUT the bound core supplies portable hellfire so hellfire-smithing needs no dungeon), and the crafting/alchemy skill (ceiling).
+  - **What it removes:** the manual build. Precision no longer caps execution; a forge is no longer needed.
+  - **Cost:** runs on mana, scaled to the work (a fine piece is a real expenditure). *(S29 use: the new frame-metal coil gun + ~40 hellfire grenade-rounds, built in minutes, witnessed by the crew — the TELL SHARPENED, exposure up.)*
 
 **DM notes (don't read aloud):**
 

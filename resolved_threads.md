@@ -59,3 +59,23 @@ S15 — telegraph back-east rate. The price-book line "~10–15 cr/word back-eas
 S15 — Mrs. Maddox's form of address. She calls Bill "John-Wyatt" (both names), not plain "Wyatt." Corrected in the names list.
 
 S15 — the Maddox move-out timing. The Session-14 archive logged the Day-14 house conversation but did not explicitly close the rented end room; the room, shed, and Tom's bench were still listed as rented at the Day-14 end-state. The Day-15 notice formalizes the departure the Day-14 record left implicit — not a retcon, a follow-through. The tenancy-closed event is archived above under "Money, deals & debts."
+
+---
+
+## S29 — closed events (the Heart of the Waste, the binding, the double dungeon)
+
+S29 — the Emberwaste, CLEARED (all 5 floor bosses; Unbroken intact, nobody bled). The Tier-1 Platinum Infernal delve run by Fortune's Folly across Days 27–28 is complete. The Ember-Colossus (Floor 5 dungeon boss) was killed by draining its essence whole into the great core across an open-air conduit (no melee, no party damage), the heart-core taken intact. The standing outcome (DL 2, the choosing, the haul, the bound familiar, the entry to the Ashen Descent) lives in campaign_state.md. → Session_29.md.
+
+S29 — the maker-core BINDING, DONE. The "binding mapped, 3 conditions, pending" thread is CLOSED as an event: the conditions were met (banked aspected fuel + DL 2 level-gate + an all-at-once aspected fuel flood) and the core was bound. **The standing result is live, not resolved:** the core is now a BONDED FAMILIAR (a partner, deepening over time, voice on a far horizon) — that relationship/capability stays in campaign_state.md + system_engineer_truth_v1.md. Only the *act of binding* is archived here. → Session_29.md.
+
+S29 — the 2nd CHOOSING, taken (Path III, the Maker's Table). The "Saturday delve fires the 2nd choosing + 10 pts → DL ~2" thread is CLOSED: the choosing fired at the Emberwaste completion, Bill took Path III, and DL landed at exactly 2 (20 points ÷ 10). The 3rd choosing (next Special/dungeon completion) is the new open item, in campaign_state.md.
+
+S29 — the coil-gun rail-throat / frame-metal commission. The S28 "rail compromised, full re-forge owed on return" thread is CLOSED by self-build: Bill built a NEW frame-metal coil gun at the hellfire forge via the Crafting Table (aspected throat + bond-seam), the old braced gun demoted to backup. The town gunsmith commission is effectively moot (the gunsmith still gets his story on return — a live social beat, in campaign_state.md). → Session_29.md.
+
+S29 — the failure-beat counter. Confirmed RESET to 0 at S28 (the chosen Warden rail-compromise) and stayed 0 through S29 — the Colossus kill was earned off heavy flagged in-play setup, no beat owed or manufactured. The live failure-EDGE going forward is the Ashen Descent itself (single-entry, leagues past Platinum); that is hard ground, not a tracked counter. → dm_directors_notes_v1.md §10.
+
+S29 — the Crafting Table boon, LANDED (and expanded). The "Crafting Table — PENDING, fires on entry to the double dungeon" thread is CLOSED as an event: it fired on entry to the Ashen Descent, established in full, and EXPANDED to alchemy (establishing Alchemy Lv.1). The capability is live in campaign_state.md + system_engineer_truth_v1.md. The achievement's separate one-off +1 went to Hell Grenade (Lv.1→2).
+
+S29 — emberwaste_delve_team_prep.md, DELETED. The DM-only prep file's consequences have all landed (the whole delve is cleared); per its own instruction and gm_operations §2, it is removed from the repo. The live delve file is now infernal_dungeon_the_ashen_descent.md, whose achievement-on-entry section has now FIRED.
+
+S29 — Charles's "fifteen years," retcon confirmed. The S28 errata (delving is young on this frontier; Charles is the crew's newest member, world-weary for this young frontier but not a long-delved veteran) held through S29, with one in-fiction self-correction handled. The "fifteen years" line is dead canon and not propagated into the Session_29 archive.
