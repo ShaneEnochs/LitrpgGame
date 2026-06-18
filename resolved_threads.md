@@ -38,6 +38,8 @@ Not archived here, by the rule above (standing, not closed — kept live in camp
 
 ERRATA
 
+S28 — Charles's tenure ("fifteen years") is retconned (corrected in play). Two in-play lines on Floor 4 had Charles claim "fifteen years" of delving/healing. This contradicts canon: delving is a young thing on this frontier and Charles is the crew's NEWEST member (joined Fortune's Folly on their 2nd Platinum; the crew has 3 Platinum clears total). Nobody has a long delving career yet. Charles's gravity is LIVED, not DELVED — he's older (50s), Church-adjacent / field-surgeon background from a prior life back east, the conscience/healer who has only ever triaged; the Obsidian Stair is where his Life domain first became OFFENSE. He self-corrected the "fifteen" on his own tongue in-fiction. Do not propagate "fifteen years" into any archive. → Session_28.md.
+
 S18 — Marguerite is a butcher, not a horse trainer (corrected in play). A mid-session narration built a horse-training scene from "the trotter, no second miss." Marguerite is the slaughterhouse butcher who teaches blade anatomy and the cut; "the trotter" is the trotter JOINT on a pork side, and Day 18 was blade lesson #3. The horse-training scene was scrapped and replaced live. Bill attended all prior Marguerite sessions; no missed session ever occurred. → Session_18.md.
 
 S18 — Doss is a guild OFFICER, not "Iron rank" (corrected in play). Per game_bible.md §19 and the gm_operations.md glossary, the old metal ranks are retired; an officer who held an old metal rank converts to an OFFICER rank, not the rank-and-file equivalent. Doss is a 1st Lieutenant. Early session files reading "Officer Doss, Iron rank" are dated text — convert on sight. → Session_18.md.
