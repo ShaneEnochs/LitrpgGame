@@ -1,0 +1,72 @@
+{
+  "_file": "fortunes_folly_crew.json",
+  "_role": "Authority layer (values) for Bill's delve crew, Fortune's Folly. Voice, texture, and key exchanges live in npcs/fortunes_folly.md; per-member WARMTH lives in bill_weaver_sheet.json -> relationships (Myles/Charles/Jason/Julie); narrative history in the arc files. This file holds only what is mechanically KNOWN about the crew.",
+  "_fidelity_note": "These are NPCs. The campaign tracks them at NPC fidelity, not at Bill's precise sheet fidelity: per npcs/fortunes_folly.md and the S29 achievement, the crew's exact post-delve upgrades are resolved OFF-SCREEN by world-logic (Bill sees more of his own). Attribute and Delver-Level figures below are APPROXIMATE lane values, deliberately so. Do not invent precise stat blocks the play never specified; advance these only when play actually surfaces a crew member's number.",
+  "_current_to": "Session 29 close — Day 28, Sunday, Nov 23, 1862, entering the Ashen Descent (double dungeon). S30 in progress.",
+  "_provenance": "Built at v3-migration Phase 6 from emberwaste_delve_team_prep.md (baseline profiles) + Sessions 24-29 (the introduction, the Emberwaste run, the Ashen-Descent entry). Absorbs the team profiles from the prep file, which is now safe to retire.",
+
+  "crew": {
+    "name": "Fortune's Folly",
+    "composition": "Four established delvers + Bill (the fifth, range). Bill knows them as Wyatt; named in for real by S28.",
+    "grade_posture": "All-Platinum PURIST crew — they run only Platinum sites, refuse easier grades, and historically 'barely make it back.' This is why they recruited a clean fifth with ranged damage (they had melee, magic, and a healer, no reliable range; Platinum floor-bosses punish that gap).",
+    "shared_history": [
+      "Myles, Jason, Julie each ran a Foundation delve (a growth item + a starter intrinsic + 10 awakening points apiece).",
+      "Cleared 3 Tier-1 Platinums together before Bill (Charles joined on the 2nd, so Charles had 2).",
+      "S26-29: cleared the Emberwaste (Infernal Tier-1 Platinum, 5 floors) UNBROKEN (no party death) with Bill as the fifth — earning the 'Unbroken' bonus (a guaranteed aspected core each) and the 'Furnace's Due' bonus.",
+      "S29: on the Ember-Colossus's death a SECOND arch rose (first nested delve on record) into the ASHEN DESCENT; entering it tripped the FIRST DOUBLE PLATINUM achievement."
+    ],
+    "first_double_platinum_boon": "LOCKED CANON: the achievement paid EVERY party member, not only Bill — '+1 to a non-mundane thing each + a class boon.' Bill's boon was the Crafting Table (see his sheet). The crew members' specific boons are resolved OFF-SCREEN by world-logic; do not pin them unless play surfaces one.",
+    "tactics": "Myles plants and holds aggro; Charles heals from cover behind him; Jason dives the flank; Julie and Bill range from the back, covering casts and divers; Myles calls the line. Since the Emberwaste, Myles defers the opening READ of each floor to Bill. Bill's job is discipline: shoot what he's told, reload fast, do not freelance (a soldier, not a commander).",
+    "credits": "The crew handles its own money off-screen; Bill's own share/credits live in bill_weaver_sheet.json. No shared-purse figure is tracked.",
+    "current_location": "Inside the Ashen Descent (single-entry double dungeon, no return) as of S30 — see infernal_dungeon_the_ashen_descent.md."
+  },
+
+  "members": [
+    {
+      "name": "Myles",
+      "role": "tank / leader",
+      "person": "The steady center; talks little, decides fast, never panics. 'I bring my crew home.' Reads Bill as a man who already knows what he did and isn't asking to be impressed.",
+      "delver_level_approx": "~4-5 (DL ~4 pre-Emberwaste; +10 pts on the Emberwaste completion). Exact off-screen.",
+      "attribute_lanes": "Very high Might (~40), good Presence; heavy and slow, immovable when planted.",
+      "growth_item": "A tower-style relic-steel shield (Foundation guard-class item, grown with him; 'now bites back').",
+      "intrinsic_skills": "Bulwark (~Lv.3 hold-the-line discipline; amplifies guard actives, anchors threat); a seated taunt/threat aura/active that pulls monster aggression.",
+      "affinity": "—",
+      "in_delve_role": "Plants, holds aggro, reads the boss tells (slam windows); the wall everyone fights behind."
+    },
+    {
+      "name": "Charles",
+      "role": "healer (Life caster)",
+      "person": "50s, dry, fatalistic; the conscience of the crew — says 'turn back' and patches them anyway. The warmest of the four toward Bill ('Wyatt is my favorite person on this crew'). His standing aim is 'nobody bleeds.' NEWEST member (joined on their 2nd Platinum).",
+      "delver_level_approx": "~3-4 (DL ~3 pre-Emberwaste, lowest of the crew; +10 on the Emberwaste). Exact off-screen.",
+      "attribute_lanes": "Low Might (must be protected — shapes every fight); Life-affinity caster, limited mana (his mana is the crew's real clock — fights are won fast or lost slow).",
+      "growth_item": "A focus/reliquary growth item (boosts healing throughput).",
+      "intrinsic_skills": "Life-domain spells: a battlefield mend, a stabilize, a cleanse (matters vs Infernal status — burns, brimstone-sickness).",
+      "affinity": "Life (the rare, valuable kind out west).",
+      "in_delve_role": "Kept behind Myles; triages — he can't heal everything, which is the crew's ceiling. Matters doubly against blood-trigger enemies (e.g. the Ash Rats)."
+    },
+    {
+      "name": "Jason",
+      "role": "damage / fighter (melee striker)",
+      "person": "Late 20s, hot, fast, grinning — the crew's edge and its risk; Julie's older brother; reckless in a way she manages; loves Platinum. Warmed to Bill immediately. Loose under fire ('remind me to stand behind you').",
+      "delver_level_approx": "~4-5 (DL ~4 pre-Emberwaste; +10 on the Emberwaste). Exact off-screen.",
+      "attribute_lanes": "High Might + Precision (~38 / ~35).",
+      "growth_item": "Relic-steel war-axe or paired blades (Foundation, grown sharp).",
+      "intrinsic_skills": "A momentum/berserk-lean discipline (~Lv.3 — amplifies strikes as a fight runs hot); a seated Movement Skill (a dash/leap-strike — closes distance fast).",
+      "affinity": "—",
+      "gear": "The relic-steel weapon(s); a fire-aspected blade-edge enchant (bites Infernal flesh harder); medium armor.",
+      "in_delve_role": "The spear-tip — dives boss flanks, gets in trouble, Bill and Myles get him out."
+    },
+    {
+      "name": "Julie",
+      "role": "damage / mage (offensive caster)",
+      "person": "Mid-20s, cool, precise — the planner who actually plans the fights Jason throws himself into; Jason's younger sister, his temper-brake; the closest in temperament to Bill. Warms once he proves he listens.",
+      "delver_level_approx": "~4-5 (DL ~4 pre-Emberwaste; +10 on the Emberwaste). Exact off-screen.",
+      "attribute_lanes": "Intellect-heavy (~40 — a big mana pool for her level); the crew's burst damage at range, but cast-time and mana-limited (she and Bill's gun complement — he covers her cast windows, she opens bosses for his shots).",
+      "growth_item": "A catalyst/wand growth item (Foundation).",
+      "intrinsic_skills": "Offensive spells: a ranged bolt/lance, a placed area effect, a control/debuff; a lift-weave (floated the Ember-Colossus heart-core out on it, S27, logged by Bill).",
+      "affinity": "Arcane (offensive; explicitly NOT Life — Charles holds that). Bill read and logged her Arcane density-knot, S27.",
+      "active_conversion": "Runs her own essence->mana filter at ~75% efficiency (her blind cap). Gave Bill the master class on the continuous open draw at the Floor-2 rest (S27, skin-contact read, one sitting); standing offer to keep teaching ('ask me again when we're out, clean').",
+      "in_delve_role": "Back-line burst and control alongside Bill; the two range together while Myles holds and Jason dives."
+    }
+  ]
+}

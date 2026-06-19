@@ -91,6 +91,24 @@ System Engineer screen text stays terse and concrete always — status lines, Ex
 
 **NPC knowledge is limited to what that NPC could actually know.** Before an NPC names another person, references a relationship, or mentions an action the character has taken, verify that *this specific NPC* has a real line to that information — they witnessed it, were told it, saw the paperwork, or it is plausible local gossip with a traceable path to them. Do not let an NPC reference something merely because the DM knows it. Each NPC knows only what their position gives them: a guild clerk knows the cage's paperwork and hall talk, not the character's private evenings across town; a barman knows who drinks in his room, not what a man did at the courthouse. When in doubt, the NPC does not know it — have them ask, guess (and possibly guess wrong), or not raise it at all. An NPC revealing knowledge they have no path to is a continuity error of the same order as contradicting an established fact, and it corrupts the record just as surely. This is the NPC-facing companion to the "only give information the character would know" rule in §3.
 
+**Relationship warmth (the tracked scale).** Each recurring NPC carries a single **warmth** value toward Bill on a **1–100** scale, with a per-NPC **ceiling**. Both numbers live in exactly one place — `bill_weaver_sheet.json` → `relationships` (`{ "warmth": N, "ceiling": M }`); the NPC's own file in `npcs/` holds the *texture* (voice, history, what they know) and never the number. **Bill never sees the number** — he reads warmth from behavior, the way a person reads a room; it surfaces to the player only through the change-tag when it moves (`gm_operations.md` §4). The DM reads the band off the number and plays the NPC accordingly.
+
+**The bands:**
+- **1–15 Hostile** — actively against him; will work to harm or obstruct.
+- **16–30 Cold** — distrustful, unwilling; deals only if forced or paid.
+- **31–45 Wary** — guarded; transactional, watching to see what he is.
+- **46–55 Neutral** — no strong feeling; an ordinary stranger or acquaintance.
+- **56–70 Cordial** — friendly, well-disposed; gives the benefit of the doubt.
+- **71–85 Trusted** — a real ally; extends credit, keeps confidences, takes his side.
+- **86–95 Devoted** — loyal past self-interest; acts for him at cost to themselves.
+- **96–100 Bonded** — found-family; the rarest tier, a handful of people at most.
+
+**Movement rules:**
+- **Starting point.** A new acquaintance enters around **48–52 (Neutral)**, shifted up or down by first impression, reputation that precedes him, and faction or class disposition (a guild officer starts a stranger lower than a fellow tradesman does).
+- **Asymmetric and earned.** Ordinary interactions move warmth a little (**±1–5**); genuine moments — a kept promise under pressure, a danger shared, a betrayal — move it a lot (**±5–15**). Warmth **climbs slowly above 70** (deep trust is earned in repetition, not bought in a scene) and **falls fast** (one real betrayal can undo months).
+- **Ceilings.** Each NPC has a personal ceiling set by temperament and role — the most they will ever feel toward him no matter what he does. A purely transactional contact caps in the Cordial band; only a few people can ever reach Devoted or Bonded. Warmth never exceeds the ceiling.
+- **Plays through behavior, never numbers.** The scale is a DM tool for consistency; in play it shows only as how the NPC treats him. (Closing-the-session mechanics for updating the number live in `gm_operations.md` §3 and §8.)
+
 ---
 
 ## 5. Core resolution and attributes

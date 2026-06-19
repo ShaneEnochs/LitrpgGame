@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "file": "pricing.json",
+    "role": "Consolidated pricing reference — every credit figure and value band scattered across the campaign files, in one place.",
+    "currency": "credits (cr)",
+    "sources": [
+      "campaign_state.md (Price book; Dungeon-goods floor; Auction house market; Guild fees)",
+      "dungeon_economy_v1.md (the tier x grade scaling model; boss-drop bands)",
+      "essence_aspects_v1.md (rarity-grade scale; core value in ME; sample core prices)",
+      "ability_orbs_v1.md, auras_v1.md, dungeon_materials_v1.md (qualitative value bands)"
+    ],
+    "current_to": "Session 30 in progress; figures are stable references the world quotes. Rarity model reworked S30 — four-rarity scarcity scale; see rarity_grades.",
+    "note": "Many values are deliberately ranges or qualitative bands, not fixed numbers — the world prices in analog 'believed-price' (assayers read a value, they don't display one). Town-counter figures are a Tin/low-tier BASELINE that scales UP by tier (see tier_grade_pricing_model)."
+  },
+
+  "principles": {
+    "town_counter_is_a_baseline": "The Argent buy-book figures are what the town counter sees — overwhelmingly Tin/Copper goods. They are a low-tier baseline, not a flat grade price; higher-tier drops scale up by the multiplier model.",
+    "assayed_vs_unassayed": "A licensed-assayed good fetches near the floor confidently; an identical UNassayed good fetches ~a third, grudgingly. Unassayed unknowns fetch ~nothing.",
+    "aspect_premium": "Aspected goods (earth, fire, beast, etc.) carry a premium over unaspected.",
+    "bonus_quest_rewards_never_money": "Posted bonus-quest rewards pay in goods (an aspected core of choice, a crafting material, a boon), never coin — though their value reads on the same scale.",
+    "for_bill": "A Platinum aspected core is rarely worth selling to Bill — it is worth far more in his hands as filter feedstock / binding fuel / convert-for-mana than on the counter.",
+    "frontier_markup": "Materials are western, workshops and customers are eastern; frontier stock is thin, late, and marked up. Eastern buyers' agents take combat orbs and tomes."
+  },
+
+  "everyday_and_town": {
+    "_source": "campaign_state.md price book",
+    "pickles": "2 cr",
+    "plain_meal": "15-25 cr",
+    "cheap_room": "25-50 cr/night",
+    "rye": "25 cr",
+    "cheap_drink": "3 cr",
+    "message": "1 cr",
+    "coffee": "1 cr",
+    "two_carried_supper_plates": "~35 cr",
+    "clarion_subscription": "a few cr/week, daily home delivery"
+  },
+
+  "services": {
+    "legal_calloway": {
+      "_source": "campaign_state.md price book",
+      "document_review": "200 cr/doc",
+      "notary": "25 cr",
+      "engagement": "100 cr",
+      "docket": "150 cr",
+      "title": "50 cr",
+      "receiving": "~1% + time",
+      "holder": "25 cr/mo",
+      "trade_name_filing": "~50 cr",
+      "partnership_drafting": "fees ahead (Quest Instruments articles)"
+    },
+    "telegraph": {
+      "_source": "campaign_state.md price book",
+      "in_territory": "1 cr/word + 1 cr/word per ~1,000 mi; 10-word minimum",
+      "back_east": "~3-3.5 cr/word",
+      "wire_transfers": "same-day"
+    },
+    "letters": "a few cr, 2-3 weeks each way",
+    "runner_errands": "a few cr; a wagered fast run ~10 cr all-in"
+  },
+
+  "guild_and_assay_fees": {
+    "_source": "campaign_state.md price book",
+    "registration": "300 cr — mandatory assay / re-assay & cultivator registration (a record)",
+    "licensed_assay_fee": "~tens of cr for a guardian-core read"
+  },
+
+  "consumables_and_ammunition": {
+    "cartridges": { "_source": "campaign_state.md", "price": "~30-40 cr/box of 50", "components_restock": "~18-22 cr", "note": "'my shelf, your cash' at the gunsmith; reloading kit owned" },
+    "coil_gun_ammunition": {
+      "_source": "campaign_state.md (Day-26 anchor)",
+      "deep_belt": "~500 cr bought the gunsmith at the wheel till dawn for ~100 bodkins + ~15 range darts + wedges + a dozen-odd broadheads, AND a standing retainer / first-call on his wheel",
+      "cost_driver": "steel is cheap; the cost is grindstone time — bodkins fast, range darts slower, broadheads the chokepoint",
+      "self_build_note": "S30-forward: Bill can craft his own steel dart bodies via the Crafting Table + portable hellfire; the gunsmith's standing supply is being redefined toward grindstone-finishing and first-call, not raw body supply."
+    },
+    "delvers_salve": { "_source": "campaign_state.md", "price": "~20 cr/tin", "note": "fire-resist; apply before the heat" }
+  },
+
+  "crafting_and_sundry": {
+    "_source": "campaign_state.md price book",
+    "beeswax": "~4 cr/cake at cost (standing order ~3-4 cakes/wk)",
+    "wool_coats": "~9 cr/coat to sew; ~7 cr retail",
+    "plain_tins": "cheap by the dozen",
+    "struck_die": "80 cr (owned)",
+    "tin_lids": "near-free by the dozen",
+    "earth_scrap": "~10 cr — a Common earth worked fragment (bought off Pearce as filter feedstock)"
+  },
+
+  "dungeon_goods_town_counter_floor": {
+    "_source": "campaign_state.md (Argent buy book — TOWN COUNTER / Tin-low-tier baseline)",
+    "_warning": "These are the LOW-TIER BASELINE. A Platinum boss core is ~700-950+, NOT 140-190 — scale up by tier_grade_pricing_model.",
+    "common_construct_or_banking_core": "~30-60 cr",
+    "gatekeeper_or_uncommon_core": "~150-200+ cr",
+    "beast_aspect_uncommon": "~140-190 cr",
+    "low_sensor_chip": "single-digits to low-tens cr",
+    "common_earth_or_fire_material": "~25-55 cr (aspect premium on top)",
+    "low_common_utility_orb": "~tens of cr",
+    "high_level_or_combat_orb": "near-tome money",
+    "unique_or_great_cores": "off the buy book (one-buyer / believed-price)"
+  },
+
+  "tier_grade_pricing_model": {
+    "_source": "dungeon_economy_v1.md",
+    "_basis": "Multiplier applied to the Tin/floor baseline above; a drop's worth = tier x grade x quality x aspect x source.",
+    "_note": "Tier here = the SITE tier (Tin/Copper/Iron/Silver/Gold/Platinum), which rates dungeons. It is independent of the rarity grade (scarcity of the drop). A Platinum site can drop a Common core; a Tin site could in principle drop a Rare one.",
+    "multipliers": {
+      "Tin / Copper (Tier 1 low)": "x1 (the baseline the book quotes)",
+      "Iron / Silver (Tier 1 mid)": "x1.5-2.5",
+      "Gold (Tier 1 high)": "x3-4",
+      "Platinum (Tier 1 top)": "x4-6 (where Fortune's Folly lives)",
+      "Tier 2+": "x8+ and climbing (eastern-agent territory)"
+    },
+    "worked_example": "A Platinum Uncommon core = ~560-1,100 cr (x4-6 on the ~140-190 Tin Uncommon), before aspect or boss premiums."
+  },
+
+  "boss_drops": {
+    "_source": "dungeon_economy_v1.md",
+    "platinum_floor_boss_core": { "range": "~600-1,400 cr assayed", "note": "Uncommon-Rare, high quality, faint fight-pattern; fire/earth/beast premium on top. A beast-boss core like the Ash-Maw: ~700-1,000 cr." },
+    "platinum_floor_boss_material_or_elixir": "tens to low-hundreds cr (more for genuinely scarce restoratives)",
+    "platinum_dungeon_boss_core": "low thousands cr — auction-headline, eastern-agent, sometimes one-buyer",
+    "platinum_dungeon_boss_aspected_material": "hundreds to low thousands cr (more for maker-prized made-stock, e.g. Infernal forge-stock)"
+  },
+
+  "auction_house_market": {
+    "_source": "campaign_state.md (Argent hall, Day 23 canon)",
+    "lv3_combat_orb": "~525 cr (east)",
+    "certified_domain_tome": "~2,200 cr (east)",
+    "lv1_utility_orb": "~tens of cr",
+    "lv2_passive_orb": "~150-220 cr",
+    "assayed_cores": "near floor confidently; identical unread cores at a third",
+    "unassayed_unknowns": "~nothing",
+    "schedule": "weekly Tuesday auctions + a thin daily direct counter",
+    "note": "The Clarion's printed delve-market figures are a soft third-hand echo — trust the shape, not the digits."
+  },
+
+  "rarity_grades": {
+    "_source": "essence_aspects_v1.md §8 (player-authored canon, Day 25; reworked S30)",
+    "_basis": "SCARCITY of a core or material — how rare the thing is, not how strong. Distinct from a dungeon's tier/grade (rates sites) and from an orb's level (1-5). Assayers grade on this scale, returning aspect + rarity grade at the depth the reader's skill allows.",
+    "scarcity_not_power": "Rarity answers how many exist, never how powerful. A Common core can carry a fierce aspect; a Rare one can be a dud. Power is carried by the Legendary/Mythic power-tags, the orb level, the aspect, and the believed-price — not by the rarity grade.",
+    "ladder": [
+      { "grade": "Common", "graduations": ["Low", "Mid", "High"], "note": "the overwhelming majority; ordinary banking fuel, floor-priced (a cracked one reads Common, damaged — at/below floor)" },
+      { "grade": "Uncommon", "graduations": ["Low", "Mid", "High"], "note": "a real step up; a premium above floor (the gatekeeper core sits here)" },
+      { "grade": "Rare", "graduations": ["Low", "Mid", "High"], "note": "genuinely scarce; specialist money. High Rare is the top of the repeatable, classifiable world — the rarest thing that still has a reference class to grade against" }
+    ],
+    "unique": "OFF the graduated scale: literally one-of-a-kind, no exact duplicate ever made. With no reference class, a licensed read returns family/category, not contents (the mechanical reason the great forge-core wouldn't close to Pearce's read). Cracking a Unique to its contents needs a far higher license (Saint Orison) or a reader native to its grammar (Bill's Deep Inspection, formerly Forceread).",
+    "blueprint_rule": "A PLAIN Unique CAN be reverse-engineered/blueprinted. The instant a second exact copy exists it stops being Unique: the original and the copy both reclassify onto the standard track, entering at Rare and degrading toward Uncommon, then Common, as the make is mass-produced. Making a true twin spends the uniqueness for both.",
+    "legendary_and_mythic": "POWER-TAGS, applied ONLY to Unique items — not rungs on the ladder. They mark a Unique too perfect to reduce to a repeatable process: it CANNOT be blueprinted into true copies at all. Reverse-engineering one yields a lesser standard-track replica (Rare at best, falling from there) while the original stays Unique and tagged. Mythic is the higher, rarer mark; Legendary the merely storied.",
+    "aspect": "Rides alongside the grade: unaspected, or a named aspect (earth, fire, electric/storm, poison, beast, ghost, ...). A made/worked resonance (forge-resonant, 'made stock') is noted as such.",
+    "orbs_are_separate": "Skill orbs keep their LEVEL (1-5) as their grade — the rarity scale is for cores and materials, not orbs.",
+    "_retired_epic_note": "Epic is RETIRED as a grade in the S30 rework. Any 'Epic' tag surviving in older session files is stale — read it as High Rare, or as a Unique power-tag, per context. Value bands once filed under Epic/Legendary/Mythic now attach to High Rare and to Unique (believed-price / one-buyer)."
+  },
+
+  "core_value_in_ME": {
+    "_source": "essence_aspects_v1.md (mana-equivalent — fuel value, not sale price)",
+    "_note": "ME = mana-equivalent; what a core is worth as fuel, distinct from its cr sale price. Pool max reference: 210.",
+    "common_core": "~40-80 ME (~30-60 cr)",
+    "uncommon_core_boss_dense": "~150-300 ME (~140-300 cr)",
+    "platinum_boss_core": "~400-600 ME (~700-950 cr)"
+  },
+
+  "qualitative_value_bands": {
+    "_source": "ability_orbs_v1.md, auras_v1.md, dungeon_materials_v1.md",
+    "_note": "Where the catalogs give a feel rather than a figure, they use these bands. Rough ladder, lowest to highest.",
+    "bands": ["cheap", "modest", "good value", "valued / sought", "expensive / pricey", "very expensive / one-buyer", "near-tome money", "tome money and up"],
+    "sample_anchors": {
+      "Keen Edge orb": "a few hundred cr at the cage, more in private sale",
+      "restricted_orbs": "rarely sold openly; high private price (e.g. Phase, Aura of Suppression)",
+      "high_value_orbs": "Life/heal-type and last-resort orbs — medics and the Church bid; expensive"
+    }
+  }
+}
