@@ -90,7 +90,27 @@ A SavePoint is a **mid-session marker** capturing the exact stop-state so play r
 [Relationship: Mrs. Maddox +2]   [Relationship: Mrs. Maddox: 86]
 ```
 
-**What gets tagged:** anything a JSON owns — ammo by type, mana, cash and the money lines, attributes/skills/ability levels when they change, delver and class level, and relationship warmth. Not trivial flavor; only values that map to a field the player will update. **Keying:** a relationship tag uses the NPC's canonical name, matching the key in the sheet's `relationships` block, so a tag maps to exactly one field.
+**What gets tagged (resources):** anything a JSON owns — ammo by type, mana, cash and the money lines, attributes/skills/ability levels when they change, delver and class level, and relationship warmth. Not trivial flavor; only values that map to a field the player will update. **Keying:** a relationship tag uses the NPC's canonical name, matching the key in the sheet's `relationships` block, so a tag maps to exactly one field.
+
+**What gets tagged (combat — precise tracking, S30).** The same bold-bracket format now carries every combat mechanic, under one split rule (`game_bible.md` §3): **the player's own side is shown in numbers; the enemy's state is described in words.**
+
+Show in brackets (player-side and resolution):
+```
+[Attack: 1d20+2 = 17 vs AC 19 — miss]
+[Arcane Lance: 3d6+6 = 17 force damage]
+[Hell Grenade — C core (40 ME), 30-mana charge: 6d6+10 = 41, radius 15 ft]
+[Save: 1d20+5 = 22 vs DC 19 — success, half]
+[Ash Rat attack: 1d20+7 = 19 vs your AC 12 — hit]
+[Bill HP: 40 → 31]   [Bill mana: 210 → 180]
+[Initiative: Jason 60, Myles 41, Julie 32, Charles 28, Bill 39]
+```
+Rules for the combat tags:
+- **Your damage TO an enemy is shown** (it's your number: the roll and total), but the **enemy's resulting HP is NOT** — narrate its condition instead ("it reels, one leg dragging"). The player learns what they dealt, never what the enemy has left.
+- **An enemy's attack roll vs your AC is shown** (so a hit is explained), and **your** HP change is shown. The enemy's own AC, HP, save bonuses, and damage dice stay in the DM layer (monster stat blocks — a later pass) and never appear as numbers.
+- **Saves your effects force are shown as pass/fail vs your DC**, never the enemy's save bonus.
+- HP bands map to the condition ladder (`game_bible.md` §7): the number is the player's; the words are everyone's.
+
+The combat math itself lives in the JSON sheets (`bill_weaver_sheet.json` `_combat_layer`; `fortunes_folly_crew.json` `_combat_model`) and `essence_aspects_v1.md` §8b (core ME). The dice roller is `dice_roller.html`.
 
 ---
 

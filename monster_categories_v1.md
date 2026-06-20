@@ -173,3 +173,32 @@ The apex — the rarest and most catastrophic category, creatures whose strength
 **Danger.** It is the danger. A Titan cannot be fought by a person, only by a host, and even then at terrible cost. There is no frontier-tier engagement with a Titan that is not a disaster; the category exists at the edge of the catalog to mark the ceiling, not to be met in ordinary play.
 
 **Drops.** The stuff of legend — orbs, auras, materials, and essence at the apex of every scale. A single Titan's body has founded fortunes and guilds. But Titan loot is national-interest matter, claimed by the great powers and the Church, and never an ordinary delver's to sell.
+
+---
+
+## ⚙ STAT BLOCKS — THE MECHANICAL LAYER (DM-side, precise tracking — S30)
+
+*The category entries above are the **palette** — nature, abilities, drops. This section is how a specific creature gets the **hidden numbers** that make precise combat resolution consistent (`game_bible.md` §3, §8). These numbers are **DM-side and never surfaced to the player as numbers**: per the visibility split, the player sees an enemy's attack roll vs their own AC and whether their effect beat a DC, but an enemy's HP, AC, save bonuses, and damage taken are described in words, never numbered. A specific site builds its creatures' blocks (e.g. the Ashen Descent's Floor-1 blocks); this section is the template and the per-category baselines they're built from.*
+
+**The stat-block line:**
+> **Name** (Category). HP · AC · Attack (+to-hit / damage dice+mod, type) · Saves (Fort / Ref / Will, flat bonuses) · special (immunities, weakness seam, on-death, fight-pattern).
+
+**How the numbers relate to the player scale** (player AC 11–24, HP 40–150, attack ~+5/+6, save DCs 14–19, damage ~1d8–1d12+mod):
+- **AC** is the number a crew member's `1d20 + attack mod` must meet. Mob AC ~15–18 = hittable by a strong attacker (Jason +5, Bill +2 on aim plus the gun), missable by a weak one. Boss AC ~20–22.
+- **HP** sets how many solid hits it takes. Mob HP scaled so 1–3 crew hits drop it (the threat is numbers + the creature's bite, not durability); elite/boss HP much higher (a multi-round focus).
+- **Attack +to-hit** is the `1d20 + bonus` the creature rolls vs the crew member's AC; **damage** is its dice + mod applied to that member's HP (shown player-side as the member's HP change).
+- **Saves** are the `1d20 + bonus` the creature rolls vs a crew member's spell DC (Julie DC 18–19, Charles DC 18, Myles DC 14). High Fort = soaks Life/poison/raw force; high Ref = dodges areas/aimed bursts; high Will = resists Hex/charm/fear. A mindless Construct/Undead has a moot Will (immune to mind effects entirely).
+
+**Per-category baselines** (a starting shape; a specific creature deviates by its strength and the site's tier):
+- **Beast** — moderate AC, low–moderate HP, high single-attack damage or pack tactics; high Ref on fast ones; no special immunities beyond toughness. Aspected hides break at the glowing seam (weakness).
+- **Construct** — high AC and HP, immune to mind/fear/poison/bleed (Will moot), never tires; weakness = precise hits on seams/joints; can't be Hexed/charmed/feared.
+- **Elemental** — resists/immune to its own element, acute vulnerability to the opposite (a matching-opposite hit ignores resistance and adds bonus); may dissolve to take a blow (a "miss" that's really a phase). High Fort.
+- **Ooze** — immune to piercing (often physical generally — Bill's darts near-useless), splits when struck wrong, corrodes gear on a hit; low AC, high effective HP; needs area/elemental/caustic. Low Ref/Will.
+- **Plant** — entangle (Ref save or held), poison (Fort save), regenerates unless burned/area'd; fire bonus damage. Moderate everything.
+- **Spirit** — **immune to ordinary steel** (only essence/aspected/Life/Arcane touches it), works on the mind (fear/illusion — high Will), drains warmth/essence on contact; low HP once something CAN hit it; high Ref (hard to pin).
+- **Undead** — tireless, no pain/fear (Will moot vs morale; mind effects do nothing), draining touch, resist killing-blows; **weak to Life/holy** (a Life effect bites hardest); high Fort, low Will-as-resistance-is-moot.
+- **Infernal** — **resist fire** (a fire/hellfire attack from a non-hellfire source is wasted; Bill's *hellfire* still bites because it's structured), terror/dread aura (Will save or shaken), command of flame; vulnerable to cold/water-aspect (scarce here). The Descent's natives.
+- **Aberration** — telekinesis, sense-distortion, mimicry; some carry a cultivation-fouling field (raises mana costs nearby); unpredictable — read it wrong and fight it wrong. Varied saves.
+- **Giant / Titan** — off the frontier scale; Titans combine categories and break the rules. Not built to a baseline — authored as set-pieces, HP/AC far past anything above.
+
+*Build a site's creatures into this format in the site's own file (the Ashen Descent's Floor-1 blocks are the worked example). Keep them DM-side; narrate enemy state in words.*

@@ -140,6 +140,30 @@ The entrance drops into a massive crater filled with knee-deep gray ash. Crumbli
 
 ---
 
+### ⚙ FLOOR 1 — STAT BLOCKS (DM-SIDE — precise tracking, S30)
+
+*These numbers are the hidden mechanical layer for the Floor-1 creatures (`game_bible.md` §3, §8 — precise combat tracking). **DM-side: never surfaced to the player as numbers.** The player sees an enemy's attack roll vs their own AC and whether their effect beat a DC; an enemy's HP, AC, save bonuses, and damage-taken stay here and are narrated in words ("it reels, a leg dragging"). These exist so resolution is consistent, not improvised.*
+
+*Scaling note: the Descent is **leagues past Platinum — "Floor 1 filler hits like elites."** So these mobs carry low HP (they die in 1–3 solid crew hits — the threat is numbers and their bite, not durability) but real attack bonuses and damage that genuinely endanger a low-HP target (Bill at 40, Charles at 40). A handful connecting is lethal. Stat line: **HP · AC · Attack (to-hit / damage) · Saves (Fort/Ref/Will as flat bonuses) · special.** Saves are the d20+bonus the creature rolls vs a crew member's spell DC.*
+
+**Mob — Ash Rat** (Beast). HP 12 · AC 16 · Attack +7 / 1d6+3 bite · Saves +6 / +9 / +2. *Dormant until a crew member bleeds (drops below ~half HP or takes a bleeding wound), then the whole nest swarms that target. Fast (high Ref). Swarming: each rat that hits a wounded target adds a stacking +1 to the next rat's bite that round (pack frenzy). Trivial alone; a 6-rat swarm on a downed delver is a kill. Charles's "nobody bleeds" exists because of exactly this trigger.*
+
+**Mob — Cinder Imp** (Infernal). HP 10 · AC 17 · Attack +8 ranged / 1d8+2 fire · Saves +5 / +8 / +4. *Snipes weak fireballs from high perches; AC 17 + range make it annoying to the melee crew (Bill's job). Panics and FLEES the instant it's meleed, often aggroing nearby mobs as it runs (a new mob group joins). Resist fire (Infernal). Kill it at range before it pulls a second pack.*
+
+**Mob — Smoldering Skeleton** (Undead). HP 18 · AC 15 · Attack +7 / 1d8+3 rusty sword · Saves +8 / +3 / +0 (immune to mind/fear effects → Will is moot). *Tireless, no pain or fear, mindless (immune to Hex's morale-style debuffs, charm, fear). On death BURSTS into a blinding hot-ash cloud: everyone within ~10 ft saves vs the killer's effect (or a flat DC 15) or is blinded 1 round + 1d4 fire. Weak to Life/holy (Charles's domain bites hardest here). Higher HP than the other mobs — it soaks a hit.*
+
+**Mob — Coal-Goblin** (Beast). HP 8 · AC 16 · Attack +6 ranged / 1d6+1 thrown rock · Saves +4 / +9 / +2. *A cowardly hoarder — greed, not aggression. Throws rocks from range, races for dropped cores/loot, sprints away with it. Not a fighter; the threat is it STEALING a core (the 2 imp-cores it's racing for in the live field) and fleeing. High Ref (runner). Drops what it carries if killed.*
+
+**Mob — Barbed Hell-Hound Pup** (Infernal). HP 14 · AC 17 · Attack +8 / 1d8+3 bite · Saves +7 / +8 / +3. *Pack hunter (3–5); flanks and bites ankles to inflict a crippling SLOW (target saves vs DC 15 or halved Speed 1 round). Resist fire. (The 4 the crew already killed this session are husks — throat-cores intact, seams open: drain-practice/Ember-fuel reps.)*
+
+**Mob — Smoke Wisp** (Spirit). HP 8 · AC 18 · Attack +7 / envelops head: choking 1d6 + zero-visibility · Saves +4 / +9 / +6. *Floats passive until disturbed; then envelops a victim's head — choking damage each round + that victim is blinded until it's removed. **Immune to ordinary steel** (Spirit — Bill's darts/Jason's blade pass through; needs Bill's hellfire, Julie's Arcane, or Charles's Life to touch it). Hard to pin (AC 18, high Ref); the eye can't hold its position once it drifts. Low HP — one real hit from a source that CAN touch it drops it.*
+
+**Floor Boss — The Charred Warden** (Infernal / Construct-jailer). **HP 220 · AC 21 · Saves +14 / +9 / +11.** Attacks: *Iron Key smash* +16 / 2d10+8 bludgeon (single target); *Hammer Sweep* (winds up 1 round, telegraphed) hits everyone in a wide arc +14 / 3d10+8, knockdown on a failed Ref vs DC 22 — **the room-clearing wind-up is the read/interrupt window.** Special: on aggro, **seals all room exits**; summons **fire cages** (a cage drops on one crew member, DC 20 to break manually from outside or 30 HP of damage to the cage — the trapped member is out until freed); carries a **heavy fire shield** (resist fire heavily + reduces all incoming damage by ~1/3 until broken — *the Prisoner's Vengeance side quest strips this shield at the start if completed*). Resist fire (Infernal); immune to fear/mind. **Weakness:** the molten seams at the joints (Bill's seam-read shot ignores a chunk of the damage reduction); the telegraphed hammer wind-up. *Fights like another site's final boss — do NOT knock on that door until the floor's mobs are cleared and ideally the side quest is done.*
+
+*(Boss HP 220 against the crew's output — Jason ~10–16/hit ramping, Bill's hellfire 2d10+2 ~15 through the seam, Julie's Arcane Lance 3d6+6 ~17, charged Hell Grenades — is roughly a 6–10 round fight if they focus and Myles eats the hammer sweeps. Tune in play; the shield and cages are the real difficulty, not the HP.)*
+
+---
+
 ## Floor 2 — The Obsidian Caldera
 
 The elevator opens into a sprawling cavern lit by harsh orange light. Lakes of lava bubble violently, and the only safe footing is a network of razor-sharp obsidian bridges. Thick steam vents regularly obscure vision.

@@ -58,12 +58,15 @@ Everyone has an **innate, unaspected filter** — the thing their core does to t
 | **Bill's tuned filter (mastery)** | **~95%+** | Deliberate sighted tuning blows past the blind feel-ceiling. **Eventually out-converts any normal cultivator** (who is stuck near their innate plateau). Earned: lots of bench work per filter, build-defining, dead-on-thesis (the engineer's *apparatus* beats a born gift, at the cost of having to build and grind each one). |
 | **Aspected filter (same craftsmanship)** | a notch below its unaspected equal | Imposing/preserving a fold is friction; an aspect-filter loses a bit more than a neutral one of equal skill. (And converting *aspected essence* to *generic mana* is worse still — the §4b rule — because the fold is thrown away.) |
 
-**ESSENCE measured in mana-equivalent units (ME)** = how much mana a source would yield at a hypothetical 100% filter. Rough scale, tracking core value:
-- **Common core (~30-60 cr):** ~40-80 ME
-- **Uncommon core (boss-dense / ~140-300 cr):** ~150-300 ME
-- **Platinum boss core (~700-950 cr):** ~400-600 ME — *a single boss core is more than a full pool's worth of fuel.*
+**ESSENCE measured in mana-equivalent units (ME)** = how much mana a source would yield at a hypothetical 100% filter. **The precise ME of any core is set by its essence-grade (E–S) × source tier — see §8b, the essence-content ladder.** The rough older anchors below are kept for reading old records; §8b is authoritative going forward:
+- **Common core:** ~10–40 ME (E–C grade at Tier 1)
+- **Uncommon core:** ~60–80 ME (B grade at Tier 1)
+- **Floor-boss core (Platinum):** ~240 ME (A grade × 1.5 boss × Tier 1)
+- **Dungeon-boss core (Platinum):** ~960 ME (S grade × 3 boss × Tier 1) — *a single boss core is well past a full pool's worth of fuel.*
 
-**Worked example (the Ash-Maw boss core, ~500 ME):** through Bill's *innate* 50% → ~250 mana (already more than a full 210 pool); through a crude built filter at 30% → ~150; through a tuned 95% filter → ~475. The progression is visible and worth chasing — and it's also why Bill usually **banks** an aspected boss core (for the binding/craft) rather than burning it for mana: the value is higher banked, and aspected→generic conversion is lossy anyway.
+**Worked example (a Tier-1 floor-boss core, ~240 ME):** through Bill's *innate* 50% → ~120 mana (past half a 210 pool from one core); through a crude built filter at 30% → ~72; through a tuned 95% filter → ~228. The progression is visible and worth chasing — and it's also why Bill usually **banks** an aspected boss core (for the binding/craft) rather than burning it for mana: the value is higher banked, and aspected→generic conversion is lossy anyway.
+
+*(NOTE — S30 revision: earlier sessions used a looser ME scale, 40–80 ME Common / 400–600 ME Platinum boss. The §8b ladder replaces it with exact figures. Old session text quoting the looser numbers is dated history; §8b wins.)*
 
 **Bill's status (Day 27):** he has the **innate ~50% filter** like everyone (his passive regen). He **cannot yet actively convert** — he hasn't learned to hold the continuous draw that tunes the innate filter, and he can't yet *build* a fuel-filter for banked cores. **Julie (≈75%, sighted-by-feel) is his master class:** watching her hold the draw under load is where he learns the tuning act — and his edge is that he'll be able to *see* what she does blind, then tune deliberately past her plateau and build dedicated filters besides. Her 75% is both his lesson and his proof that the innate filter *moves*.
 
@@ -115,6 +118,61 @@ These are *not* rungs on the ladder. They are quality marks that ride on a Uniqu
 **Skill orbs keep their LEVEL (1–5)** as their grade — the rarity scale is for cores and materials, not orbs. (So: "a Lv.3 combat orb," but "an Uncommon earth core.")
 
 *Bill's live holdings under this scale are tracked in `bill_weaver_sheet.json` (`banked_cores_and_haul`, `filters_and_captures`) — the rule lives in this file, the current inventory in the sheet. Headline anchor: the bound maker-core **Ember** reads **forge-resonant · Unique** (its threshold names a family, not a number). Whether Ember also carries a Legendary/Mythic power-tag — i.e. whether its make is irreducible, copy-proof — is left open for play to settle.*
+
+---
+
+## 8b. ESSENCE-CONTENT LADDER — HOW MUCH ME A CORE HOLDS (player-authored, S30)
+
+§8 grades a core's **scarcity** (Common–Unique, the pricing/blueprint axis). This section grades a core's **essence content** — the raw ME it holds — on a separate **E–S letter scale**. The two axes are independent (per §8's "rarity is scarcity, never power"): a Common-scarcity core can hold a high essence-grade, and vice versa. The E–S grade is what the combat/fuel math reads (mana yield, Hell Grenade core-seating, conversion).
+
+**The letter grades (base ME, at Tier 1):**
+
+| Grade | Base ME |
+|---|---|
+| E | 10 |
+| D | 20 |
+| C | 40 |
+| B | 80 |
+| A | 160 |
+| S | 320 |
+
+**The tier multiplier** (the source delve's tier; the single biggest lever, per `dungeon_economy_v1.md` §1):
+
+| Tier | Multiplier |
+|---|---|
+| Tier 1 | ×1 |
+| Tier 2 | ×5 |
+| Tier 3 | ×10 |
+| Tier 4 | ×15 |
+| Tier 5 | ×20 |
+
+So **core ME = (grade base ME) × (tier multiplier)**. An A-grade core from a Tier-3 site = 160 × 10 = 1,600 ME.
+
+**The dungeon GRADE (Tin–Platinum) sets the DROP BELL CURVE — which letter you're likely to pull — not a multiplier.** Each site grade centers on a typical grade and tapers, hard-capped where noted:
+
+| Site grade | E | D | C | B | A | S | Cap |
+|---|----|----|----|----|----|----|----|
+| Tin       | 75% | 25% | —   | —   | —   | —  | nothing above D |
+| Copper    | 55% | 35% | 10% | —   | —   | —  | nothing above C |
+| Iron      | 25% | 50% | 25% | —   | —   | —  | nothing above C |
+| Silver    | 10% | 25% | 50% | 15% | —   | —  | nothing above B |
+| Gold      | —   | 15% | 50% | 25% | 10% | —  | nothing above A |
+| Platinum  | —   | —   | 20% | 50% | 25% | 5% | S is the rare drop |
+
+(Higher-tier sites — Tier 2+ — shift the curve upward as the DM judges; the table above is the Tier-1 frontier baseline. These are drop *likelihoods*; a specific core's grade, once dropped, is fixed and read by Inspect.)
+
+**BOSS CORES** carry a grade at the upper end of their site's curve, plus a flat multiplier:
+- **Floor boss:** grade = one step below the site's cap (e.g. **A** at a Platinum site, B–S range); **×1.5** multiplier.
+- **Dungeon boss:** grade = the site's cap (**S** at a Platinum site); **×3** multiplier.
+
+Boss multipliers apply on top of the tier multiplier. A Platinum (Tier-1) floor boss = A (160) × 1.5 × 1 = **240 ME**. A Platinum (Tier-1) dungeon boss = S (320) × 3 × 1 = **960 ME**.
+
+**Worked anchors (the live delve — Emberwaste / Ashen Descent, Platinum, Tier 1):**
+- A mob B-core: 80 ME.
+- The Ash-Maw / floor-boss cores: **~240 ME** (A × 1.5).
+- The Ember-Colossus heart-core (dungeon boss): **~960 ME** (S × 3) — an order of magnitude past Bill's 210 pool, matching its canon "far past a full pool."
+
+*This ladder feeds: essence→mana conversion (§4b — ME × filter%), Hell Grenade's core-seated blast (`bill_weaver_sheet.json` → Hell Grenade: ME ÷ 5 added to the blast), and the believed-price cross-check in `dungeon_economy_v1.md`. Where a core's ME and its credit price seem to disagree, they are measuring different things (content vs. scarcity×demand) and both can be true.*
 
 ---
 
