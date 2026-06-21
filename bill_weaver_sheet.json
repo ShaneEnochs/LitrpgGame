@@ -12,7 +12,7 @@
     ],
     "scales": {
       "attributes": "1-100 (10 average, 20 unawakened ceiling, past 20 needs an open core)",
-      "mundane_skills": "1-10 (0 untrained, 5-6 professional, 9-10 master)",
+      "mundane_skills": "CONVERTED to PF2e proficiency (Trained/Expert/Master/Legendary). bonus = rank + level + attr mod. See pf2e_translation_layer.md §4a; source 1-10 kept under each skill's 'homebrew'.",
       "ability_levels": "1-5 (each Skill/ability/intrinsic), with hidden evolutions past 5",
       "delver_level": "points / 10",
       "class_level": "System depth, separate from Delver Level"
@@ -89,56 +89,115 @@
     }
   },
   "mundane_skills": {
-    "Engineering": {
-      "level": 7,
-      "subskills": {
-        "wagon/wheel work": 6,
-        "fine instrument bodies": 6,
-        "firearm mechanism": 4,
-        "locks & mechanisms": 3,
-        "lift/hoist works": 5
-      }
+    "_scale_note": "Converted to PF2e proficiency per pf2e_translation_layer.md §4a (Option A ladder). Source 1-10 values kept under 'homebrew'. bonus = rank + level(2) + attr mod. Attr mods: Might+1 Precision+2 Intellect+2 Perception+0 Presence+0 Insight+2.",
+    "Crafting": {
+      "homebrew": {
+        "from": [
+          "Engineering 7",
+          "Alchemy/Chemistry 4 (merged)"
+        ],
+        "subskills": {
+          "wagon/wheel work": 6,
+          "fine instrument bodies": 6,
+          "firearm mechanism": 4,
+          "locks & mechanisms": 3,
+          "lift/hoist works": 5
+        },
+        "note": "mundane bench-chemistry folds in here; distinct from the System-side Alchemy Lv.1"
+      },
+      "key_attr": "Intellect",
+      "rank": "Legendary",
+      "bonus": 12
     },
-    "Explosives": {
-      "level": 3
+    "Thievery": {
+      "homebrew": {
+        "from": "Lockpicking & Mechanisms 3"
+      },
+      "key_attr": "Precision",
+      "rank": "Expert",
+      "bonus": 8
     },
-    "Lockpicking & Mechanisms": {
-      "level": 3
+    "Society": {
+      "homebrew": {
+        "from": "Instruction 5"
+      },
+      "key_attr": "Intellect",
+      "rank": "Master",
+      "bonus": 10
     },
-    "Appraisal (Machinery)": {
-      "level": 4
-    },
-    "Instruction": {
-      "level": 5
-    },
-    "Alchemy / Chemistry": {
-      "level": 4,
-      "note": "mundane bench-chemistry; distinct from the System-side Alchemy Lv.1"
+    "Diplomacy": {
+      "homebrew": {
+        "from": [
+          "Leadership 4",
+          "Negotiation 4 (merged)"
+        ]
+      },
+      "key_attr": "Presence",
+      "rank": "Expert",
+      "bonus": 6
     },
     "Medicine": {
-      "level": 2
+      "homebrew": {
+        "from": "Medicine 2"
+      },
+      "key_attr": "Insight",
+      "rank": "Trained",
+      "bonus": 6
     },
-    "Shooting": {
-      "level": 5,
-      "note": "under-threat gate crossed in spirit across the delve; flag a tick at next clean audit"
+    "Nature": {
+      "homebrew": {
+        "from": "Gardening / Herb-craft 0"
+      },
+      "key_attr": "Insight",
+      "rank": "Untrained",
+      "bonus": 2
     },
-    "Melee (Blades)": {
-      "level": 4,
-      "subskills": {
-        "Butchery / anatomy of the cut": 4
+    "_perception_note": "Social Reading 6 maps to the Perception stat (Sense Motive), not a skill row — see pf2e_proficiencies.perception_sense_motive."
+  },
+  "pf2e_proficiencies": {
+    "_note": "PF2e-native lines that are not skill rows: a Perception specialization, Lores, and weapon proficiencies. All bonuses = rank + level(2) + attr mod.",
+    "perception_sense_motive": {
+      "homebrew": "Social Reading 6",
+      "key_attr": "Insight",
+      "rank": "Master",
+      "bonus": 10
+    },
+    "lores": {
+      "Engineering Lore (appraisal)": {
+        "homebrew": "Appraisal (Machinery) 4",
+        "key_attr": "Intellect",
+        "rank": "Expert",
+        "bonus": 8
+      },
+      "Alchemical / Explosives Lore": {
+        "homebrew": "Explosives 3",
+        "key_attr": "Intellect",
+        "rank": "Expert",
+        "bonus": 8
       }
     },
-    "Social Reading": {
-      "level": 6
-    },
-    "Leadership": {
-      "level": 4
-    },
-    "Negotiation": {
-      "level": 4
-    },
-    "Gardening / Herb-craft": {
-      "level": 0
+    "weapon_proficiencies": {
+      "_note": "Attack bonus only; damage dice and traits come from Base_Weapons_cleaned.csv.",
+      "martial_firearms": {
+        "homebrew": "Shooting 5",
+        "weapons": [
+          "coil gun",
+          "revolver"
+        ],
+        "key_attr": "Precision",
+        "rank": "Master",
+        "attack_bonus": 10
+      },
+      "simple_melee": {
+        "homebrew": "Melee (Blades) 4",
+        "weapons": [
+          "belt knife"
+        ],
+        "key_attr": "Might",
+        "rank": "Expert",
+        "attack_bonus": 7,
+        "note": "Butchery / anatomy of the cut 4 rides here, or a Warfare Lore if made rollable."
+      }
     }
   },
   "cultivation": {
