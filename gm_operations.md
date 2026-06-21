@@ -154,6 +154,18 @@ Maintain continuity carefully — names, places, injuries, promises, debts, inve
 
 ---
 
+## 10. Dice and resolution — the roller is authoritative
+
+**All randomness in play routes through the dice roller. The DM never rolls by any other method** — no ad-hoc "I'll pick a number," no generic RNG. Two faces of one tool: **`dice_roller.html`** (the in-browser tool the player rolls in) and **`dice_roller.py`** (its faithful command-line port — identical logic — that the DM runs for every sandbox roll). When the DM needs a roll, it runs the port and reports the result.
+
+- **Identical logic in both.** Crypto-grade uniform rolls (rejection sampling; *no* `Math.random` / *no* Python `random`), `NdM` + a flat modifier, optional single-d20 fortune/misfortune (keep higher/lower of two), nat-20/nat-1 flagged, and **PF2e degrees of success** vs a DC: ≥ DC+10 = critical success · ≥ DC = success · ≥ DC−9 = failure · else critical failure. A **nat 20 bumps the degree up one step**, a **nat 1 down one** — so a nat 20 that still misses the DC is a normal failure, a nat 1 that would have beaten it is a normal success, and a crit/fumble can swing a whole band.
+- **Call the roll before it happens** — the expression, the modifier, and the DC — so the player sees exactly what's being rolled and what beats it (e.g. *"Stealth: 1d20 + 2 vs DC 18"*). The roller resolves it; the result stands.
+- **Visibility follows §4 and the game_bible §3/§8 split.** Player-facing rolls (Bill's, the crew's) surface in the change-tag register. Enemy rolls show only as far as the player would see them — an enemy's attack roll vs Bill's AC, and the pass/fail of Bill's effect vs its DC — while enemy DCs and defenses stay DM-side. Bill's Deep Inspection is the inward exception that reads more of the hidden enemy layer, rendered as his plates.
+- **Source-of-truth + filename discipline (§6).** Both roller files keep their names. `dice_roller.html` is the source of truth; `dice_roller.py` is the canonical port and is re-synced to the HTML if their logic ever drifts.
+- **A result is a result.** A roll, once made, is not re-rolled to fish for a better outcome — failure beats come from live work and stand (§ failure policy; `dm_directors_notes_v1.md` §10). The only legitimate reroll is an in-fiction mechanic (a fortune effect, a feat, an ability that grants one), resolved through the roller's fortune mode.
+
+---
+
 ## Appendix A — Companion files and when to read them
 
 **Project manifest — the project should contain exactly these files, and nothing else.** Anything not on this list is superseded cruft: delete it (Appendix B says what each retired file became). A duplicate or version-suffixed copy of a living file or JSON is the main way a stale fact resurfaces — there is only ever one current copy, under the canonical name.
