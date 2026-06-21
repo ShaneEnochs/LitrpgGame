@@ -2,7 +2,7 @@
   "_meta": {
     "file": "bill_weaver_sheet.json",
     "role": "Player character sheet — the living authority for every tracked value about Bill: attributes, skills, cultivation/abilities, gear, ammunition, money, banked cores/captures, and NPC warmth (relationships).",
-    "current_to": "SESSION 30 IN PROGRESS — Day 28, on Floor 1 of the Ashen Descent (the Smoldering Wastes). Carries the S29-close state; the S30 change reflected here is ammo (7 hellfire rounds fired). S30 deltas NOT yet folded in (await S30 close per gm_operations.md close-out): the bound core named 'Ember' and the bond a step deeper; mana gently ticked. Phase-1 migration reconciliation (this pass): absorbed the facts campaign_state.md held that the JSON lacked — the Pem money line, the firm's recurring income, the patent portfolio, the old charm, the delve notebook, bench odds/documents — and added the relationships scaffold. Phase-2 (this pass): the relationships block is populated with the full recurring roster, paired to the npcs/ files. || S30 MECHANICS PASS (this edit): added the _combat_layer (modifiers, HP 40, AC 12, Speed/mana pointers), Hell Grenade's full charge/ME/radius formula, Spirit Gun damage, Deep Inspection's governing note, and weapons_combat. Drafted abilities left at their locked limits-economy costs.",
+    "current_to": "SESSION 30 IN PROGRESS — Day 28, on Floor 1 of the Ashen Descent (the Smoldering Wastes). Carries the S29-close state; the S30 change reflected here is ammo (7 hellfire rounds fired). S30 deltas NOT yet folded in (await S30 close per gm_operations.md close-out): the bound core named 'Ember' and the bond a step deeper; mana gently ticked. Phase-1 migration reconciliation (this pass): absorbed the facts campaign_state.md held that the JSON lacked — the Pem money line, the firm's recurring income, the patent portfolio, the old charm, the delve notebook, bench odds/documents — and added the relationships scaffold. Phase-2 (this pass): the relationships block is populated with the full recurring roster, paired to the npcs/ files. || S30 MECHANICS PASS (this edit): added the _combat_layer (modifiers, HP 40, AC 12, Speed/mana pointers), Hell Grenade's full charge/ME/radius formula, Spirit Gun damage, Deep Inspection's governing note, and weapons_combat. Drafted abilities left at their locked limits-economy costs. || S30 ABILITY-ECONOMY LOCK (this edit): added _ability_economy — the mana/ME cost models for Deep Inspection (read), the blueprint/drafting space, the mental Crafting Table, and Ember's well — built to the precise-tracking system and back-checked against this floor's spends. Added maker_core.well_current_ME tracking. Narrative S30 deltas still await close.",
     "derived_from": [
       "campaign_state.md",
       "Session_27.md",
@@ -276,11 +276,70 @@
         "keeps essence-conduits open under fire; drinks essence-sources dry (deep self-growing well)",
         "shares Bill's sight down the bond (force-multiplier)",
         "holds drink-captures (the Colossus's pattern lives in its well)"
-      ]
+      ],
+      "well_current_ME": "~80 ME, climbing (self-grown baseline + the 4 Floor-1 dog-cores + the Smoke Wisp, drunk this session). SPENDABLE FUEL — distinct from held PATTERNS (Colossus 960 / glass-wraith / cerberus / wisp), which are buildable blueprints, not spendable ME.",
+      "economy_ref": "Full cost model in _ability_economy.ember_well. Ember spends its OWN well, not Bill's pool; it touches the pool only via the larder (fills) or an over-fielded construct on an empty well (drains)."
     },
     "crafting_table": {
       "status": "LIVE & EXPANDED (S29 class boon)",
       "note": "assembles any item Bill holds a blueprint for given materials + skill + mana; no forge/workshop/hours; expanded into alchemical transformation; the tell sharpened (maker-mark exposure up)"
+    },
+    "_ability_economy": {
+      "_note": "S30 player-authored, locked. The mana/ME economy for Bill's System abilities, in the precise-tracking register (game_bible.md S3/S8; gm_operations.md S4). Through-line: the POOL pays for what comes out of Bill; EMBER'S WELL pays for what Ember does; holding a design ready or a blueprint in mind costs nothing — only making and using draw. Costs surface inline in bold-bracket tags when spent. Back-checked against Floor 1 of the Ashen Descent.",
+      "deep_inspection": {
+        "formula": "cost = depth_base x range_mult, + moving penalty, + hold; then Ember's share off the top.",
+        "depth_base": {
+          "Sweep (wide/passive, category contacts)": 1,
+          "Tight beam (bottom one target: category/condition/obvious weakness)": 3,
+          "Hard probe (immunities + the precise vulnerable seam)": 6,
+          "Full bore (make/history/weave architecture; bottom a boss/stranger as far as one read reaches)": 12
+        },
+        "range_mult": "1 + (feet / 5) x 0.1.  In-hand/touching = x1.0 (the floor). 5ft x1.1, 10ft x1.2, 30ft x1.6, 40ft x1.8, 50ft x2.0, 80ft x2.6.",
+        "moving_target": "+0.5 to the range mult if the target is moving/evasive (harder to keep a grip on).",
+        "hold": "+1 per round per target for a PARKED read held across rounds (a snapshot is +0).",
+        "ember_share": "When Ember rides the read, knock ~1/3 off the total. A standing sweep Ember holds OUTRIGHT costs Bill ~nothing (well trickle). If Ember is busy/away, Bill pays full.",
+        "thread_opposed": "Pushing the read into something that RESISTS, or down a live tether toward a boss, costs FULL-BORE x range AND becomes a contest: 1d20 + read-governing (+1, the Per/Ins average) vs the thing's resistance. A failed contest or a noticed pull is the wake-risk. The one read that is both expensive and uncertain.",
+        "governing": "+1 (average of Perception mod 0 and Insight mod 2). A read is not an attack — no damage; the governing value only sets the contest on a thread/opposed read.",
+        "floor_backcheck": "Spun sweep (Ember-held): ~1 open / ~free hold. 4 dogs (tight, close, 1 rd parked): ~2-3 net. Skeleton wiring (hard, close): ~4 net. The key (full bore, ~35ft gateway, x1.7 -> 12x1.7~=20, less Ember's third): ~14 net — the floor's biggest read."
+      },
+      "blueprint_and_drafting_space": {
+        "principle": "Holding costs nothing — capacity, not drain. The cost is at the two ends: building a design into a slot, and activating it.",
+        "costs": {
+          "hold a captured blueprint in the Schematic library (items + constructs)": "FREE (capturing one = a Deep Inspection read, costed above)",
+          "hold a design seated in a drafting slot, ready": "FREE (a readiness state, like the Active kit; felt as ceiling, not upkeep)",
+          "seat / build a drafted design into a slot": "its CREATION cost, one-time, from pool",
+          "swap a slot (re-seat)": "slow + deliberate; pay the new design's creation again",
+          "activate a seated design": "its USE cost, from pool"
+        },
+        "creation_use_scale": "Anchored to the carried designs (Electromagnet ~28 create / ~2 use; Standing Ward ~70 create / ~4 per min). Simple aimed tool: 20-30 create / 1-3 use. Sustained or area field: 50-80 create / 3-6 per min. Master/complex: 80-150 create.",
+        "slots": "4 total, 0 filled (drafting block above). Electromagnet is the live candidate for the magnet-fetch."
+      },
+      "crafting_table": {
+        "principle": "Assembles a held blueprint into a real item (and alchemy transforms), pool scaled to the work; the three gates stand (blueprint held - materials owned-and-consumed - skill caps what's buildable). CONSTRUCTS do NOT run here — those are Ember's bench (ember_well.build_construct).",
+        "build_cost": {
+          "small/simple (a dart, a coating, a reagent, a single round)": "5-10",
+          "moderate (a gun part, an elixir, a batch of rounds, the magnet as an object)": "15-30",
+          "complex / master-grade (a whole gun frame, a major rig - e.g. the new coil gun)": "60-120"
+        },
+        "alchemy_band": "Rides the same scale: coating 5-15, elixir 15-30, transmutation higher.",
+        "tell": "Faster than a forge and LOUDER as a maker-tell — forge-less master-grade work is the sharpened exposure axis."
+      },
+      "ember_well": {
+        "principle": "Ember spends ESSENCE (ME) from its OWN well — deep, self-growing, fed by drinking. It touches Bill's pool in only two places: the larder FILLS Bill's pool from the well; an over-fielded construct on an empty well DRAINS into the pool. Everything else is free to Bill.",
+        "current_well_ME": "~80, climbing (see abilities.maker_core.well_current_ME).",
+        "costs": {
+          "hold a standing sweep / a read": "~free (well trickle)",
+          "ride Bill's read": "a slice of well -> that's the -1/3 off Bill's read cost",
+          "share the gun's per-shot draw": "a slice of well per shot -> lowers Bill's per-shot mana; the cost is SEAM-HEAT, not pool",
+          "drink essence (conduit / core / wisp)": "NET-POSITIVE — fills the well. Free to Bill",
+          "portable hellfire (work ambient fire -> hellfire)": "small, per working, from the well",
+          "keep a conduit open under fire / lend the magnet field": "modest, per round, from the well",
+          "larder (feed Bill's filter)": "TRANSFER: drains well, fills pool (aspect-matched = clean conversion); a steady trickle, tops Bill over a quiet minute or two",
+          "build a construct": "well-ME = the construct's SIZE: sentinel ~30-50 - cerberus ~150-250 - the Colossus 'big dog' ~its whole 960 pattern",
+          "sustain a construct": "per-round well drain; UNTRAINED bleed is high (short-lived) -> trained, a trickle. Well runs dry mid-fight -> the draw reaches into Bill's POOL (the untested entanglement edge)"
+        },
+        "cerberus_note": "Bill HOLDS the cerberus blueprint, but at ~80 ME the well can't stand up a ~150-250 ME cerberus without bleeding it out fast. Drink a banked floor-boss core first (~240 ME each -> triples the well) to fund + sustain it."
+      }
     }
   },
   "choosing": {
