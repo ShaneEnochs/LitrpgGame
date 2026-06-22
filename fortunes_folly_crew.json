@@ -133,7 +133,8 @@
           "damage": "1d4 + Might 6",
           "note": "the tower shield as a weapon; can attack without lowering guard"
         }
-      ]
+      ],
+      "gear_upgrade_S30": "S30 UPGRADE — 'Rooted' (★ living, BOND-FED anti-pull anchor: resists being moved/pulled — the counter to a boss that kills by dragging you off a bridge) on a DRAKE-FACED (fire-resistant) tower shield. HP~150 AC24; Bulwark DR6. NOTE: the root is sustained by Bill's bond/Ember — wavers if the bond is cut/overtaxed."
     },
     {
       "name": "Charles",
@@ -226,7 +227,8 @@
           "damage": "1d4 + Might 0",
           "note": "a healer, not a fighter; last-resort only"
         }
-      ]
+      ],
+      "gear_upgrade_S30": "S30 UPGRADE — 'Long Lantern': Life-weave now REACHES (heal a man at the lava's edge without standing in it) and costs a hair less — more Mends off his 240 pool, the crew's clock stretched. AC11."
     },
     {
       "name": "Jason",
@@ -310,7 +312,8 @@
           "damage": "2d6 + Might 4",
           "note": "the same growth item run as paired blades; fire-aspected edge: +1d6 vs Infernal"
         }
-      ]
+      ],
+      "gear_upgrade_S30": "S30 UPGRADE — 'Shearing Edge': fire-aspect re-pointed to a structure/web/chitin-shearer (cuts strung web in one stroke; the Broodmother's anchor-line killer). HP~122 AC19; Bloodrush Lv.3."
     },
     {
       "name": "Julie",
@@ -423,7 +426,9 @@
           "damage": "1d4 + Might 0",
           "note": "not a fighter; her offense is her spells"
         }
-      ]
+      ],
+      "gear_upgrade_S30": "S30 UPGRADE — 'Open Throat' (★ EXCEPTIONAL, crit-crafted): focus turned amplifier tuned to her clean ~75% filter — casts cost less AND save-DCs sharper, with headroom. More Lances/zones off the same pool. Int~40."
     }
-  ]
+  ],
+  "_S30_note": "Floor 1 of the Ashen Descent cleared together; nobody on the crew bled (Bill took two hits, healed). The crew watched Bill drink the boss + the soul-flood, name his maker-core 'Ember', and remake all four of their kits at a bonfire — they've gone from trusting him to queuing for him. Warmth up across the board (Charles still warmest). The crew is now kitted specifically for Floor 2's spider/lava. Crew stats stay LANE-LEVEL — these upgrades are qualitative, not new precise stat blocks."
 }

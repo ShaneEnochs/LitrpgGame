@@ -79,3 +79,23 @@ S29 — the Crafting Table boon, LANDED (and expanded). The "Crafting Table — 
 S29 — emberwaste_delve_team_prep.md, DELETED. The DM-only prep file's consequences have all landed (the whole delve is cleared); per its own instruction and gm_operations §2, it is removed from the repo. The live delve file is now infernal_dungeon_the_ashen_descent.md, whose achievement-on-entry section has now FIRED.
 
 S29 — Charles's "fifteen years," retcon confirmed. The S28 errata (delving is young on this frontier; Charles is the crew's newest member, world-weary for this young frontier but not a long-delved veteran) held through S29, with one in-fiction self-correction handled. The "fifteen years" line is dead canon and not propagated into the Session_29 archive.
+
+---
+
+## S30 — closed events (Floor 1 of the Ashen Descent — The Smoldering Wastes, CLEARED)
+
+S30 — FLOOR 1 (The Smoldering Wastes), CLEARED. The Charred Warden (Floor-1 boss) was deposed across ~5 precise, dice-resolved rounds: Bill grabbed the dead prisoner's gaol-key (waking the boss, taking 12), turned it to sever the boss's fire-shield, the crew ground the stripped boss down, and Ember finished it by drinking its core whole. Standing outcomes (Deep Inspection Lv.2, the crew upgrades, Ember named, the well's surge, the captured patterns) live in campaign_state.md + the sheet. → Session_30.md.
+
+S30 — the PRISONER'S VENGEANCE side-quest, RESOLVED. The Floor-1 side-quest (the gaol-key + the warded cell) is CLOSED: Bill read the key as the boss's shield off-switch, chose "leave it unless we hit a door we can't pass," then committed — grabbed it, and turned it mid-fight to strip the shield. Turning it (the keystone) blew the cell open and freed a soul-flood that harried the Warden. The key is spent/fused. The cell's containment-lattice architecture was read and banked as a buildable study (spirit-containment ward). → Session_30.md.
+
+S30 — the soul-flood, DRUNK. The freed prisoners (a Hungry-Ghost-tier incorporeal flood) were going to turn on the living once the Warden fell; Bill had Ember drink the bulk of them via a primed conduit BEFORE killing the boss (the safe timing). The keystone "bill" is mostly paid — only a thin scattered remnant survived (since shot apart by the new ghost-touch gun). The flood is banked as ME + a hungry-dead pattern. → Session_30.md.
+
+S30 — Snik the coal-goblin, SPARED & SETTLED. The fleeing Floor-1 goblin (a dungeon-native, NOT a delver-observer — continuity corrected in play) was found on a hoard. Bill traded the inert Imp-Prince husk for a Ghost Touch rune + Ghost Oil + scavenged cores, let Snik keep its coin and life, took its sworn oath (genuine-but-flighty, read Master), and got true-but-vague Floor-2 intel (rising fire, thin obsidian bridges, a spawning "mother" that pulls). Bill cowed it with a full-bore read ("I will see you"). A closed loose end; Snik stays put. → Session_30.md.
+
+S30 — Deep Inspection Lv.1→2, RESOLVED. The long-flagged intrinsic level (premium reps banked since S26/S29) was spent at the Charred Chapel class beat: deeper hidden-layer/boss resolution, cheaper distance reads, and a native efficient array mode. NOTE: the big delve-PAYOUT (attribute points) does NOT pay mid-run — it lands at the threshold on EXIT after the terminus (Floor 5); banked, owed, single-entry. Class still Lv.2 (Lv.3 progress banking). → Session_30.md; delve_progression_truth_v1.md.
+
+S30 — the maker-core NAMED "Ember." The "name pending fold" thread is CLOSED as an event: Bill named the bound core "Ember" (built wide for any gender; its first held word). The relationship/bond deepening stays live in campaign_state.md + system_engineer_truth_v1.md. → Session_30.md.
+
+S30 — the spoken/living binding technique + first rune study (events; capabilities live). Learned in play: living bond-fed weaves (speak a binding rather than etch it) — used to root Myles's shield and to put ghost-touch on Bill's gun. First real rune study (Ghost Touch read to the grain, pattern stored; the Drafting rune category begins to surface). These are now live capabilities in the sheet + system_engineer_truth_v1.md; only the first-time events are archived here. → Session_30.md.
+
+S30 — the seam-shot rule change + the dice tooling. Two mechanics events closed: (1) the coil gun's seam bonus changed from AUTO-HIT to +5 to the attack roll (player ruling); (2) all rolls now route through the dice_roller — a faithful CLI port (dice_roller.py) was built and the standing rule recorded in gm_operations.md §10. → Session_30.md; gm_operations.md §10.
