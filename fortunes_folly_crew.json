@@ -1,434 +1,434 @@
 {
-  "_file": "fortunes_folly_crew.json",
-  "_role": "Authority layer (values) for Bill's delve crew, Fortune's Folly. Voice, texture, and key exchanges live in npcs/fortunes_folly.md; per-member WARMTH lives in bill_weaver_sheet.json -> relationships (Myles/Charles/Jason/Julie); narrative history in the arc files. This file holds only what is mechanically KNOWN about the crew.",
-  "_fidelity_note": "PROMOTED TO SHEET FIDELITY (S30). The crew formerly tracked at NPC fidelity (approximate lane values). As the campaign moves toward a pf2e-granular combat layer, the four were built to full sheet fidelity: each started at 10 across the six attributes, then spent earned points (10 per Platinum completion + 10 awakening) along their established lanes. The approximate lane values from the prior version are preserved in each member's 'attribute_lanes_legacy' string for provenance; the 'attributes' block is now authoritative. Where a locked attribute is given (e.g. Myles Might 40, Julie Intellect 40), it was used as the anchor the lane was built to.",
-  "_current_to": "Session 30 in progress — Day 28, Sunday, Nov 23, 1862, Floor 1 of the Ashen Descent.",
-  "_provenance": "Built at v3-migration Phase 6 from emberwaste_delve_team_prep.md + Sessions 24-29. Stat blocks, derived values, and named abilities authored in the S30 mechanics pass (player-directed): point totals from delve count, modifiers at every-5 = +1, HP/Speed off raw attributes, spell DCs and damage off the modifier model below.",
-  "_combat_model": {
-    "attribute_scale": "1-100 (10 average, 20 unawakened ceiling, past 20 needs an open core).",
-    "points": "10 per Platinum completion + 10 at awakening. Spent along established lanes from a base of 10 in every attribute.",
-    "modifier": "modifier = floor((attribute - 10) / 5). Every 5 points above 10 = +1. 10 = +0, 20 = +2, 40 = +6.",
-    "mana_pool": "Intellect x 10 (the locked world formula; only Bill's window renders it, but it governs every awakened pool).",
-    "speed": "Precision + Might/2 + Perception/3 + Insight/4, total rounded up (game_bible combat rule). Uses RAW attributes, not modifiers.",
-    "hp": "(10 + Might) + (Delver Level x Might/2), rounded down. Uses RAW Might, not the modifier.",
-    "save_dc": "10 + governing modifier + ability level. The defender rolls a d20 vs this DC; pf2e degrees of success (10-over = crit, 10-under = crit fail) apply.",
-    "damage": "(ability level x dice) + governing modifier, e.g. a Lv.3 d6 spell with a +6 caster = 3d6+6. One die type + a flat modifier per ability (matches dice_roller.html: NdM plus a manual modifier; degree-of-success grader fires on a single d20 vs a DC).",
-    "heal": "base + (governing modifier x ability level).",
-    "two_attribute_abilities": "average the two modifiers, round down (e.g. Bill's Deep Inspection averages Perception and Insight).",
-    "rounds": "5-second rounds, act-what's-logical (no fixed action count). Durations below are in rounds.",
-    "ac": "AC = 10 + (higher of Might or Precision modifier) + armor bonus + shield bonus (when raised). The defender's AC is the number an attacker's d20 roll + bonuses must meet or beat.",
-    "weapon_damage": "Melee: weapon die + (higher of Might or Precision modifier). Ranged: weapon die + Precision modifier. Aspected/elemental edges add bonus dice vs the matching monster category (e.g. fire-aspect +1d6 vs Infernal)."
-  },
-  "crew": {
-    "name": "Fortune's Folly",
-    "composition": "Four established delvers + Bill (the fifth, range). Bill knows them as Wyatt; named in for real by S28.",
-    "grade_posture": "All-Platinum PURIST crew — they run only Platinum sites, refuse easier grades, and historically 'barely make it back.' This is why they recruited a clean fifth with ranged damage (they had melee, magic, and a healer, no reliable range; Platinum floor-bosses punish that gap).",
-    "shared_history": [
-      "Myles, Jason, Julie each ran a Foundation delve (a growth item + a starter intrinsic + 10 awakening points apiece).",
-      "Cleared 3 Tier-1 Platinums together before Bill (Charles joined on the 2nd, so Charles had 2).",
-      "S26-29: cleared the Emberwaste (Infernal Tier-1 Platinum, 5 floors) UNBROKEN (no party death) with Bill as the fifth — earning the 'Unbroken' bonus (a guaranteed aspected core each) and the 'Furnace's Due' bonus.",
-      "S29: on the Ember-Colossus's death a SECOND arch rose (first nested delve on record) into the ASHEN DESCENT; entering it tripped the FIRST DOUBLE PLATINUM achievement."
-    ],
-    "points_math": "Awakening 10 + 10/Platinum completion. Myles/Jason/Julie: 10 + 3 pre-Bill Plats (30) + Emberwaste (10) = 50 (DL 5). Charles joined on the 2nd Plat: 10 + 2 (20) + Emberwaste (10) = 40 (DL 4). The Ashen Descent entry fired First Double Platinum (a +1 + a class boon), NOT attribute points — it is not yet a completion, so no points from it.",
-    "first_double_platinum_boon": "LOCKED CANON: the achievement paid EVERY party member, not only Bill — '+1 to a non-mundane thing each + a class boon.' Bill's boon was the Crafting Table (see his sheet). The crew members' specific boons are resolved OFF-SCREEN by world-logic; do not pin them unless play surfaces one. (When one surfaces, apply the +1 to the relevant ability's level below.)",
-    "tactics": "Myles plants and holds aggro; Charles heals from cover behind him; Jason dives the flank; Julie and Bill range from the back, covering casts and divers; Myles calls the line. Since the Emberwaste, Myles defers the opening READ of each floor to Bill. Bill's job is discipline: shoot what he's told, reload fast, do not freelance (a soldier, not a commander).",
-    "credits": "The crew handles its own money off-screen; Bill's own share/credits live in bill_weaver_sheet.json. No shared-purse figure is tracked.",
-    "current_location": "Inside the Ashen Descent (single-entry double dungeon, no return) as of S30 — see infernal_dungeon_the_ashen_descent.md."
-  },
-  "members": [
-    {
-      "name": "Myles",
-      "role": "tank / leader",
-      "person": "The steady center; talks little, decides fast, never panics. 'I bring my crew home.' Reads Bill as a man who already knows what he did and isn't asking to be impressed.",
-      "delver_level": 5,
-      "points_total": 50,
-      "attributes": {
-        "Might": {
-          "value": 40,
-          "mod": 6
-        },
-        "Precision": {
-          "value": 12,
-          "mod": 0
-        },
-        "Intellect": {
-          "value": 10,
-          "mod": 0
-        },
-        "Perception": {
-          "value": 16,
-          "mod": 1
-        },
-        "Presence": {
-          "value": 18,
-          "mod": 1
-        },
-        "Insight": {
-          "value": 14,
-          "mod": 1
-        }
-      },
-      "derived": {
-        "hp": 150,
-        "hp_calc": "(10+40) + (5 x 40/2) = 50 + 100 = 150",
-        "speed": 41,
-        "speed_calc": "12 + 40/2 + 16/3 + 14/4 = 12 + 20 + 5.33 + 3.5 = 40.83 -> 41",
-        "mana": 100,
-        "mana_calc": "Intellect 10 x 10"
-      },
-      "growth_item": "A tower-style relic-steel shield (Foundation guard-class item, grown with him; 'now bites back').",
-      "affinity": "—",
-      "abilities": [
-        {
-          "name": "Bulwark",
-          "category": "Intrinsic",
-          "level": 3,
-          "governing": "Might",
-          "cost": "none (passive)",
-          "function": "While Myles spends his round planted (no movement), he gains damage reduction = Might mod x2 = 6 against physical/impact damage, and cannot be forcibly moved, shoved, or knocked from position unless the mover beats his Might (40) on a contest. Being Lv.3 raises the effect of Anchor and Hold the Line.",
-          "amplifies": [
-            "Anchor",
-            "Hold the Line"
-          ]
-        },
-        {
-          "name": "Anchor",
-          "category": "Active (guard)",
-          "level": 3,
-          "governing": "Might",
-          "cost": "6 mana",
-          "duration_rounds": 1,
-          "function": "Pick one adjacent ally. The next single attack against that ally this round is redirected to Myles, who applies his Bulwark DR (6) to it. One ally, one blow, per use."
-        },
-        {
-          "name": "Hold the Line",
-          "category": "Active (taunt)",
-          "level": 3,
-          "governing": "Presence",
-          "cost": "8 mana",
-          "area": "close burst (~15 ft), all enemies",
-          "duration_rounds": 1,
-          "save_dc": 14,
-          "save_calc": "10 + Presence mod 1 + level 3",
-          "function": "Each enemy in the burst saves vs DC 14. On a failure it must target Myles with its attacks this round. On a success it acts freely but takes a small accuracy penalty if it attacks anyone other than Myles. Mindless/driven creatures save worst; disciplined or boss-tier enemies often pass."
-        }
-      ],
-      "attribute_lanes_legacy": "Very high Might (~40), good Presence; heavy and slow, immovable when planted.",
-      "in_delve_role": "Plants, holds aggro, reads the boss tells (slam windows); the wall everyone fights behind.",
-      "ac": {
-        "value": 24,
-        "calc": "10 + Might mod 6 (higher of Might/Prec) + heavy armor 5 + tower shield 3 (raised) = 24",
-        "note": "24 when shield is raised/set; 21 if shield down. Heavy relic-steel armor + tower-shield growth item."
-      },
-      "weapons": [
-        {
-          "name": "Short sword",
-          "type": "melee",
-          "damage": "1d8 + Might 6",
-          "note": "his working blade"
-        },
-        {
-          "name": "Shield bash",
-          "type": "melee",
-          "damage": "1d4 + Might 6",
-          "note": "the tower shield as a weapon; can attack without lowering guard"
-        }
-      ],
-      "gear_upgrade_S30": "S30 UPGRADE — 'Rooted' (★ living, BOND-FED anti-pull anchor: resists being moved/pulled — the counter to a boss that kills by dragging you off a bridge) on a DRAKE-FACED (fire-resistant) tower shield. HP~150 AC24; Bulwark DR6. NOTE: the root is sustained by Bill's bond/Ember — wavers if the bond is cut/overtaxed."
-    },
-    {
-      "name": "Charles",
-      "role": "healer (Life caster)",
-      "person": "50s, dry, fatalistic; the conscience of the crew — says 'turn back' and patches them anyway. The warmest of the four toward Bill ('Wyatt is my favorite person on this crew'). His standing aim is 'nobody bleeds.' NEWEST member (joined on their 2nd Platinum).",
-      "delver_level": 4,
-      "points_total": 40,
-      "attributes": {
-        "Might": {
-          "value": 10,
-          "mod": 0
-        },
-        "Precision": {
-          "value": 10,
-          "mod": 0
-        },
-        "Intellect": {
-          "value": 24,
-          "mod": 2
-        },
-        "Perception": {
-          "value": 10,
-          "mod": 0
-        },
-        "Presence": {
-          "value": 10,
-          "mod": 0
-        },
-        "Insight": {
-          "value": 36,
-          "mod": 5
-        }
-      },
-      "derived": {
-        "hp": 40,
-        "hp_calc": "(10+10) + (4 x 10/2) = 20 + 20 = 40",
-        "speed": 28,
-        "speed_calc": "10 + 10/2 + 10/3 + 36/4 = 10 + 5 + 3.33 + 9 = 27.33 -> 28",
-        "mana": 240,
-        "mana_calc": "Intellect 24 x 10"
-      },
-      "growth_item": "A focus/reliquary growth item (boosts healing throughput).",
-      "affinity": "Life (the rare, valuable kind out west).",
-      "casting_note": "Intellect (24) sizes his pool (the fuel — limited, the crew's real clock). Insight (36) governs how well each Life effect lands (the skill — faith-driven). Two stats, two jobs: he heals hard but cannot do it many times.",
-      "abilities": [
-        {
-          "name": "Mend",
-          "category": "Active (Life)",
-          "level": 2,
-          "governing": "Insight",
-          "cost": "20 mana",
-          "range": "touch or near (~15 ft)",
-          "save": "none (willing target)",
-          "heal": "15 + (Insight mod 5 x level 2) = 25 HP",
-          "function": "The workhorse heal. Restores 25 HP to one ally. ~12 casts on his 240 pool — the crew's clock."
-        },
-        {
-          "name": "Stabilize",
-          "category": "Active (Life)",
-          "level": 2,
-          "governing": "Insight",
-          "cost": "12 mana",
-          "range": "near",
-          "save": "none",
-          "function": "Lifts one ally out of Critical or Dying up to Badly Hurt — halts the death slide and the bleeding, restores no further HP. Buys survival, not recovery."
-        },
-        {
-          "name": "Cleanse",
-          "category": "Active (Life)",
-          "level": 3,
-          "governing": "Insight",
-          "cost": "16 mana",
-          "range": "touch or near",
-          "save_dc": 18,
-          "save_calc": "10 + Insight mod 5 + level 3",
-          "function": "Removes one affliction (burn, poison, brimstone-sickness, Infernal status) from one ally. Ordinary status is simply stripped. Against an affliction with its own strength, Charles contests it: his Insight (36) vs the affliction's value — succeed and it is stripped, fail and it is reduced one step. His highest-leveled spell, drilled on an Infernal-heavy delve history."
-        }
-      ],
-      "attribute_lanes_legacy": "Low Might (must be protected — shapes every fight); Life-affinity caster, limited mana (his mana is the crew's real clock — fights are won fast or lost slow).",
-      "in_delve_role": "Kept behind Myles; triages — he can't heal everything, which is the crew's ceiling. Matters doubly against blood-trigger enemies (e.g. the Ash Rats).",
-      "ac": {
-        "value": 11,
-        "calc": "10 + Precision mod 0 (=Might mod 0) + light armor 1 = 11",
-        "note": "light armor only; survives by position (behind Myles), not defense."
-      },
-      "weapons": [
-        {
-          "name": "Knife / staff",
-          "type": "melee",
-          "damage": "1d4 + Might 0",
-          "note": "a healer, not a fighter; last-resort only"
-        }
-      ],
-      "gear_upgrade_S30": "S30 UPGRADE — 'Long Lantern': Life-weave now REACHES (heal a man at the lava's edge without standing in it) and costs a hair less — more Mends off his 240 pool, the crew's clock stretched. AC11."
-    },
-    {
-      "name": "Jason",
-      "role": "damage / fighter (melee striker)",
-      "person": "Late 20s, hot, fast, grinning — the crew's edge and its risk; Julie's older brother; reckless in a way she manages; loves Platinum. Warmed to Bill immediately. Loose under fire ('remind me to stand behind you').",
-      "delver_level": 5,
-      "points_total": 50,
-      "attributes": {
-        "Might": {
-          "value": 32,
-          "mod": 4
-        },
-        "Precision": {
-          "value": 38,
-          "mod": 5
-        },
-        "Intellect": {
-          "value": 10,
-          "mod": 0
-        },
-        "Perception": {
-          "value": 10,
-          "mod": 0
-        },
-        "Presence": {
-          "value": 10,
-          "mod": 0
-        },
-        "Insight": {
-          "value": 10,
-          "mod": 0
-        }
-      },
-      "derived": {
-        "hp": 122,
-        "hp_calc": "(10+32) + (5 x 32/2) = 42 + 80 = 122",
-        "speed": 60,
-        "speed_calc": "38 + 32/2 + 10/3 + 10/4 = 38 + 16 + 3.33 + 2.5 = 59.83 -> 60",
-        "mana": 100,
-        "mana_calc": "Intellect 10 x 10"
-      },
-      "growth_item": "Relic-steel war-axe or paired blades (Foundation, grown sharp).",
-      "gear": "The relic-steel weapon(s); a fire-aspected blade-edge enchant (bites Infernal flesh harder); medium armor.",
-      "affinity": "—",
-      "abilities": [
-        {
-          "name": "Bloodrush",
-          "category": "Intrinsic",
-          "level": 3,
-          "governing": "Might / Precision",
-          "cost": "none (passive)",
-          "function": "Each consecutive round Jason is in melee and deals or takes damage, he gains a stacking +2 damage per step, to a max of 3 steps (+6) at Lv.3. The stack resets to 0 if he ends a round out of melee or takes no combat action. The bonus adds to his weapon strikes; Precision (+5) governs whether the ramped hits land cleanly. This is why he over-commits and needs pulling out."
-        },
-        {
-          "name": "Closing Step",
-          "category": "Movement (seated)",
-          "level": 2,
-          "governing": "Precision",
-          "cost": "12 mana",
-          "range": "~30 ft",
-          "function": "A single explosive gap-closer ending in a melee strike on arrival at +5 to hit (Precision). The strike deals normal weapon damage plus any active Bloodrush stack. He controls the speed, not the landing — a bad destination (bad footing, bad position) is on the read. One use = one leap + one strike. As his one Movement seat, holding this means holding nothing else in that slot."
-        }
-      ],
-      "attribute_lanes_legacy": "High Might + Precision (~38 / ~35) — rebuilt S30 as a Precision-led speed fighter (Precision 38 > Might 32).",
-      "in_delve_role": "The spear-tip — dives boss flanks, gets in trouble, Bill and Myles get him out.",
-      "ac": {
-        "value": 19,
-        "calc": "10 + Precision mod 5 (higher of Might/Prec) + medium armor 4 = 19",
-        "note": "medium armor; hard to hit through speed (Precision-led)."
-      },
-      "weapons": [
-        {
-          "name": "Relic-steel war-axe",
-          "type": "melee",
-          "damage": "1d12 + Might 4",
-          "note": "Foundation growth item, grown sharp; fire-aspected edge: +1d6 vs Infernal"
-        },
-        {
-          "name": "Paired blades (alt config)",
-          "type": "melee",
-          "damage": "2d6 + Might 4",
-          "note": "the same growth item run as paired blades; fire-aspected edge: +1d6 vs Infernal"
-        }
-      ],
-      "gear_upgrade_S30": "S30 UPGRADE — 'Shearing Edge': fire-aspect re-pointed to a structure/web/chitin-shearer (cuts strung web in one stroke; the Broodmother's anchor-line killer). HP~122 AC19; Bloodrush Lv.3."
-    },
-    {
-      "name": "Julie",
-      "role": "damage / mage (offensive caster)",
-      "person": "Mid-20s, cool, precise — the planner who actually plans the fights Jason throws himself into; Jason's younger sister, his temper-brake; the closest in temperament to Bill. Warms once he proves he listens.",
-      "delver_level": 5,
-      "points_total": 50,
-      "attributes": {
-        "Might": {
-          "value": 12,
-          "mod": 0
-        },
-        "Precision": {
-          "value": 16,
-          "mod": 1
-        },
-        "Intellect": {
-          "value": 40,
-          "mod": 6
-        },
-        "Perception": {
-          "value": 18,
-          "mod": 1
-        },
-        "Presence": {
-          "value": 10,
-          "mod": 0
-        },
-        "Insight": {
-          "value": 14,
-          "mod": 1
-        }
-      },
-      "derived": {
-        "hp": 52,
-        "hp_calc": "(10+12) + (5 x 12/2) = 22 + 30 = 52",
-        "speed": 32,
-        "speed_calc": "16 + 12/2 + 18/3 + 14/4 = 16 + 6 + 6 + 3.5 = 31.5 -> 32",
-        "mana": 400,
-        "mana_calc": "Intellect 40 x 10"
-      },
-      "growth_item": "A catalyst/wand growth item (Foundation).",
-      "affinity": "Arcane (offensive; explicitly NOT Life — Charles holds that). Bill read and logged her Arcane density-knot, S27.",
-      "active_conversion": "Runs her own essence->mana filter at ~75% efficiency (her blind cap). Gave Bill the master class on the continuous open draw at the Floor-2 rest (S27, skin-contact read, one sitting); standing offer to keep teaching ('ask me again when we're out, clean').",
-      "abilities": [
-        {
-          "name": "Arcane Lance",
-          "category": "Active (Arcane)",
-          "level": 3,
-          "governing": "Intellect",
-          "cost": "15 mana",
-          "range": "line of sight",
-          "target": "one creature",
-          "save_dc": 19,
-          "save_calc": "10 + Intellect mod 6 + level 3",
-          "damage": "3d6+6 force",
-          "save_effect": "half on a successful save",
-          "function": "Her bread-and-butter single-target burst — the shot that opens a boss for Bill's gun."
-        },
-        {
-          "name": "Personal Battlefield",
-          "category": "Active (Arcane, zone)",
-          "level": 2,
-          "governing": "Intellect",
-          "cost": "30 mana",
-          "area": "~15 ft radius, placed within line of sight",
-          "duration_rounds": 3,
-          "save_dc": 18,
-          "save_calc": "10 + Intellect mod 6 + level 2",
-          "damage": "2d6+6 arcane",
-          "save_effect": "half on a successful save",
-          "function": "A hazard zone. Any creature in the area at the START of its round takes 2d6+6, halved on a save. Persists without concentration once placed. Double the Lance's cost because it threatens a whole space over time."
-        },
-        {
-          "name": "Hex",
-          "category": "Active (Arcane, control)",
-          "level": 2,
-          "governing": "Intellect",
-          "cost": "20 mana",
-          "range": "line of sight",
-          "target": "one creature",
-          "save_dc": 18,
-          "save_calc": "10 + Intellect mod 6 + level 2",
-          "duration_rounds": 2,
-          "function": "On a failed save the target suffers one chosen debuff for 2 rounds: -2 to its attacks and saves, OR halved movement, OR vulnerability (the next damage it takes is increased — the setup for Bill's or Jason's follow-up). On a success the debuff lasts 1 round at half strength."
-        },
-        {
-          "name": "Levitate Object",
-          "category": "Active (Arcane, utility)",
-          "level": 1,
-          "governing": "Intellect",
-          "cost": "10 mana + 2 mana/round to sustain",
-          "range": "line of sight",
-          "target": "one unattended object",
-          "save": "none (acts on objects, not creatures)",
-          "function": "Lifts and moves a mass scaled to Intellect — at Int 40, up to roughly a large core, a body, or a heavy crate, at walking pace. This is what floated the Ember-Colossus heart-core out (S27). Cannot hurl creatures or wrench worn/held gear off a living target."
-        }
-      ],
-      "attribute_lanes_legacy": "Intellect-heavy (~40 — a big mana pool for her level); the crew's burst damage at range, but cast-time and mana-limited (she and Bill's gun complement — he covers her cast windows, she opens bosses for his shots).",
-      "in_delve_role": "Back-line burst and control alongside Bill; the two range together while Myles holds and Jason dives.",
-      "ac": {
-        "value": 12,
-        "calc": "10 + Precision mod 1 + light armor 1 = 12",
-        "note": "light armor; a back-line caster — 52 HP and low AC both say keep her at range."
-      },
-      "weapons": [
-        {
-          "name": "Catalyst/wand (melee pinch)",
-          "type": "melee",
-          "damage": "1d4 + Might 0",
-          "note": "not a fighter; her offense is her spells"
-        }
-      ],
-      "gear_upgrade_S30": "S30 UPGRADE — 'Open Throat' (★ EXCEPTIONAL, crit-crafted): focus turned amplifier tuned to her clean ~75% filter — casts cost less AND save-DCs sharper, with headroom. More Lances/zones off the same pool. Int~40."
-    }
+ "_file": "fortunes_folly_crew.json",
+ "_role": "Authority layer (values) for Bill's delve crew, Fortune's Folly. Voice, texture, and key exchanges live in npcs/fortunes_folly.md; per-member WARMTH lives in bill_weaver_sheet.json -> relationships (Myles/Charles/Jason/Julie); narrative history in the arc files. This file holds only what is mechanically KNOWN about the crew.",
+ "_fidelity_note": "PROMOTED TO SHEET FIDELITY (S30). The crew formerly tracked at NPC fidelity (approximate lane values). As the campaign moves toward a pf2e-granular combat layer, the four were built to full sheet fidelity: each started at 10 across the six attributes, then spent earned points (10 per Platinum completion + 10 awakening) along their established lanes. The approximate lane values from the prior version are preserved in each member's 'attribute_lanes_legacy' string for provenance; the 'attributes' block is now authoritative. Where a locked attribute is given (e.g. Myles Might 40, Julie Intellect 40), it was used as the anchor the lane was built to.",
+ "_current_to": "Session 30 in progress — Day 28, Sunday, Nov 23, 1862, Floor 1 of the Ashen Descent. || S31: upgrade VALUES LOCKED (Julie −3 mana / +2 DCs; Charles ~30 ft reach / −2 mana; Jason Shearing Edge +2 vs chitin/web) + Jason's war-axe gained ETCHED bond-independent ghost-touch. No combat; no HP/stat change otherwise. New combat rules: 6-second rounds; Bill's aim = +1/sec to hit, max +6.",
+ "_provenance": "Built at v3-migration Phase 6 from emberwaste_delve_team_prep.md + Sessions 24-29. Stat blocks, derived values, and named abilities authored in the S30 mechanics pass (player-directed): point totals from delve count, modifiers at every-5 = +1, HP/Speed off raw attributes, spell DCs and damage off the modifier model below.",
+ "_combat_model": {
+  "attribute_scale": "1-100 (10 average, 20 unawakened ceiling, past 20 needs an open core).",
+  "points": "10 per Platinum completion + 10 at awakening. Spent along established lanes from a base of 10 in every attribute.",
+  "modifier": "modifier = floor((attribute - 10) / 5). Every 5 points above 10 = +1. 10 = +0, 20 = +2, 40 = +6.",
+  "mana_pool": "Intellect x 10 (the locked world formula; only Bill's window renders it, but it governs every awakened pool).",
+  "speed": "Precision + Might/2 + Perception/3 + Insight/4, total rounded up (game_bible combat rule). Uses RAW attributes, not modifiers.",
+  "hp": "(10 + Might) + (Delver Level x Might/2), rounded down. Uses RAW Might, not the modifier.",
+  "save_dc": "10 + governing modifier + ability level. The defender rolls a d20 vs this DC; pf2e degrees of success (10-over = crit, 10-under = crit fail) apply.",
+  "damage": "(ability level x dice) + governing modifier, e.g. a Lv.3 d6 spell with a +6 caster = 3d6+6. One die type + a flat modifier per ability (matches dice_roller.html: NdM plus a manual modifier; degree-of-success grader fires on a single d20 vs a DC).",
+  "heal": "base + (governing modifier x ability level).",
+  "two_attribute_abilities": "average the two modifiers, round down (e.g. Bill's Deep Inspection averages Perception and Insight).",
+  "rounds": "5-second rounds, act-what's-logical (no fixed action count). Durations below are in rounds.",
+  "ac": "AC = 10 + (higher of Might or Precision modifier) + armor bonus + shield bonus (when raised). The defender's AC is the number an attacker's d20 roll + bonuses must meet or beat.",
+  "weapon_damage": "Melee: weapon die + (higher of Might or Precision modifier). Ranged: weapon die + Precision modifier. Aspected/elemental edges add bonus dice vs the matching monster category (e.g. fire-aspect +1d6 vs Infernal)."
+ },
+ "crew": {
+  "name": "Fortune's Folly",
+  "composition": "Four established delvers + Bill (the fifth, range). Bill knows them as Wyatt; named in for real by S28.",
+  "grade_posture": "All-Platinum PURIST crew — they run only Platinum sites, refuse easier grades, and historically 'barely make it back.' This is why they recruited a clean fifth with ranged damage (they had melee, magic, and a healer, no reliable range; Platinum floor-bosses punish that gap).",
+  "shared_history": [
+   "Myles, Jason, Julie each ran a Foundation delve (a growth item + a starter intrinsic + 10 awakening points apiece).",
+   "Cleared 3 Tier-1 Platinums together before Bill (Charles joined on the 2nd, so Charles had 2).",
+   "S26-29: cleared the Emberwaste (Infernal Tier-1 Platinum, 5 floors) UNBROKEN (no party death) with Bill as the fifth — earning the 'Unbroken' bonus (a guaranteed aspected core each) and the 'Furnace's Due' bonus.",
+   "S29: on the Ember-Colossus's death a SECOND arch rose (first nested delve on record) into the ASHEN DESCENT; entering it tripped the FIRST DOUBLE PLATINUM achievement."
   ],
-  "_S30_note": "Floor 1 of the Ashen Descent cleared together; nobody on the crew bled (Bill took two hits, healed). The crew watched Bill drink the boss + the soul-flood, name his maker-core 'Ember', and remake all four of their kits at a bonfire — they've gone from trusting him to queuing for him. Warmth up across the board (Charles still warmest). The crew is now kitted specifically for Floor 2's spider/lava. Crew stats stay LANE-LEVEL — these upgrades are qualitative, not new precise stat blocks."
+  "points_math": "Awakening 10 + 10/Platinum completion. Myles/Jason/Julie: 10 + 3 pre-Bill Plats (30) + Emberwaste (10) = 50 (DL 5). Charles joined on the 2nd Plat: 10 + 2 (20) + Emberwaste (10) = 40 (DL 4). The Ashen Descent entry fired First Double Platinum (a +1 + a class boon), NOT attribute points — it is not yet a completion, so no points from it.",
+  "first_double_platinum_boon": "LOCKED CANON: the achievement paid EVERY party member, not only Bill — '+1 to a non-mundane thing each + a class boon.' Bill's boon was the Crafting Table (see his sheet). The crew members' specific boons are resolved OFF-SCREEN by world-logic; do not pin them unless play surfaces one. (When one surfaces, apply the +1 to the relevant ability's level below.)",
+  "tactics": "Myles plants and holds aggro; Charles heals from cover behind him; Jason dives the flank; Julie and Bill range from the back, covering casts and divers; Myles calls the line. Since the Emberwaste, Myles defers the opening READ of each floor to Bill. Bill's job is discipline: shoot what he's told, reload fast, do not freelance (a soldier, not a commander).",
+  "credits": "The crew handles its own money off-screen; Bill's own share/credits live in bill_weaver_sheet.json. No shared-purse figure is tracked.",
+  "current_location": "Inside the Ashen Descent (single-entry double dungeon, no return) as of S30 — see infernal_dungeon_the_ashen_descent.md."
+ },
+ "members": [
+  {
+   "name": "Myles",
+   "role": "tank / leader",
+   "person": "The steady center; talks little, decides fast, never panics. 'I bring my crew home.' Reads Bill as a man who already knows what he did and isn't asking to be impressed.",
+   "delver_level": 5,
+   "points_total": 50,
+   "attributes": {
+    "Might": {
+     "value": 40,
+     "mod": 6
+    },
+    "Precision": {
+     "value": 12,
+     "mod": 0
+    },
+    "Intellect": {
+     "value": 10,
+     "mod": 0
+    },
+    "Perception": {
+     "value": 16,
+     "mod": 1
+    },
+    "Presence": {
+     "value": 18,
+     "mod": 1
+    },
+    "Insight": {
+     "value": 14,
+     "mod": 1
+    }
+   },
+   "derived": {
+    "hp": 150,
+    "hp_calc": "(10+40) + (5 x 40/2) = 50 + 100 = 150",
+    "speed": 41,
+    "speed_calc": "12 + 40/2 + 16/3 + 14/4 = 12 + 20 + 5.33 + 3.5 = 40.83 -> 41",
+    "mana": 100,
+    "mana_calc": "Intellect 10 x 10"
+   },
+   "growth_item": "A tower-style relic-steel shield (Foundation guard-class item, grown with him; 'now bites back').",
+   "affinity": "—",
+   "abilities": [
+    {
+     "name": "Bulwark",
+     "category": "Intrinsic",
+     "level": 3,
+     "governing": "Might",
+     "cost": "none (passive)",
+     "function": "While Myles spends his round planted (no movement), he gains damage reduction = Might mod x2 = 6 against physical/impact damage, and cannot be forcibly moved, shoved, or knocked from position unless the mover beats his Might (40) on a contest. Being Lv.3 raises the effect of Anchor and Hold the Line.",
+     "amplifies": [
+      "Anchor",
+      "Hold the Line"
+     ]
+    },
+    {
+     "name": "Anchor",
+     "category": "Active (guard)",
+     "level": 3,
+     "governing": "Might",
+     "cost": "6 mana",
+     "duration_rounds": 1,
+     "function": "Pick one adjacent ally. The next single attack against that ally this round is redirected to Myles, who applies his Bulwark DR (6) to it. One ally, one blow, per use."
+    },
+    {
+     "name": "Hold the Line",
+     "category": "Active (taunt)",
+     "level": 3,
+     "governing": "Presence",
+     "cost": "8 mana",
+     "area": "close burst (~15 ft), all enemies",
+     "duration_rounds": 1,
+     "save_dc": 14,
+     "save_calc": "10 + Presence mod 1 + level 3",
+     "function": "Each enemy in the burst saves vs DC 14. On a failure it must target Myles with its attacks this round. On a success it acts freely but takes a small accuracy penalty if it attacks anyone other than Myles. Mindless/driven creatures save worst; disciplined or boss-tier enemies often pass."
+    }
+   ],
+   "attribute_lanes_legacy": "Very high Might (~40), good Presence; heavy and slow, immovable when planted.",
+   "in_delve_role": "Plants, holds aggro, reads the boss tells (slam windows); the wall everyone fights behind.",
+   "ac": {
+    "value": 24,
+    "calc": "10 + Might mod 6 (higher of Might/Prec) + heavy armor 5 + tower shield 3 (raised) = 24",
+    "note": "24 when shield is raised/set; 21 if shield down. Heavy relic-steel armor + tower-shield growth item."
+   },
+   "weapons": [
+    {
+     "name": "Short sword",
+     "type": "melee",
+     "damage": "1d8 + Might 6",
+     "note": "his working blade"
+    },
+    {
+     "name": "Shield bash",
+     "type": "melee",
+     "damage": "1d4 + Might 6",
+     "note": "the tower shield as a weapon; can attack without lowering guard"
+    }
+   ],
+   "gear_upgrade_S30": "S30 UPGRADE — 'Rooted' (★ living, BOND-FED anti-pull anchor: resists being moved/pulled — the counter to a boss that kills by dragging you off a bridge) on a DRAKE-FACED (fire-resistant) tower shield. HP~150 AC24; Bulwark DR6. NOTE: the root is sustained by Bill's bond/Ember — wavers if the bond is cut/overtaxed."
+  },
+  {
+   "name": "Charles",
+   "role": "healer (Life caster)",
+   "person": "50s, dry, fatalistic; the conscience of the crew — says 'turn back' and patches them anyway. The warmest of the four toward Bill ('Wyatt is my favorite person on this crew'). His standing aim is 'nobody bleeds.' NEWEST member (joined on their 2nd Platinum).",
+   "delver_level": 4,
+   "points_total": 40,
+   "attributes": {
+    "Might": {
+     "value": 10,
+     "mod": 0
+    },
+    "Precision": {
+     "value": 10,
+     "mod": 0
+    },
+    "Intellect": {
+     "value": 24,
+     "mod": 2
+    },
+    "Perception": {
+     "value": 10,
+     "mod": 0
+    },
+    "Presence": {
+     "value": 10,
+     "mod": 0
+    },
+    "Insight": {
+     "value": 36,
+     "mod": 5
+    }
+   },
+   "derived": {
+    "hp": 40,
+    "hp_calc": "(10+10) + (4 x 10/2) = 20 + 20 = 40",
+    "speed": 28,
+    "speed_calc": "10 + 10/2 + 10/3 + 36/4 = 10 + 5 + 3.33 + 9 = 27.33 -> 28",
+    "mana": 240,
+    "mana_calc": "Intellect 24 x 10"
+   },
+   "growth_item": "A focus/reliquary growth item (boosts healing throughput).",
+   "affinity": "Life (the rare, valuable kind out west).",
+   "casting_note": "Intellect (24) sizes his pool (the fuel — limited, the crew's real clock). Insight (36) governs how well each Life effect lands (the skill — faith-driven). Two stats, two jobs: he heals hard but cannot do it many times.",
+   "abilities": [
+    {
+     "name": "Mend",
+     "category": "Active (Life)",
+     "level": 2,
+     "governing": "Insight",
+     "cost": "18 mana",
+     "range": "touch or reaching (~30 ft, S31)",
+     "save": "none (willing target)",
+     "heal": "15 + (Insight mod 5 x level 2) = 25 HP",
+     "function": "The workhorse heal. Restores 25 HP to one ally. ~12 casts on his 240 pool — the crew's clock."
+    },
+    {
+     "name": "Stabilize",
+     "category": "Active (Life)",
+     "level": 2,
+     "governing": "Insight",
+     "cost": "10 mana",
+     "range": "reaching (~30 ft)",
+     "save": "none",
+     "function": "Lifts one ally out of Critical or Dying up to Badly Hurt — halts the death slide and the bleeding, restores no further HP. Buys survival, not recovery."
+    },
+    {
+     "name": "Cleanse",
+     "category": "Active (Life)",
+     "level": 3,
+     "governing": "Insight",
+     "cost": "14 mana",
+     "range": "touch or reaching (~30 ft)",
+     "save_dc": 18,
+     "save_calc": "10 + Insight mod 5 + level 3",
+     "function": "Removes one affliction (burn, poison, brimstone-sickness, Infernal status) from one ally. Ordinary status is simply stripped. Against an affliction with its own strength, Charles contests it: his Insight (36) vs the affliction's value — succeed and it is stripped, fail and it is reduced one step. His highest-leveled spell, drilled on an Infernal-heavy delve history."
+    }
+   ],
+   "attribute_lanes_legacy": "Low Might (must be protected — shapes every fight); Life-affinity caster, limited mana (his mana is the crew's real clock — fights are won fast or lost slow).",
+   "in_delve_role": "Kept behind Myles; triages — he can't heal everything, which is the crew's ceiling. Matters doubly against blood-trigger enemies (e.g. the Ash Rats).",
+   "ac": {
+    "value": 11,
+    "calc": "10 + Precision mod 0 (=Might mod 0) + light armor 1 = 11",
+    "note": "light armor only; survives by position (behind Myles), not defense."
+   },
+   "weapons": [
+    {
+     "name": "Knife / staff",
+     "type": "melee",
+     "damage": "1d4 + Might 0",
+     "note": "a healer, not a fighter; last-resort only"
+    }
+   ],
+   "gear_upgrade_S30": "S30 UPGRADE — 'Long Lantern': Life-weave now REACHES (heal a man at the lava's edge without standing in it) and costs a hair less — more Mends off his 240 pool, the crew's clock stretched. AC11. || S31 VALUES LOCKED: heal reach ~30 ft (from ~15); −2 mana on heals (Mend 18 / Stabilize 10 / Cleanse 14) → ~13 Mends off his 240 pool (the crew's clock stretched)."
+  },
+  {
+   "name": "Jason",
+   "role": "damage / fighter (melee striker)",
+   "person": "Late 20s, hot, fast, grinning — the crew's edge and its risk; Julie's older brother; reckless in a way she manages; loves Platinum. Warmed to Bill immediately. Loose under fire ('remind me to stand behind you').",
+   "delver_level": 5,
+   "points_total": 50,
+   "attributes": {
+    "Might": {
+     "value": 32,
+     "mod": 4
+    },
+    "Precision": {
+     "value": 38,
+     "mod": 5
+    },
+    "Intellect": {
+     "value": 10,
+     "mod": 0
+    },
+    "Perception": {
+     "value": 10,
+     "mod": 0
+    },
+    "Presence": {
+     "value": 10,
+     "mod": 0
+    },
+    "Insight": {
+     "value": 10,
+     "mod": 0
+    }
+   },
+   "derived": {
+    "hp": 122,
+    "hp_calc": "(10+32) + (5 x 32/2) = 42 + 80 = 122",
+    "speed": 60,
+    "speed_calc": "38 + 32/2 + 10/3 + 10/4 = 38 + 16 + 3.33 + 2.5 = 59.83 -> 60",
+    "mana": 100,
+    "mana_calc": "Intellect 10 x 10"
+   },
+   "growth_item": "Relic-steel war-axe or paired blades (Foundation, grown sharp).",
+   "gear": "The relic-steel weapon(s); a fire-aspected blade-edge enchant (bites Infernal flesh harder); medium armor.",
+   "affinity": "—",
+   "abilities": [
+    {
+     "name": "Bloodrush",
+     "category": "Intrinsic",
+     "level": 3,
+     "governing": "Might / Precision",
+     "cost": "none (passive)",
+     "function": "Each consecutive round Jason is in melee and deals or takes damage, he gains a stacking +2 damage per step, to a max of 3 steps (+6) at Lv.3. The stack resets to 0 if he ends a round out of melee or takes no combat action. The bonus adds to his weapon strikes; Precision (+5) governs whether the ramped hits land cleanly. This is why he over-commits and needs pulling out."
+    },
+    {
+     "name": "Closing Step",
+     "category": "Movement (seated)",
+     "level": 2,
+     "governing": "Precision",
+     "cost": "12 mana",
+     "range": "~30 ft",
+     "function": "A single explosive gap-closer ending in a melee strike on arrival at +5 to hit (Precision). The strike deals normal weapon damage plus any active Bloodrush stack. He controls the speed, not the landing — a bad destination (bad footing, bad position) is on the read. One use = one leap + one strike. As his one Movement seat, holding this means holding nothing else in that slot."
+    }
+   ],
+   "attribute_lanes_legacy": "High Might + Precision (~38 / ~35) — rebuilt S30 as a Precision-led speed fighter (Precision 38 > Might 32).",
+   "in_delve_role": "The spear-tip — dives boss flanks, gets in trouble, Bill and Myles get him out.",
+   "ac": {
+    "value": 19,
+    "calc": "10 + Precision mod 5 (higher of Might/Prec) + medium armor 4 = 19",
+    "note": "medium armor; hard to hit through speed (Precision-led)."
+   },
+   "weapons": [
+    {
+     "name": "Relic-steel war-axe",
+     "type": "melee",
+     "damage": "1d12 + Might 4",
+     "note": "Foundation growth item, grown sharp; fire-aspected edge: +1d6 vs Infernal Ghost-touch (etched, S31): harms incorporeal/spirit; +2 vs chitin/web (Shearing Edge); severs strung web/anchor-lines."
+    },
+    {
+     "name": "Paired blades (alt config)",
+     "type": "melee",
+     "damage": "2d6 + Might 4",
+     "note": "the same growth item run as paired blades; fire-aspected edge: +1d6 vs Infernal"
+    }
+   ],
+   "gear_upgrade_S30": "S30 UPGRADE — 'Shearing Edge': fire-aspect re-pointed to a structure/web/chitin-shearer (cuts strung web in one stroke; the Broodmother's anchor-line killer). HP~122 AC19; Bloodrush Lv.3. || S31: 'Shearing Edge' VALUE LOCKED — auto-severs strung web / anchor-lines (the Broodmother kill-condition enabler), +2 damage vs chitin/web creatures. PLUS ★ ETCHED GHOST-TOUCH (S31, permanent & BOND-INDEPENDENT) on his relic-steel war-axe — bites incorporeal/spirit creatures even if Bill's bond is cut. (Inscribed by Bill off the physical Ghost Touch rune; survives a bond-cut, unlike the gun's bond-fed ghost-touch.)"
+  },
+  {
+   "name": "Julie",
+   "role": "damage / mage (offensive caster)",
+   "person": "Mid-20s, cool, precise — the planner who actually plans the fights Jason throws himself into; Jason's younger sister, his temper-brake; the closest in temperament to Bill. Warms once he proves he listens.",
+   "delver_level": 5,
+   "points_total": 50,
+   "attributes": {
+    "Might": {
+     "value": 12,
+     "mod": 0
+    },
+    "Precision": {
+     "value": 16,
+     "mod": 1
+    },
+    "Intellect": {
+     "value": 40,
+     "mod": 6
+    },
+    "Perception": {
+     "value": 18,
+     "mod": 1
+    },
+    "Presence": {
+     "value": 10,
+     "mod": 0
+    },
+    "Insight": {
+     "value": 14,
+     "mod": 1
+    }
+   },
+   "derived": {
+    "hp": 52,
+    "hp_calc": "(10+12) + (5 x 12/2) = 22 + 30 = 52",
+    "speed": 32,
+    "speed_calc": "16 + 12/2 + 18/3 + 14/4 = 16 + 6 + 6 + 3.5 = 31.5 -> 32",
+    "mana": 400,
+    "mana_calc": "Intellect 40 x 10"
+   },
+   "growth_item": "A catalyst/wand growth item (Foundation).",
+   "affinity": "Arcane (offensive; explicitly NOT Life — Charles holds that). Bill read and logged her Arcane density-knot, S27.",
+   "active_conversion": "Runs her own essence->mana filter at ~75% efficiency (her blind cap). Gave Bill the master class on the continuous open draw at the Floor-2 rest (S27, skin-contact read, one sitting); standing offer to keep teaching ('ask me again when we're out, clean').",
+   "abilities": [
+    {
+     "name": "Arcane Lance",
+     "category": "Active (Arcane)",
+     "level": 3,
+     "governing": "Intellect",
+     "cost": "12 mana",
+     "range": "line of sight",
+     "target": "one creature",
+     "save_dc": 21,
+     "save_calc": "10 + Intellect mod 6 + level 3",
+     "damage": "3d6+6 force",
+     "save_effect": "half on a successful save",
+     "function": "Her bread-and-butter single-target burst — the shot that opens a boss for Bill's gun."
+    },
+    {
+     "name": "Personal Battlefield",
+     "category": "Active (Arcane, zone)",
+     "level": 2,
+     "governing": "Intellect",
+     "cost": "27 mana",
+     "area": "~15 ft radius, placed within line of sight",
+     "duration_rounds": 3,
+     "save_dc": 20,
+     "save_calc": "10 + Intellect mod 6 + level 2",
+     "damage": "2d6+6 arcane",
+     "save_effect": "half on a successful save",
+     "function": "A hazard zone. Any creature in the area at the START of its round takes 2d6+6, halved on a save. Persists without concentration once placed. Double the Lance's cost because it threatens a whole space over time."
+    },
+    {
+     "name": "Hex",
+     "category": "Active (Arcane, control)",
+     "level": 2,
+     "governing": "Intellect",
+     "cost": "17 mana",
+     "range": "line of sight",
+     "target": "one creature",
+     "save_dc": 20,
+     "save_calc": "10 + Intellect mod 6 + level 2",
+     "duration_rounds": 2,
+     "function": "On a failed save the target suffers one chosen debuff for 2 rounds: -2 to its attacks and saves, OR halved movement, OR vulnerability (the next damage it takes is increased — the setup for Bill's or Jason's follow-up). On a success the debuff lasts 1 round at half strength."
+    },
+    {
+     "name": "Levitate Object",
+     "category": "Active (Arcane, utility)",
+     "level": 1,
+     "governing": "Intellect",
+     "cost": "8 mana + 2 mana/round to sustain",
+     "range": "line of sight",
+     "target": "one unattended object",
+     "save": "none (acts on objects, not creatures)",
+     "function": "Lifts and moves a mass scaled to Intellect — at Int 40, up to roughly a large core, a body, or a heavy crate, at walking pace. This is what floated the Ember-Colossus heart-core out (S27). Cannot hurl creatures or wrench worn/held gear off a living target."
+    }
+   ],
+   "attribute_lanes_legacy": "Intellect-heavy (~40 — a big mana pool for her level); the crew's burst damage at range, but cast-time and mana-limited (she and Bill's gun complement — he covers her cast windows, she opens bosses for his shots).",
+   "in_delve_role": "Back-line burst and control alongside Bill; the two range together while Myles holds and Jason dives.",
+   "ac": {
+    "value": 12,
+    "calc": "10 + Precision mod 1 + light armor 1 = 12",
+    "note": "light armor; a back-line caster — 52 HP and low AC both say keep her at range."
+   },
+   "weapons": [
+    {
+     "name": "Catalyst/wand (melee pinch)",
+     "type": "melee",
+     "damage": "1d4 + Might 0",
+     "note": "not a fighter; her offense is her spells"
+    }
+   ],
+   "gear_upgrade_S30": "S30 UPGRADE — 'Open Throat' (★ EXCEPTIONAL, crit-crafted): focus turned amplifier tuned to her clean ~75% filter — casts cost less AND save-DCs sharper, with headroom. More Lances/zones off the same pool. Int~40. || S31 VALUES LOCKED: −3 mana per spell (Lance 12 / Personal Battlefield 27 / Hex 17 / Levitate 8) and +2 to ALL save-DCs (Lance 21 / Battlefield 20 / Hex 20). ~3–4 extra Lances of headroom over a long fight off her 400 pool."
+  }
+ ],
+ "_S30_note": "Floor 1 of the Ashen Descent cleared together; nobody on the crew bled (Bill took two hits, healed). The crew watched Bill drink the boss + the soul-flood, name his maker-core 'Ember', and remake all four of their kits at a bonfire — they've gone from trusting him to queuing for him. Warmth up across the board (Charles still warmest). The crew is now kitted specifically for Floor 2's spider/lava. Crew stats stay LANE-LEVEL — these upgrades are qualitative, not new precise stat blocks."
 }

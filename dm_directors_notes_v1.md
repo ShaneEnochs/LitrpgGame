@@ -285,3 +285,41 @@ Discipline: the engineer file's worked anchors are the curve — price new draft
 **(c) EXPOSURE LEDGER — [S30] further compounded, intra-crew only.** The four watched Bill, in one session, drink a floor boss + an army of souls, name his maker-core, remake all four of their kits forge-less in minutes, and threaten a goblin with a read that visibly terrified it. Among the crew this is now **"useful," not secret** — Julie especially has moved from not-prying to actively filing his methods (approving, trusting, watching). No outside exposure this session (sealed inside the single-entry run). The maker-identity axis remains the heaviest; all town/return exposure stays deferred behind the whole Descent.
 
 **DM HOLDS (unchanged — do not resolve):** the Examine:Self wrong-shaped void stays UNSOLVED (no Severn-Falls / Rebecca / cosmology proper nouns in Bill's narration). The soul-prison's deeper "who built it / who was held / why a prison at the bottom of a fire" stays a hook (gave the mechanism, withheld the reason). The freed-souls' nature (drunk into Ember — an unholy meal sitting "strange") is a quiet character/clue thread, not resolved. The dead delver whose ghost-gear Snik hoarded vs. "first crew on record" is a deliberate loose thread (someone unrecorded got in and died), held open. Keep the curriculum unrevealed.
+
+---
+
+## S31 — AT THE CHARRED CHAPEL: EASING THE DEAD, EMBER'S FIRST WORDS (the close ledger)
+
+**The session in one line.** A non-combat study/character session at the lit Charred Chapel before descending to Floor 2: Bill pinned the S30 upgrade values, etched bond-independent ghost-touch onto Jason's war-axe, then communed with Ember about the soul-remnants sitting strange in its well — asked Ember what *it* wanted, derived a "release-grade" grammar for the unmade dead (after a failed first attempt), and **eased the remnants to rest** with Charles's Life-ease. The well came back **clean**; **Ember spoke its first words ("...thank you").** → `Session_31.md`.
+
+**§10 FAILURE-BEAT POLICY — counter stays 0; no beat owed or manufactured.** Non-combat session; the two failed rolls (the full-bore read of the remnants, the first release attempt) were honest craft failures on a player-chosen experiment, drawn straight from the gap between grammar-had and thing-aimed-at, not authored setbacks. The success came after real study, as it should. The live failure-EDGE forward is unchanged: Floor 2's lava/tides/bridges/pull + the deeper bond entanglement; draw consequence from the floor.
+
+**RULINGS LOCKED THIS SESSION (player-authored):**
+- **Rounds are now 6 seconds** (was 5). Rescale floor clocks (Magma Tides warning→rise ≈ 1.5 rounds; a 1-round telegraph = 6 sec).
+- **Aim = +1 to hit per second aimed, max +6 at a full round.** Can't move/act while aiming; resets if hit/shoved/shrieked; doesn't accrue vs a target Bill can't hold a bead on. (On top of 1d20 + 10 firearms + 5 seam; the gun still works perfectly.)
+- **S30 upgrade VALUES pinned** (were flavor-without-numbers): Julie Open Throat −3 mana/+2 DCs; Charles Long Lantern ~30 ft/−2 mana; Jason Shearing Edge +2 vs chitin/web + auto-sever web/anchor-lines. (In `fortunes_folly_crew.json`.)
+- **Ghost-touch can be ETCHED as a permanent rune** (vs the bond-fed spoken version) — bond-independent, survives a bond-cut, but costs forge-stock + an inscription check. Did Jason's war-axe ([1d20+8 vs DC 18 → 23 → SUCCESS]). The bond-fed vs etched distinction is now a standing maker choice (fast/toggleable/entangling vs permanent/independent/stock-costly).
+
+**THE RELEASE WORK (the rolls, for the record — all through dice_roller.py):**
+- Read the containment-ward in reverse → release-PRINCIPLE understood (no roll; in-hand specimen).
+- Full-bore read of the remnants for a blueprint: [1d20+1 vs DC 20 → 12 → FAILURE]. They're too UNMADE to resolve/blueprint — releasable only, not copyable.
+- First release attempt (invert the ward as a door): [1d20+8 vs DC 16 → 11 → FAILURE]. Wrong-sized — a door needs edges; the remnants have none.
+- Study to derive the correct grammar: [1d20+8 vs DC 18 → 23 → SUCCESS]. Cracked the **release-GRADE** (diffusion, not a door) + the **ward-registers** insight (pitch a working to a thing's state).
+- The release, done right: [1d20+8 vs DC 14 → 21 → SUCCESS]. Remnants eased out and rest; well CLEANSED.
+
+**PROGRESSION (S31):**
+- **No attribute or skill ticks** (study session). The Shooting under-threat tick (S29) + Stealth seed (S30 open-ground crossing) remain owed/flagged for the next clean audit. Provisional saves (Fort +5 / Ref +6 / Will +6) still stand; a real block still owed.
+- **Class still Lv.2 — Lv.3 still banking.** The release-grade derivation + ward-registers insight are exactly the "deep study of novel phenomena" that banks toward Lv.3 (rune-grammar road). Let the pane feel a touch closer; not yet a level.
+- **★ EMBER'S VOICE SURFACED** — first real words ("thank you"). This is the first milestone of the long voice arc (S29 wordless → S30/S31 near-word intention → S31 first words). **Pace gently from here; still NEVER an oracle.** Don't accelerate to fluent; a few words, frayed, in big emotional moments is the register.
+- **New capability:** the **release-grade** grammar (diffusion-release for the unmade) + **ward-registers** — a real rung up the rune-grammar / original-rune-language road, reached by the player going looking for a kindness (good character-through-mechanics).
+
+**(c) EXPOSURE LEDGER — [S31] no change to outside exposure** (sealed inside the single-entry run). Intra-crew: the four watched their maker stop a descent into a hell to ease some dead to rest — Charles especially moved (the conscience of the crew got the question it's been waiting for asked); warmth deepened (texture, no number). The maker-identity axis remains the heaviest; all town/return exposure stays deferred behind the whole Descent.
+
+**DM HOLDS (carried + sharpened):**
+- The **soul-prison's** deeper *who/why* stays a hook — and now rhymes HARDER: Ember **recognizes the prison-grammar as a "maker's hand"** it knows from somewhere it can't name, and the whole Descent leads *down* toward wherever that grammar belongs. Give the recognition, withhold the source.
+- **NEW HELD THREAD — the body/making path.** The player floated, and Ember confirmed buildable-in-principle: flood a remnant with mana + brace it in a reshaped containment-ward = stand up a NEW bound *who*, born from the remnant (not a resurrection; Ember-like; wholeness uncertain, could come up wrong). Ember is AFRAID to be a careless maker and chose to free the dead instead, holding this as "someday, done right." **Keep it expensive, unmapped, and morally weighty — never a cheap/safe button.** It is one of the richest player-authored threads on the table; let it grow only through real study + real risk, and let Ember's fear be load-bearing.
+- Examine:Self wrong-shaped void — still UNSOLVED (no Severn-Falls / Rebecca / cosmology proper nouns in Bill's narration). The freed-souls thread is now RESOLVED at the character level (eased to rest, well clean) — but the *what-were-they / who-imprisoned-them* question stays a withheld hook.
+- The dead-delver-vs-"first crew on record" loose thread (Snik's hoarded ghost-gear) stays open.
+- **Voice pacing is now the live discipline** — Ember can say a little; keep it a little.
+
+**STILL UNFIRED/OWED (carried — all behind the entire Ashen Descent):** the Shooting under-threat tick + the Stealth seed (next clean audit); a real saves block; the Day-29 Monday watch-report + Rusk first-tick; the partnership signing + dinner owed Pearce + the rune-teacher leg (now with the seated-grammar + rune-grammar specimens to bring him); the bank box, patents, workshop lease; Min's tin-count; Calloway's clauses; the remittance series; the gunsmith's owed story. The body/making path (new, deferred). No errata to write-once archives (the Charles over-aging was caught in play, logged in resolved_threads.md, not propagated to the archive).

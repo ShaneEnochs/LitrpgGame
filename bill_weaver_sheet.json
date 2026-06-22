@@ -1,814 +1,821 @@
 {
-  "_meta": {
-    "file": "bill_weaver_sheet.json",
-    "role": "Player character sheet — the living authority for every tracked value about Bill: attributes, skills, cultivation/abilities, gear, ammunition, money, banked cores/captures, and NPC warmth (relationships).",
-    "current_to": "SESSION 30 IN PROGRESS — Day 28, on Floor 1 of the Ashen Descent (the Smoldering Wastes). Carries the S29-close state; the S30 change reflected here is ammo (7 hellfire rounds fired). S30 deltas NOT yet folded in (await S30 close per gm_operations.md close-out): the bound core named 'Ember' and the bond a step deeper; mana gently ticked. Phase-1 migration reconciliation (this pass): absorbed the facts campaign_state.md held that the JSON lacked — the Pem money line, the firm's recurring income, the patent portfolio, the old charm, the delve notebook, bench odds/documents — and added the relationships scaffold. Phase-2 (this pass): the relationships block is populated with the full recurring roster, paired to the npcs/ files. || S30 MECHANICS PASS (this edit): added the _combat_layer (modifiers, HP 40, AC 12, Speed/mana pointers), Hell Grenade's full charge/ME/radius formula, Spirit Gun damage, Deep Inspection's governing note, and weapons_combat. Drafted abilities left at their locked limits-economy costs. || S30 ABILITY-ECONOMY LOCK (this edit): added _ability_economy — the mana/ME cost models for Deep Inspection (read), the blueprint/drafting space, the mental Crafting Table, and Ember's well — built to the precise-tracking system and back-checked against this floor's spends. Added maker_core.well_current_ME tracking. Narrative S30 deltas still await close. || S30 CLOSE: Floor 1 of the Ashen Descent CLEARED (Charred Warden drunk dry; soul-flood drunk; gaol-key turned to strip the boss shield — Prisoner's Vengeance resolved; rested at a Charred Chapel). Deep Inspection Lv.1->2. Spoken/living bond-fed binding technique learned (rooted Myles's shield, said ghost-touch onto the gun). Ember NAMED. Crew kit upgraded. Combat now precise/dice-resolved via dice_roller (gm_operations S10); seam-shot is +5 (not auto). HP/mana topped at the Chapel.",
-    "derived_from": [
-      "campaign_state.md",
-      "Session_27.md",
-      "Session_28.md",
-      "Session_29.md",
-      "system_engineer_truth_v1.md"
-    ],
-    "scales": {
-      "attributes": "1-100 (10 average, 20 unawakened ceiling, past 20 needs an open core)",
-      "mundane_skills": "CONVERTED to PF2e proficiency (Trained/Expert/Master/Legendary). bonus = rank + level + attr mod. See pf2e_translation_layer.md §4a; source 1-10 kept under each skill's 'homebrew'.",
-      "ability_levels": "1-5 (each Skill/ability/intrinsic), with hidden evolutions past 5",
-      "delver_level": "points / 10",
-      "class_level": "System depth, separate from Delver Level"
-    }
-  },
-  "identity": {
-    "true_name": "Bill Weaver",
-    "born": 1840,
-    "age": 22,
-    "species": "human",
-    "description": "5'7\", hazel eyes, brown hair, ordinary-looking.",
-    "trade": "Engineer (alchemy dabbling)",
-    "working_names": {
-      "Wyatt": "trades/teamster world, the town, the guild roll, the gunsmith, Pearce, Tasker, the crew sign-on, the Platinum Four",
-      "John": "the mission only (Beatrice, Agnes, Esther, Ada, Father Lessard)",
-      "John-Wyatt": "Mrs. Maddox",
-      "Tuesday": "Pickering's word + runner-word to Calloway's",
-      "true_name_known_by": "Hessler (alias noted), Calloway, Pickering, the Bureau assay ledger, his license",
-      "Q": "mother's pet name + cipher key (the word is QUEST)"
-    },
-    "open_fork": "Collapse to his true name as a later play, on his own word; Calloway has the path ready."
-  },
-  "class": {
-    "name": "System Engineer",
-    "level": 2,
-    "level_term_private": true,
-    "lv2_grants": [
-      "Examine sharpened",
-      "drafting slots 3 -> 4",
-      "live cost-preview during drafting",
-      "Examine: Self (directed analysis turned inward)"
-    ],
-    "lv3_progress_note": "Banking toward Lv.3 (slow): the soul-prison containment read, the rune-grammar study with Ember, and the ability-economy deductions are class-relevant 'deep study of novel phenomena' beats. Not yet a level; a pane felt getting closer. Evolution-branch legibility still waits for Lv.3."
-  },
-  "delver_level": {
-    "value": 2,
-    "points_total": 20,
-    "points_breakdown": "10 awakening + 10 Emberwaste Platinum completion"
-  },
-  "attributes": {
-    "Might": {
-      "value": 15,
-      "note": "+3 S29 Emberwaste payout",
-      "mod": 1
-    },
-    "Precision": {
-      "value": 21,
-      "note": "past the mortal ceiling; Steadyhand seated",
-      "mod": 2
-    },
-    "Intellect": {
-      "value": 21,
-      "note": "past the mortal ceiling; sets mana pool (x10 = 210)",
-      "mod": 2
-    },
-    "Perception": {
-      "value": 14,
-      "note": "",
-      "mod": 0
-    },
-    "Presence": {
-      "value": 11,
-      "note": "",
-      "mod": 0
-    },
-    "Insight": {
-      "value": 20,
-      "note": "+7 S29 Emberwaste payout; at the unawakened ceiling; backs Deep Inspection",
-      "mod": 2
-    },
-    "Speed_derived": {
-      "value": 39,
-      "formula": "Precision + Might/2 + Perception/3 + Insight/4 (rounded up)",
-      "note": "confirm at next combat readout"
-    }
-  },
-  "mundane_skills": {
-    "_scale_note": "Converted to PF2e proficiency per pf2e_translation_layer.md §4a (Option A ladder). Source 1-10 values kept under 'homebrew'. bonus = rank + level(2) + attr mod. Attr mods: Might+1 Precision+2 Intellect+2 Perception+0 Presence+0 Insight+2.",
-    "Crafting": {
-      "homebrew": {
-        "from": [
-          "Engineering 7",
-          "Alchemy/Chemistry 4 (merged)"
-        ],
-        "subskills": {
-          "wagon/wheel work": 6,
-          "fine instrument bodies": 6,
-          "firearm mechanism": 4,
-          "locks & mechanisms": 3,
-          "lift/hoist works": 5
-        },
-        "note": "mundane bench-chemistry folds in here; distinct from the System-side Alchemy Lv.1"
-      },
-      "key_attr": "Intellect",
-      "rank": "Legendary",
-      "bonus": 12
-    },
-    "Thievery": {
-      "homebrew": {
-        "from": "Lockpicking & Mechanisms 3"
-      },
-      "key_attr": "Precision",
-      "rank": "Expert",
-      "bonus": 8
-    },
-    "Society": {
-      "homebrew": {
-        "from": "Instruction 5"
-      },
-      "key_attr": "Intellect",
-      "rank": "Master",
-      "bonus": 10
-    },
-    "Diplomacy": {
-      "homebrew": {
-        "from": [
-          "Leadership 4",
-          "Negotiation 4 (merged)"
-        ]
-      },
-      "key_attr": "Presence",
-      "rank": "Expert",
-      "bonus": 6
-    },
-    "Medicine": {
-      "homebrew": {
-        "from": "Medicine 2"
-      },
-      "key_attr": "Insight",
-      "rank": "Trained",
-      "bonus": 6
-    },
-    "Nature": {
-      "homebrew": {
-        "from": "Gardening / Herb-craft 0"
-      },
-      "key_attr": "Insight",
-      "rank": "Untrained",
-      "bonus": 2
-    },
-    "_perception_note": "Social Reading 6 maps to the Perception stat (Sense Motive), not a skill row — see pf2e_proficiencies.perception_sense_motive."
-  },
-  "pf2e_proficiencies": {
-    "_note": "PF2e-native lines that are not skill rows: a Perception specialization, Lores, and weapon proficiencies. All bonuses = rank + level(2) + attr mod.",
-    "perception_sense_motive": {
-      "homebrew": "Social Reading 6",
-      "key_attr": "Insight",
-      "rank": "Master",
-      "bonus": 10
-    },
-    "lores": {
-      "Engineering Lore (appraisal)": {
-        "homebrew": "Appraisal (Machinery) 4",
-        "key_attr": "Intellect",
-        "rank": "Expert",
-        "bonus": 8
-      },
-      "Alchemical / Explosives Lore": {
-        "homebrew": "Explosives 3",
-        "key_attr": "Intellect",
-        "rank": "Expert",
-        "bonus": 8
-      }
-    },
-    "weapon_proficiencies": {
-      "_note": "Attack bonus only; damage dice and traits come from Base_Weapons_cleaned.csv.",
-      "martial_firearms": {
-        "homebrew": "Shooting 5",
-        "weapons": [
-          "coil gun",
-          "revolver"
-        ],
-        "key_attr": "Precision",
-        "rank": "Master",
-        "attack_bonus": 10
-      },
-      "simple_melee": {
-        "homebrew": "Melee (Blades) 4",
-        "weapons": [
-          "belt knife"
-        ],
-        "key_attr": "Might",
-        "rank": "Expert",
-        "attack_bonus": 7,
-        "note": "Butchery / anatomy of the cut 4 rides here, or a Warfare Lore if made rollable."
-      }
-    }
-  },
-  "cultivation": {
-    "core_state": "OPEN (Day 21)",
-    "inner_gates": {
-      "total": 8,
-      "opened": 0,
-      "note": "first gate strained but deliberately unopened (the patient play); packed dense from forge-shaft cultivation"
-    },
-    "mana": {
-      "max": 210,
-      "current_state": "worked hard at S29 close, NOT topped entering the Ashen Descent (no rest between binding and crossing)"
-    },
-    "active_conversion": {
-      "efficiency_pct": 63,
-      "note": "sighted-tuned; his ceiling far above Julie's ~75% blind cap; tuning past 63% remains"
-    },
-    "active_drain": {
-      "status": "realized + proven at boss-scale, untuned"
-    },
-    "suppression_weave": {
-      "status": "active (Day 21)",
-      "doctrine": "keep the leak as cover; the old charm is an external aid, default OFF (the charm is carried — see gear_and_inventory.carried_special)"
-    }
-  },
-  "abilities": {
-    "intrinsics": [
-      {
-        "name": "Deep Inspection",
-        "level": 2,
-        "evolved_from": "Forceread (Day 26)",
-        "note": "deep structural reach + clean resolve; reads aspect/rarity, weaves, essence-structure, made-stock, faults; out-resolves a western licensed read; reads across distance at heavier draw; reading a person stays surface (interior reads [Owner-private]); heavy reps incl. the live sight-share — flag a level at next class beat. Renders as terse plates (READ FORMAT, Day 26). Detectability: a wide/passive read sits unfelt even to an expert; a focused probe pointed at the man is felt (READ DETECTABILITY, measured off Pearce Day 26). || S30: ADVANCED to Lv.2 (deeper hidden-layer resolve, cheaper reach, native efficient array mode). Reads now resolve more of an enemy's hidden numbers for Bill as bands/tells, rendered as his plates — he reads numbers others only feel.",
-        "governing": "Perception/Insight average = (Perception mod 0 + Insight mod 2)/2 -> +1 (round down). A READ, not an attack: no damage, no save DC. The governing value would set a contest/DC only if a read is ever opposed.",
-        "lv2_grants": [
-          "Deeper resolve: focused reads now pull the HIDDEN MECHANICAL LAYER up where Lv.1 gave only a feel — relative toughness (almost weighable), the soft save, the exact seam where numbers run thin. The combat-visibility 'inward exception' (game_bible S3/S8) sharpens; boss/stranger 'does-not-fully-resolve' walls drop a step.",
-          "Cheaper reach: the distance draw eases — the read-economy range multiplier takes a discount (see _ability_economy).",
-          "Native array mode: the weighted spun needle-sphere Bill invented + drilled this delve is now a FORMAL efficient mode (not Intellect-held by hand) — a held multi-target field-read for a fraction of the old cost. Hold a whole fight bottomed for almost nothing."
-        ]
-      },
-      {
-        "name": "Schematic",
-        "level": 1,
-        "note": "keeps studied mechanisms and weaves as recallable, refinable internal drawings"
-      }
-    ],
-    "seated_universal_skills": [
-      {
-        "name": "Steadyhand",
-        "category": "Passive",
-        "level": 2,
-        "note": "his one universal Passive seat; always-on, no upkeep; stills hand-tremor, aids fine hand-work"
-      },
-      {
-        "name": "Alchemy",
-        "category": "Intrinsic/System-side",
-        "level": 1,
-        "note": "NEW S29; Crafting Table boon expansion; reagents, elixirs, coatings, material-transmutation; distinct from mundane Alchemy/Chemistry 4"
-      },
-      {
-        "name": "Hell Grenade",
-        "category": "Active (Explosion family)",
-        "level": 2,
-        "note": "+1 from the First Double Platinum achievement; lifts the old <=25-mana cap; upgraded every hellfire round already built",
-        "governing": "Intellect",
-        "mechanics": {
-          "damage_formula": "(mana charged / 5)d6 + (core ME / 5) + Intellect mod (+2)",
-          "charge": "Every 5 mana poured in = +1d6. Charging = holding the draw (the failure-edge is charging under fire).",
-          "charge_cap_by_level": {
-            "Lv2": "30 mana (6d6)",
-            "Lv3": "35 mana (7d6)",
-            "Lv4": "40 mana (8d6)",
-            "Lv5": "50 mana (10d6)"
-          },
-          "current_cap": "Lv2 = 30 mana = max 6d6 from charge",
-          "core_bonus": "ME of the seated core / 5, added flat (see essence_aspects_v1.md 8b for core ME). No core = ambient casing, +0.",
-          "intellect_mod": "+2 added on top (governs like a normal ability; not an exception)",
-          "radius": "starts at 10 ft; +5 ft per full 20 points of ROLLED damage (floor). Round down only at the very end.",
-          "modes": [
-            "Ambient (thrown, no core): charge dice + Int mod only.",
-            "Core-seated (bigger grenade): + core ME/5. Junk-core economy = cheap dense payloads from bagged commons.",
-            "Finisher (seated AT a target's core through an opening): the blast PLUS the target's own core ME turned inward — situational, hard to land, deletes most things if it connects."
-          ],
-          "worked_examples_Lv2": [
-            "Ambient, full 30-mana charge: 6d6+2 (~23 avg), 10-15 ft.",
-            "C core (40 ME), 25 mana: 5d6 + 8 + 2 = 5d6+10 (~27 avg), 15 ft.",
-            "C core (40 ME), full 30 mana: 6d6 + 8 + 2 = 6d6+10 (~31 avg), 15 ft.",
-            "A core (160 ME), full 30 mana: 6d6 + 32 + 2 = 6d6+34 (~55 avg), 25 ft.",
-            "Platinum floor-boss core (240 ME), full 30 mana: 6d6 + 48 + 2 = 6d6+50 (~71 avg), 30 ft."
-          ]
-        }
-      },
-      {
-        "name": "Spirit Gun",
-        "category": "Active",
-        "level": 1,
-        "note": "launched orb, brief flight-hold, detonate-on-arrival; crude/short at Lv.1",
-        "governing": "Intellect",
-        "mechanics": {
-          "damage_formula": "(level)d6 + Intellect mod (+2)",
-          "current_damage": "Lv1 = 1d6+2",
-          "targeting": "AIMED — eye-line aim, brief flight-hold, detonate-on-arrival. NO save; it hits where placed (like the gun). Crude/short range at Lv.1.",
-          "note": "Launched orb. The flight-hold is the first brick of the tied-off-knot / self-holding road. Scales (level)d6 + Int as it levels."
-        }
-      }
-    ],
-    "drafting": {
-      "slots_total": 4,
-      "slots_filled": 0,
-      "drafted_designs_unslotted": [
-        {
-          "name": "Mana-cut: Electromagnet",
-          "note": "will-controlled magnet; ~mid-to-high-20s creation; ~just under 2/activation"
-        },
-        {
-          "name": "The Coilgun drive",
-          "note": "bore-bound, chamber-only, pulsed, forward-only field-driver; the WEAPON is built & proven; drive unslotted by choice"
-        },
-        {
-          "name": "Standing Ward",
-          "note": "sustained barrier; ~70 creation; ~4/min; an earth-aspected version buildable now the filter has earth essence"
-        }
-      ],
-      "stored_weaves_study_specimens": [
-        "Light (clean)",
-        "Mend/patch-tool",
-        "Surefoot (partial)",
-        "Warmstone heat-weave",
-        "Cleardraw air-weave",
-        "a worn fire-resist field (read off Pearce's charm)"
-      ]
-    },
-    "maker_core": {
-      "status": "BOUND (S29) — a bonded familiar, first of its kind",
-      "self_handle": "the one who holds the fire so it doesn't burn the others",
-      "name_pending_fold": "FOLDED — named 'Ember' (S30), built wide for any gender; the first word it ever held. Bond deepened repeatedly (filter shown + fed, the rune-grammar communion, easy rapport). Voice still off, one step nearer.",
-      "nature": "old (older than the dungeons), wise about the dungeon's machinery, a who; communion is feeling/picture/intention, no words yet",
-      "functions": [
-        "runs the Crafting Table (collaborative construct-building)",
-        "hellfire refinery -> portable hellfire anywhere with ambient fire",
-        "keeps essence-conduits open under fire; drinks essence-sources dry (deep self-growing well)",
-        "shares Bill's sight down the bond (force-multiplier)",
-        "holds drink-captures (the Colossus's pattern lives in its well)"
-      ],
-      "well_current_ME": "VAST after S30 — surged on two great back-to-back meals: the drunk soul-flood (Lv6 hungry-dead mass) + the Charred Warden's whole floor-boss core (~240 ME), atop the prior dog-cores/wisp/baseline. Deep enough to fund a cerberus or the Colossus 'big dog' outright. Sated, and faintly unsettled by the unholy flavor it ate.",
-      "economy_ref": "Full cost model in _ability_economy.ember_well. Ember spends its OWN well, not Bill's pool; it touches the pool only via the larder (fills) or an over-fielded construct on an empty well (drains).",
-      "name": "Ember",
-      "standing_bond_fed_threads": [
-        "the wide spun sweep (read capability, held ~free)",
-        "the larder thread (feeds Bill's earth-filter; optional/closable)",
-        "MYLES'S ROOT — a living anti-pull anchor-weave on his drake-faced shield (S30); bond-fed, cheap, steady while the bond holds",
-        "the COIL GUN'S GHOST-TOUCH — spoken solid-to-the-formless onto every round, toggleable, off the bond (S30)"
-      ],
-      "bond_load_note": "★ The bond is now LOAD-BEARING for the whole crew: Myles's anti-pull root, Bill's filter-feed, and the gun's edge-against-the-dead all run through Ember off its well. Powerful — and a single rich seam: cut/overtax the bond and Myles loses his root and the gun loses ghost-touch. The gun-bond ENTANGLEMENT is deeper now (bond-seam + spoken ghost-touch both ride the steel). Honest live edge."
-    },
-    "crafting_table": {
-      "status": "LIVE & EXPANDED (S29 class boon)",
-      "note": "assembles any item Bill holds a blueprint for given materials + skill + mana; no forge/workshop/hours; expanded into alchemical transformation; the tell sharpened (maker-mark exposure up)",
-      "spoken_binding_technique": "★ S30 — LEARNED: living/spoken bindings. Instead of etching a static rune (a frozen written word that 'guns hate' and relic-weaves slide off), Ember SPEAKS a weave live and Bill seats it — a held, continuous word, bond-fed, that adapts and runs cheap. Used to root Myles's shield and to put ghost-touch on the gun (bypassing 'guns hate enchantment'). The near edge of the rune-language road.",
-      "rune_study": "First real RUNE study (S30): read the Ghost Touch rune to the grain (matter/inscription/essence). Pattern STORED in Schematic. The Drafting pane's rune category FLICKERS legible at the edge — rune vocabulary beginning to come online. Inventing an original rune-language is now a reachable frontier (needs: more studied runes/grammar, binding-capable substrate, the craft of inscription) — with Ember as the fluent native speaker who can teach Bill to HEAR the language; writing it down is his work."
-    },
-    "_ability_economy": {
-      "_note": "S30 player-authored, locked. The mana/ME economy for Bill's System abilities, in the precise-tracking register (game_bible.md S3/S8; gm_operations.md S4). Through-line: the POOL pays for what comes out of Bill; EMBER'S WELL pays for what Ember does; holding a design ready or a blueprint in mind costs nothing — only making and using draw. Costs surface inline in bold-bracket tags when spent. Back-checked against Floor 1 of the Ashen Descent.",
-      "deep_inspection": {
-        "formula": "cost = depth_base x range_mult, + moving penalty, + hold; then Ember's share off the top.",
-        "depth_base": {
-          "Sweep (wide/passive, category contacts)": 1,
-          "Tight beam (bottom one target: category/condition/obvious weakness)": 3,
-          "Hard probe (immunities + the precise vulnerable seam)": 6,
-          "Full bore (make/history/weave architecture; bottom a boss/stranger as far as one read reaches)": 12
-        },
-        "range_mult": "1 + (feet / 5) x 0.1.  In-hand/touching = x1.0 (the floor). 5ft x1.1, 10ft x1.2, 30ft x1.6, 40ft x1.8, 50ft x2.0, 80ft x2.6.",
-        "moving_target": "+0.5 to the range mult if the target is moving/evasive (harder to keep a grip on).",
-        "hold": "+1 per round per target for a PARKED read held across rounds (a snapshot is +0).",
-        "ember_share": "When Ember rides the read, knock ~1/3 off the total. A standing sweep Ember holds OUTRIGHT costs Bill ~nothing (well trickle). If Ember is busy/away, Bill pays full.",
-        "thread_opposed": "Pushing the read into something that RESISTS, or down a live tether toward a boss, costs FULL-BORE x range AND becomes a contest: 1d20 + read-governing (+1, the Per/Ins average) vs the thing's resistance. A failed contest or a noticed pull is the wake-risk. The one read that is both expensive and uncertain.",
-        "governing": "+1 (average of Perception mod 0 and Insight mod 2). A read is not an attack — no damage; the governing value only sets the contest on a thread/opposed read.",
-        "floor_backcheck": "Spun sweep (Ember-held): ~1 open / ~free hold. 4 dogs (tight, close, 1 rd parked): ~2-3 net. Skeleton wiring (hard, close): ~4 net. The key (full bore, ~35ft gateway, x1.7 -> 12x1.7~=20, less Ember's third): ~14 net — the floor's biggest read.",
-        "lv2_update": "Deep Inspection Lv.2 (S30): range_mult takes a DISCOUNT (distance reads cheaper — treat far/medium one band cheaper, or x0.85 on the range mult); the parked multi-target ARRAY is now a native efficient mode (hold many targets for ~the cost of one tight beam, near-free when Ember rides); focused reads bottom one tier deeper (resolve boss/hidden-layer that wouldn't bottom at Lv.1)."
-      },
-      "blueprint_and_drafting_space": {
-        "principle": "Holding costs nothing — capacity, not drain. The cost is at the two ends: building a design into a slot, and activating it.",
-        "costs": {
-          "hold a captured blueprint in the Schematic library (items + constructs)": "FREE (capturing one = a Deep Inspection read, costed above)",
-          "hold a design seated in a drafting slot, ready": "FREE (a readiness state, like the Active kit; felt as ceiling, not upkeep)",
-          "seat / build a drafted design into a slot": "its CREATION cost, one-time, from pool",
-          "swap a slot (re-seat)": "slow + deliberate; pay the new design's creation again",
-          "activate a seated design": "its USE cost, from pool"
-        },
-        "creation_use_scale": "Anchored to the carried designs (Electromagnet ~28 create / ~2 use; Standing Ward ~70 create / ~4 per min). Simple aimed tool: 20-30 create / 1-3 use. Sustained or area field: 50-80 create / 3-6 per min. Master/complex: 80-150 create.",
-        "slots": "4 total, 0 filled (drafting block above). Electromagnet is the live candidate for the magnet-fetch."
-      },
-      "crafting_table": {
-        "principle": "Assembles a held blueprint into a real item (and alchemy transforms), pool scaled to the work; the three gates stand (blueprint held - materials owned-and-consumed - skill caps what's buildable). CONSTRUCTS do NOT run here — those are Ember's bench (ember_well.build_construct).",
-        "build_cost": {
-          "small/simple (a dart, a coating, a reagent, a single round)": "5-10",
-          "moderate (a gun part, an elixir, a batch of rounds, the magnet as an object)": "15-30",
-          "complex / master-grade (a whole gun frame, a major rig - e.g. the new coil gun)": "60-120"
-        },
-        "alchemy_band": "Rides the same scale: coating 5-15, elixir 15-30, transmutation higher.",
-        "tell": "Faster than a forge and LOUDER as a maker-tell — forge-less master-grade work is the sharpened exposure axis."
-      },
-      "ember_well": {
-        "principle": "Ember spends ESSENCE (ME) from its OWN well — deep, self-growing, fed by drinking. It touches Bill's pool in only two places: the larder FILLS Bill's pool from the well; an over-fielded construct on an empty well DRAINS into the pool. Everything else is free to Bill.",
-        "current_well_ME": "~80, climbing (see abilities.maker_core.well_current_ME).",
-        "costs": {
-          "hold a standing sweep / a read": "~free (well trickle)",
-          "ride Bill's read": "a slice of well -> that's the -1/3 off Bill's read cost",
-          "share the gun's per-shot draw": "a slice of well per shot -> lowers Bill's per-shot mana; the cost is SEAM-HEAT, not pool",
-          "drink essence (conduit / core / wisp)": "NET-POSITIVE — fills the well. Free to Bill",
-          "portable hellfire (work ambient fire -> hellfire)": "small, per working, from the well",
-          "keep a conduit open under fire / lend the magnet field": "modest, per round, from the well",
-          "larder (feed Bill's filter)": "TRANSFER: drains well, fills pool (aspect-matched = clean conversion); a steady trickle, tops Bill over a quiet minute or two",
-          "build a construct": "well-ME = the construct's SIZE: sentinel ~30-50 - cerberus ~150-250 - the Colossus 'big dog' ~its whole 960 pattern",
-          "sustain a construct": "per-round well drain; UNTRAINED bleed is high (short-lived) -> trained, a trickle. Well runs dry mid-fight -> the draw reaches into Bill's POOL (the untested entanglement edge)"
-        },
-        "cerberus_note": "Bill HOLDS the cerberus blueprint, but at ~80 ME the well can't stand up a ~150-250 ME cerberus without bleeding it out fast. Drink a banked floor-boss core first (~240 ME each -> triples the well) to fund + sustain it."
-      }
-    }
-  },
-  "choosing": {
-    "first": {
-      "taken": "Forceread (now Deep Inspection)",
-      "locked_forever": [
-        "Inspect[Items]",
-        "Surefoot"
-      ]
-    },
-    "second": {
-      "taken": "Path III — The Maker's Table (S29)",
-      "declined": [
-        "Path I — seat the essence-conduit grammar clean",
-        "Path II — the sighted-draw/filter/drain efficiency leap"
-      ]
-    }
-  },
-  "health": {
-    "hp_current": 40,
-    "hp_max": 40,
-    "condition": "HEALTHY. No wounds. Mana bottomed at S29 close, recovering.",
-    "note": "Precise tracking (S30): HP is the number (see _combat_layer.hp; formula (10+Might)+(DL x Might/2)). The condition ladder (Healthy/Winded/Hurt/Badly Hurt/Critical/Dying, game_bible.md §7) is the band of this number. HP shows in bold brackets when it changes; Bill's own number is always visible to the player.",
-    "current": "40/40 (topped at the Charred Chapel, S30 close)"
-  },
-  "money": {
-    "currency": "credits (cr)",
-    "cash_on_hand": 110,
-    "guild_tab_owed": {
-      "amount": 300,
-      "status": "handed to Calloway Day 26 to settle from the gift-trust this week"
-    },
-    "gift_trust_at_calloway": {
-      "amount": 3100,
-      "note": "Malcolm's 5,000 gift in trust; -> ~2,800 once the tab clears; drawn via the instruction-ledger; NOT the loan",
-      "do_not_compress": true
-    },
-    "structured_loan_remittance": {
-      "note": "Malcolm's separate 5,000 loan; first landed Day 17; ~6 parcels remaining; nothing new Days 18-26. Arrival schedule is tracked in living_world_truth_v1.md; this line is the balance fact.",
-      "do_not_compress": true
-    },
-    "quest_account_mercantile": {
-      "note": "+25/mo retainer; parts at cost; settle monthly. (Reconciliation flag: a tie-off folded this retainer into the firm's ledger conceptually; kept as its own line here pending a Phase-3 ledger decision.)"
-    },
-    "firm_treasury": {
-      "amount": 448,
-      "recurring_income": [
-        "Dunmore gear-maintenance +80/mo",
-        "Quest distribution +1 cr/tin (~120/mo)",
-        "union runs"
-      ],
-      "note": "Min owes the delivered/paid lines + the firm's 1 cr/tin cut; at/past self-sustaining. Tin-count question still out to Min via Eli — answer pending."
-    },
-    "patronage_escrow": {
-      "amount": 3000,
-      "note": "Pickering's money held by Calloway; apart, untouched"
-    },
-    "pem": {
-      "note": "two items, DO NOT COMPRESS: the converted loot-share [standing]; the Compact [pending]",
-      "do_not_compress": true
-    },
-    "gunsmith_standing_supply": {
-      "note": "'my shelf, your cash' PLUS a 500-cr retainer / first-call on his wheel"
-    },
-    "income_doctrine": "My hands, my coin — cert, instrument bodies, gunsmith-grade work pay Bill's pocket; the firm earns off the young ones' work. In the partnership: firm income splits 50/50 with Pearce, but Bill's outside personal handwork stays his own. The speedloader and the coilgun half-commission sit on this line."
-  },
-  "patents": {
-    "status": "HELD — four filing-ready designs; to be co-owned under Quest Instruments and filed fast via the East-end channel (both names, Pearce's on top) once the articles are signed on Bill's return",
-    "designs": [
-      "lift catch",
-      "hand-warmer",
-      "speedloader",
-      "self-feeding stove"
-    ],
-    "excluded": "the coil gun is NOT in the portfolio and never will be"
-  },
-  "gear_and_inventory": {
-    "weapons": [
-      {
-        "name": "Coil gun (new, S29)",
-        "status": "PRIMARY",
-        "note": "frame-metal body, hellfire-worked by the bound core; aspected grain-matched throat (kills the mana-wear clock); bond-seam (reads what Bill reads, core can lend draw — entangling/untested under fire); 10-round magazine; silent; runs off Bill's core/the bond. NOT in the patent portfolio. || S30: SPOKEN GHOST-TOUCH live (any round harms the incorporeal, toggled on Ember's word; bypasses 'guns hate enchantment'; deepens gun-bond entanglement). SEAM-SHOT is now +5 to the attack roll (1d20+10 firearms +5 seam, needs an active read), NOT auto-hit (player ruling S30); the gun still 'works perfectly' = no manufactured misses, cost stays wear/heat/entanglement."
-      },
-      {
-        "name": "Coil gun (old, braced)",
-        "status": "BACKUP",
-        "note": "the hellfire-braced serviceable original"
-      },
-      {
-        "name": "Revolver",
-        "status": "backup sidearm",
-        "note": "top-break, six chambers; ~175 loaded cartridges + home reserve; speedloader proven; a patent candidate"
-      },
-      {
-        "name": "Belt knife",
-        "note": "gunsmith-ground, peace-bonded, registered"
-      }
-    ],
-    "ammunition": {
-      "coil_gun": {
-        "magazine": "10-round; feeds standard darts and hellfire rounds",
-        "standard_darts": {
-          "_source": "deep belt commissioned Day 26, collected Day 27 (~100 bodkins, ~15 range darts, a handful of wedges, ~a dozen broadheads); lightly used in the Emberwaste before the gun went soft-pull/backup and the revolver carried the rest of the run",
-          "bodkin": {
-            "count": "~86",
-            "note": "default; ~10 spent on the Emberwaste's Floor 1 (S27) || S30: 3 spent on the skeletons, 1 test-shot on a remnant soul."
-          },
-          "range_dart": {
-            "count": "~15",
-            "note": "long/slim/hardened; barely used"
-          },
-          "wedge": {
-            "count": "~3-4",
-            "note": "1 spent prying the Furnace-Warden vent (S28)"
-          },
-          "broadhead": {
-            "count": "~11",
-            "note": "1 spent wrecking the Furnace-Warden core (S28)"
-          },
-          "harpoon": {
-            "count": 0,
-            "note": "back-burnered — line-stowage unsolved"
-          },
-          "glass-crowned alchemy dart": {
-            "count": 0,
-            "note": "not yet made; now buildable via the Alchemy leg + Crafting Table"
-          }
-        },
-        "hellfire_rounds": {
-          "count": "~38 (Floor-1 husks recovered & regrown off Ember's well; near a full belt)",
-          "loaded": "reload to taste from the belt at the Chapel",
-          "on_belt": "~30",
-          "renewable": true,
-          "distributed_to_crew": "a few (the distributable-grenade thread; they can throw one in a pinch)",
-          "note": "formerly called hellfire grenade-rounds; NEW S29; seeded core-shard center, hellfire-charged, Hell Grenade knot seated (Lv.2); RENEWABLE (recover the husk, the bound core regrows/recharges it — the 7 husks from Floor 1 not yet recovered); detonated from inside on shared sight; bites the fire-immune || S30 close: the 7 Floor-1 husks RECOVERED and regrown; belt near full."
-        }
-      },
-      "revolver": {
-        "chambered": 6,
-        "loaded_carried": "~175 cartridges total (6 chambered + the rest in speedloader strips on the belt)",
-        "home_reserve": "additional, count unspecified",
-        "speedloader": "proven; eyes-up reloads by feel",
-        "note": "became Bill's working gun after the coil gun went soft-pull at the Warden (S28)"
-      }
-    },
-    "kit": [
-      "Reloading kit + component reserve at home",
-      "Shuttered tin lantern",
-      "Canvas haversack",
-      "2 tins delver's salve (fire-resist)",
-      "small medical kit",
-      "3 days' food + water",
-      "bedroll / wool blanket, stout boots, heavy socks",
-      "the delve notebook (Reach survey + arch runes + construct internals + forge workings + clean schematics + the Colossus architecture)"
-    ],
-    "carried_special": [
-      {
-        "name": "the old charm",
-        "note": "pre-Bureau preservation/keeping weave; on an open core it damps spiritual pressure from outside — a suppression AID, wearable. Worth far more than scrap; only Bill and Pearce know what it is. Carried; worn deliberately, default OFF (to preserve the leak-as-cover)."
-      }
-    ],
-    "consumables_on_belt": [
-      {
-        "name": "rare mana-restorative elixir",
-        "status": "unused (the bound core managed his pool through the Colossus duel)"
-      }
-    ],
-    "bench_and_documents": [
-      "bench odds: the galvanic cell + electromagnet (proof rig)",
-      "the spent earth core (dead template)",
-      "Esther's recognition list — house strongbox",
-      "Quest receipt slip — Calloway's iron box"
-    ],
-    "weapons_combat": {
-      "_note": "Combat damage for the weapons listed in gear_and_inventory.weapons. Ranged = die + Precision mod; melee = die + higher of Might/Precision mod. S30 mechanics layer.",
-      "entries": [
-        {
-          "name": "Coil gun — standard dart",
-          "type": "ranged",
-          "damage": "1d10 + Precision (+2)",
-          "note": "bodkin baseline; dart type flavors the hit (bodkin armor-pierce, broadhead vs soft, wedge, range dart)"
-        },
-        {
-          "name": "Coil gun — hellfire round",
-          "type": "ranged",
-          "damage": "2d10 + Precision (+2)",
-          "note": "the extra d10 is the hellfire charge; bites the fire-immune (Infernals); renewable husk ammo"
-        },
-        {
-          "name": "Revolver",
-          "type": "ranged",
-          "damage": "1d8 + Precision (+2)",
-          "note": "backup sidearm; became his working gun when the old coil gun went soft-pull (S28)"
-        },
-        {
-          "name": "Belt knife",
-          "type": "melee",
-          "damage": "1d4 + Might (+1)",
-          "note": "gunsmith-ground; backup"
-        }
-      ]
-    },
-    "worn_armor": [
-      {
-        "name": "Drake-scale vest (S30)",
-        "note": "light fire-resistant underplate (Emberwaste drake-scales, Crafting Table); cheap insurance on AC-12 Bill against the lava/fire floor below. Does not raise him to a tank."
-      }
-    ],
-    "acquired_S30": [
-      "GHOST TOUCH rune (physical) — KEPT (was only the template for the spoken weave on the gun); etchable elsewhere or tradeable",
-      "GHOST OIL — one-use coating, same effect temporary (the dead delver's unused backup, from Snik's hoard)",
-      "Warden cell-door maul-iron — master-grade, binding-TRAINED stock; MOSTLY SPENT working the crew upgrades (weave-carrier threads + Myles's facing)",
-      "Soul-Coins — the Warden's true drop / the dungeon-natives' currency (a floor's worth) — banked",
-      "scavenged small cores (from Snik's hoard) — minor fuel",
-      "Drake-scales + fire-aspected smithing nodule (Emberwaste) — MOSTLY SPENT on the crew upgrades; specialty stock now LOW (enough for small work, not another big build; rune-language frontier waits for more substrate)"
-    ],
-    "traded_away_S30": [
-      "Imp-Prince husk (inert, drunk-hollow) — traded to the goblin Snik for the rune+oil+cores+its sworn oath+intel on Floor 2"
-    ]
-  },
-  "banked_cores_and_haul": {
-    "bound_not_loot": "The maker-core — bound, a bonded familiar (see abilities.maker_core)",
-    "headline": {
-      "name": "Ember-Colossus heart-core",
-      "aspect": "Fire",
-      "grade": "dungeon-boss-grade",
-      "condition": "intact (drained whole, not shattered)",
-      "value_note": "auction low-thousands / richest fuel of the run; floated on Julie's lift-weave into the Ashen Descent"
-    },
-    "banked_fuel": [
-      "Earth core (Unbroken reward — feeds the starving filter)",
-      "Cinder-Drake Fire-Platinum floor-boss core",
-      "Ash-Maw fire core",
-      "dense Earth core + 2 golem earth cores",
-      "Warden fire-fragments",
-      "fire-aspected smithing nodule + drake-scales"
-    ],
-    "spent": [
-      "Forge-stock — mostly spent (the new gun's frame-metal)",
-      "Imp-Prince boss core — spent (drunk in the S29 conduit test; now a husk in the renewable-ammo pool)"
-    ],
-    "ammo_feedstock": [
-      "Prince husk, spent stones, big-core bones (renewable shard-cores)"
-    ],
-    "general_fuel_at_home": [
-      "older Foundation-delve cores (strong common, run of commons, gatekeeper Uncommon, sensor chip, cracked dud, earth scrap)"
-    ]
-  },
-  "filters_and_captures": {
-    "aspect_filter": {
-      "type": "earth-aspect (first-gen)",
-      "efficiency_pct_lossy": 30,
-      "feedstock": "Earth core + dense earth cores (real food at last; was starving)"
-    },
-    "captures_library_buildable_pending": [
-      "Glass-wraith — complete schematic (first complete Spirit-type)",
-      "Cerberus construct-blueprint (corroborated)",
-      "Ember-Colossus blueprint (corpse-grade-complete; biggest war-construct schematic)",
-      "Imp-Prince spatial-fold/teleport (new domain, hardest crack)",
-      "Julie's Arcane Bolt — the density-knot structure (logged whole)",
-      "Julie's heat-containment weave",
-      "Julie's Levitate Item — the sustained-force lift-weave (logged S29)",
-      "The hellfire-forge design (also internalized as portable hellfire)"
-    ],
-    "intact_orbs_sellable": [
-      "Warmstone Lv.1 utility orb (radiant heat) — weave seen/stored/replicated, orb intact",
-      "Cleardraw Lv.1 utility orb (air/draft-clearing) — weave seen/stored/replicated, orb intact"
-    ],
-    "reference_stock": [
-      "The three frame-metal samples (made stock; spare maker-stock / standing reference)"
-    ],
-    "captures_library": [],
-    "captures_S30_additions": [
-      "Smoke-Wisp pattern ('a smoke that hides')",
-      "Charred Warden pattern (whole — a fire-warden 'big dog', buildable)",
-      "Hungry-dead / soul-flood pattern (the drunk flood — a hungry-spirit swarm, buildable; strange/unholy flavor)",
-      "Spirit-containment WARD (study) — read the soul-prison's lattice architecture: how to hold the incorporeal; buildable, deferred",
-      "Ghost Touch rune pattern (stored; deployed as a spoken weave on the gun)",
-      "Rune-grammar (communion with Ember) — essence-as-spoken-language; the rune-language road begun"
-    ]
-  },
-  "relationships": {
-    "_scale": "1-100 warmth toward Bill; bands + movement/ceiling/visibility rules in game_bible.md. Bill never sees the number — he reads it from behavior. Movement surfaces via the change-tag (gm_operations.md §4). Read the band off the number; do not store the band. Qualitative texture and voice for each NPC live in npcs/.",
-    "_status": "PHASE-2 — populated from the campaign_state NPC section and the npcs/ files. Values are openers; they move in play per the change-tag and the close ledger. Dormant/one-off NPCs are added when they re-enter play and earn a file.",
-    "Pearce": {
-      "warmth": 80,
-      "ceiling": 90
-    },
-    "Calloway": {
-      "warmth": 78,
-      "ceiling": 90
-    },
-    "Doss": {
-      "warmth": 78,
-      "ceiling": 90
-    },
-    "Mrs. Maddox": {
-      "warmth": 82,
-      "ceiling": 92
-    },
-    "the firm": {
-      "warmth": 75,
-      "ceiling": 92
-    },
-    "the gunsmith": {
-      "warmth": 70,
-      "ceiling": 88
-    },
-    "Hessler": {
-      "warmth": 68,
-      "ceiling": 82
-    },
-    "Pickering": {
-      "warmth": 65,
-      "ceiling": 85
-    },
-    "Tasker": {
-      "warmth": 60,
-      "ceiling": 78
-    },
-    "Pem": {
-      "warmth": 68,
-      "ceiling": 85
-    },
-    "the Dunmore Brothers": {
-      "warmth": 72,
-      "ceiling": 85
-    },
-    "Rusk": {
-      "warmth": 68,
-      "ceiling": 88
-    },
-    "Father Lessard": {
-      "warmth": 65,
-      "ceiling": 85
-    },
-    "Sister Beatrice": {
-      "warmth": 64,
-      "ceiling": 85
-    },
-    "Sister Agnes": {
-      "warmth": 62,
-      "ceiling": 82
-    },
-    "Esther": {
-      "warmth": 70,
-      "ceiling": 88
-    },
-    "Myles": {
-      "warmth": 75,
-      "ceiling": 95
-    },
-    "Charles": {
-      "warmth": 88,
-      "ceiling": 95
-    },
-    "Jason": {
-      "warmth": 78,
-      "ceiling": 95
-    },
-    "Julie": {
-      "warmth": 74,
-      "ceiling": 95
-    }
-  },
-  "_combat_layer": {
-    "_note": "S30 mechanics layer — the pf2e-granular combat numbers. Built on the same model as fortunes_folly_crew.json _combat_model. Bill's narrative/canon fields are untouched; this only ADDS derived combat values and the damage/DC math for his offensive Skills. Drafted abilities keep their locked limits-economy costs (creation/use) and get NO invented DCs/dice.",
-    "modifier_rule": "modifier = floor((attribute-10)/5). Every 5 above 10 = +1.",
-    "hp": {
-      "value": 40,
-      "calc": "(10 + Might 15) + (Delver Level 2 x Might/2 = 2 x 7.5 = 15) = 25 + 15 = 40",
-      "note": "Deliberately fragile — DL2 + Might 15 is a low body. Bill wins by not being hit; the crew keeps him out of melee. HEALTH still tracked as conditions narratively (see 'health'); this number is the granular-combat overlay."
-    },
-    "speed": {
-      "value": 39,
-      "note": "already on the sheet (attributes.Speed_derived); Precision 21 + Might/2 + Perception/3 + Insight/4, rounded up."
-    },
-    "mana": {
-      "value": 210,
-      "note": "Intellect 21 x 10; already in cultivation.mana.max."
-    },
-    "ac": {
-      "value": 12,
-      "calc": "10 + Precision mod 2 (higher of Might mod 1 / Precision mod 2) + armor 0 = 12",
-      "note": "Unarmored by choice (carries light — boots, haversack, no armor on the sheet). Fragile; the cover and the crew are his defense, not plate."
-    },
-    "ac_rule": "AC = 10 + (higher of Might or Precision mod) + armor + shield.",
-    "seam_shot_rule": "Bond-seam = +5 to the coil-gun attack roll when Bill has an active READ on the target (1d20 + 10 firearms + 5 seam vs AC; off-guard/aim add as normal). Replaces the old auto-hit (player ruling S30). 'Works perfectly' still holds: no manufactured misses; the seam's only honest cost is wear/heat/entanglement.",
-    "saves_PROVISIONAL": {
-      "_note": "PROVISIONAL — saves were a gap; derived S30 as level(2)+trained prof(2)+attr mod, pending the player locking a real saves block. Fortitude (Might+1), Reflex (Precision+2), Will (Insight+2).",
-      "Fortitude": "+5 (2 level + 2 trained + Might 1)",
-      "Reflex": "+6 (2 level + 2 trained + Precision 2) — used vs the Warden backlash S30",
-      "Will": "+6 (2 level + 2 trained + Insight 2)"
-    }
+ "_meta": {
+  "file": "bill_weaver_sheet.json",
+  "role": "Player character sheet — the living authority for every tracked value about Bill: attributes, skills, cultivation/abilities, gear, ammunition, money, banked cores/captures, and NPC warmth (relationships).",
+  "current_to": "SESSION 30 IN PROGRESS — Day 28, on Floor 1 of the Ashen Descent (the Smoldering Wastes). Carries the S29-close state; the S30 change reflected here is ammo (7 hellfire rounds fired). S30 deltas NOT yet folded in (await S30 close per gm_operations.md close-out): the bound core named 'Ember' and the bond a step deeper; mana gently ticked. Phase-1 migration reconciliation (this pass): absorbed the facts campaign_state.md held that the JSON lacked — the Pem money line, the firm's recurring income, the patent portfolio, the old charm, the delve notebook, bench odds/documents — and added the relationships scaffold. Phase-2 (this pass): the relationships block is populated with the full recurring roster, paired to the npcs/ files. || S30 MECHANICS PASS (this edit): added the _combat_layer (modifiers, HP 40, AC 12, Speed/mana pointers), Hell Grenade's full charge/ME/radius formula, Spirit Gun damage, Deep Inspection's governing note, and weapons_combat. Drafted abilities left at their locked limits-economy costs. || S30 ABILITY-ECONOMY LOCK (this edit): added _ability_economy — the mana/ME cost models for Deep Inspection (read), the blueprint/drafting space, the mental Crafting Table, and Ember's well — built to the precise-tracking system and back-checked against this floor's spends. Added maker_core.well_current_ME tracking. Narrative S30 deltas still await close. || S30 CLOSE: Floor 1 of the Ashen Descent CLEARED (Charred Warden drunk dry; soul-flood drunk; gaol-key turned to strip the boss shield — Prisoner's Vengeance resolved; rested at a Charred Chapel). Deep Inspection Lv.1->2. Spoken/living bond-fed binding technique learned (rooted Myles's shield, said ghost-touch onto the gun). Ember NAMED. Crew kit upgraded. Combat now precise/dice-resolved via dice_roller (gm_operations S10); seam-shot is +5 (not auto). HP/mana topped at the Chapel. || S31 CLOSE (this edit) — a non-combat study/character session at the Chapel before descending to Floor 2: ETCHED permanent bond-independent Ghost-Touch onto Jason's war-axe (off the physical rune template; ~20 mana; forge-stock now VERY LOW; the physical Ghost Touch rune survived intact/retained). Communed with Ember and RESOLVED the soul-remnant thread — derived a new 'release-grade' grammar (after a failed first attempt) and EASED the lingering soul-remnants to rest on the Chapel's consecrated ground (Charles's Life-ease aiding); Ember's well is now CLEANSED (the 'strange/unholy' unease gone; clean fuel). EMBER'S VOICE SURFACED (first real words: 'thank you' — pace gently from here; never an oracle). New grammar held: the release-grade (diffusion-release for the unmade) + the ward-registers insight (a rung up the rune-grammar road). The soul-remnants are GONE (released, not banked — too unmade to blueprint). Mana topped back at the Chapel (×10 regen). No attribute/skill ticks (study session). Provisional saves still stand; the Shooting under-threat tick + Stealth seed still owed at the next clean audit.",
+  "derived_from": [
+   "campaign_state.md",
+   "Session_27.md",
+   "Session_28.md",
+   "Session_29.md",
+   "system_engineer_truth_v1.md"
+  ],
+  "scales": {
+   "attributes": "1-100 (10 average, 20 unawakened ceiling, past 20 needs an open core)",
+   "mundane_skills": "CONVERTED to PF2e proficiency (Trained/Expert/Master/Legendary). bonus = rank + level + attr mod. See pf2e_translation_layer.md §4a; source 1-10 kept under each skill's 'homebrew'.",
+   "ability_levels": "1-5 (each Skill/ability/intrinsic), with hidden evolutions past 5",
+   "delver_level": "points / 10",
+   "class_level": "System depth, separate from Delver Level"
   }
+ },
+ "identity": {
+  "true_name": "Bill Weaver",
+  "born": 1840,
+  "age": 22,
+  "species": "human",
+  "description": "5'7\", hazel eyes, brown hair, ordinary-looking.",
+  "trade": "Engineer (alchemy dabbling)",
+  "working_names": {
+   "Wyatt": "trades/teamster world, the town, the guild roll, the gunsmith, Pearce, Tasker, the crew sign-on, the Platinum Four",
+   "John": "the mission only (Beatrice, Agnes, Esther, Ada, Father Lessard)",
+   "John-Wyatt": "Mrs. Maddox",
+   "Tuesday": "Pickering's word + runner-word to Calloway's",
+   "true_name_known_by": "Hessler (alias noted), Calloway, Pickering, the Bureau assay ledger, his license",
+   "Q": "mother's pet name + cipher key (the word is QUEST)"
+  },
+  "open_fork": "Collapse to his true name as a later play, on his own word; Calloway has the path ready."
+ },
+ "class": {
+  "name": "System Engineer",
+  "level": 2,
+  "level_term_private": true,
+  "lv2_grants": [
+   "Examine sharpened",
+   "drafting slots 3 -> 4",
+   "live cost-preview during drafting",
+   "Examine: Self (directed analysis turned inward)"
+  ],
+  "lv3_progress_note": "Banking toward Lv.3 (slow): the soul-prison containment read, the rune-grammar study with Ember, and the ability-economy deductions are class-relevant 'deep study of novel phenomena' beats. Not yet a level; a pane felt getting closer. Evolution-branch legibility still waits for Lv.3."
+ },
+ "delver_level": {
+  "value": 2,
+  "points_total": 20,
+  "points_breakdown": "10 awakening + 10 Emberwaste Platinum completion"
+ },
+ "attributes": {
+  "Might": {
+   "value": 15,
+   "note": "+3 S29 Emberwaste payout",
+   "mod": 1
+  },
+  "Precision": {
+   "value": 21,
+   "note": "past the mortal ceiling; Steadyhand seated",
+   "mod": 2
+  },
+  "Intellect": {
+   "value": 21,
+   "note": "past the mortal ceiling; sets mana pool (x10 = 210)",
+   "mod": 2
+  },
+  "Perception": {
+   "value": 14,
+   "note": "",
+   "mod": 0
+  },
+  "Presence": {
+   "value": 11,
+   "note": "",
+   "mod": 0
+  },
+  "Insight": {
+   "value": 20,
+   "note": "+7 S29 Emberwaste payout; at the unawakened ceiling; backs Deep Inspection",
+   "mod": 2
+  },
+  "Speed_derived": {
+   "value": 39,
+   "formula": "Precision + Might/2 + Perception/3 + Insight/4 (rounded up)",
+   "note": "confirm at next combat readout"
+  }
+ },
+ "mundane_skills": {
+  "_scale_note": "Converted to PF2e proficiency per pf2e_translation_layer.md §4a (Option A ladder). Source 1-10 values kept under 'homebrew'. bonus = rank + level(2) + attr mod. Attr mods: Might+1 Precision+2 Intellect+2 Perception+0 Presence+0 Insight+2.",
+  "Crafting": {
+   "homebrew": {
+    "from": [
+     "Engineering 7",
+     "Alchemy/Chemistry 4 (merged)"
+    ],
+    "subskills": {
+     "wagon/wheel work": 6,
+     "fine instrument bodies": 6,
+     "firearm mechanism": 4,
+     "locks & mechanisms": 3,
+     "lift/hoist works": 5
+    },
+    "note": "mundane bench-chemistry folds in here; distinct from the System-side Alchemy Lv.1"
+   },
+   "key_attr": "Intellect",
+   "rank": "Legendary",
+   "bonus": 12
+  },
+  "Thievery": {
+   "homebrew": {
+    "from": "Lockpicking & Mechanisms 3"
+   },
+   "key_attr": "Precision",
+   "rank": "Expert",
+   "bonus": 8
+  },
+  "Society": {
+   "homebrew": {
+    "from": "Instruction 5"
+   },
+   "key_attr": "Intellect",
+   "rank": "Master",
+   "bonus": 10
+  },
+  "Diplomacy": {
+   "homebrew": {
+    "from": [
+     "Leadership 4",
+     "Negotiation 4 (merged)"
+    ]
+   },
+   "key_attr": "Presence",
+   "rank": "Expert",
+   "bonus": 6
+  },
+  "Medicine": {
+   "homebrew": {
+    "from": "Medicine 2"
+   },
+   "key_attr": "Insight",
+   "rank": "Trained",
+   "bonus": 6
+  },
+  "Nature": {
+   "homebrew": {
+    "from": "Gardening / Herb-craft 0"
+   },
+   "key_attr": "Insight",
+   "rank": "Untrained",
+   "bonus": 2
+  },
+  "_perception_note": "Social Reading 6 maps to the Perception stat (Sense Motive), not a skill row — see pf2e_proficiencies.perception_sense_motive."
+ },
+ "pf2e_proficiencies": {
+  "_note": "PF2e-native lines that are not skill rows: a Perception specialization, Lores, and weapon proficiencies. All bonuses = rank + level(2) + attr mod.",
+  "perception_sense_motive": {
+   "homebrew": "Social Reading 6",
+   "key_attr": "Insight",
+   "rank": "Master",
+   "bonus": 10
+  },
+  "lores": {
+   "Engineering Lore (appraisal)": {
+    "homebrew": "Appraisal (Machinery) 4",
+    "key_attr": "Intellect",
+    "rank": "Expert",
+    "bonus": 8
+   },
+   "Alchemical / Explosives Lore": {
+    "homebrew": "Explosives 3",
+    "key_attr": "Intellect",
+    "rank": "Expert",
+    "bonus": 8
+   }
+  },
+  "weapon_proficiencies": {
+   "_note": "Attack bonus only; damage dice and traits come from Base_Weapons_cleaned.csv.",
+   "martial_firearms": {
+    "homebrew": "Shooting 5",
+    "weapons": [
+     "coil gun",
+     "revolver"
+    ],
+    "key_attr": "Precision",
+    "rank": "Master",
+    "attack_bonus": 10
+   },
+   "simple_melee": {
+    "homebrew": "Melee (Blades) 4",
+    "weapons": [
+     "belt knife"
+    ],
+    "key_attr": "Might",
+    "rank": "Expert",
+    "attack_bonus": 7,
+    "note": "Butchery / anatomy of the cut 4 rides here, or a Warfare Lore if made rollable."
+   }
+  }
+ },
+ "cultivation": {
+  "core_state": "OPEN (Day 21)",
+  "inner_gates": {
+   "total": 8,
+   "opened": 0,
+   "note": "first gate strained but deliberately unopened (the patient play); packed dense from forge-shaft cultivation"
+  },
+  "mana": {
+   "max": 210,
+   "current_state": "worked hard at S29 close, NOT topped entering the Ashen Descent (no rest between binding and crossing)"
+  },
+  "active_conversion": {
+   "efficiency_pct": 63,
+   "note": "sighted-tuned; his ceiling far above Julie's ~75% blind cap; tuning past 63% remains"
+  },
+  "active_drain": {
+   "status": "realized + proven at boss-scale, untuned"
+  },
+  "suppression_weave": {
+   "status": "active (Day 21)",
+   "doctrine": "keep the leak as cover; the old charm is an external aid, default OFF (the charm is carried — see gear_and_inventory.carried_special)"
+  }
+ },
+ "abilities": {
+  "intrinsics": [
+   {
+    "name": "Deep Inspection",
+    "level": 2,
+    "evolved_from": "Forceread (Day 26)",
+    "note": "deep structural reach + clean resolve; reads aspect/rarity, weaves, essence-structure, made-stock, faults; out-resolves a western licensed read; reads across distance at heavier draw; reading a person stays surface (interior reads [Owner-private]); heavy reps incl. the live sight-share — flag a level at next class beat. Renders as terse plates (READ FORMAT, Day 26). Detectability: a wide/passive read sits unfelt even to an expert; a focused probe pointed at the man is felt (READ DETECTABILITY, measured off Pearce Day 26). || S30: ADVANCED to Lv.2 (deeper hidden-layer resolve, cheaper reach, native efficient array mode). Reads now resolve more of an enemy's hidden numbers for Bill as bands/tells, rendered as his plates — he reads numbers others only feel.",
+    "governing": "Perception/Insight average = (Perception mod 0 + Insight mod 2)/2 -> +1 (round down). A READ, not an attack: no damage, no save DC. The governing value would set a contest/DC only if a read is ever opposed.",
+    "lv2_grants": [
+     "Deeper resolve: focused reads now pull the HIDDEN MECHANICAL LAYER up where Lv.1 gave only a feel — relative toughness (almost weighable), the soft save, the exact seam where numbers run thin. The combat-visibility 'inward exception' (game_bible S3/S8) sharpens; boss/stranger 'does-not-fully-resolve' walls drop a step.",
+     "Cheaper reach: the distance draw eases — the read-economy range multiplier takes a discount (see _ability_economy).",
+     "Native array mode: the weighted spun needle-sphere Bill invented + drilled this delve is now a FORMAL efficient mode (not Intellect-held by hand) — a held multi-target field-read for a fraction of the old cost. Hold a whole fight bottomed for almost nothing."
+    ]
+   },
+   {
+    "name": "Schematic",
+    "level": 1,
+    "note": "keeps studied mechanisms and weaves as recallable, refinable internal drawings"
+   }
+  ],
+  "seated_universal_skills": [
+   {
+    "name": "Steadyhand",
+    "category": "Passive",
+    "level": 2,
+    "note": "his one universal Passive seat; always-on, no upkeep; stills hand-tremor, aids fine hand-work"
+   },
+   {
+    "name": "Alchemy",
+    "category": "Intrinsic/System-side",
+    "level": 1,
+    "note": "NEW S29; Crafting Table boon expansion; reagents, elixirs, coatings, material-transmutation; distinct from mundane Alchemy/Chemistry 4"
+   },
+   {
+    "name": "Hell Grenade",
+    "category": "Active (Explosion family)",
+    "level": 2,
+    "note": "+1 from the First Double Platinum achievement; lifts the old <=25-mana cap; upgraded every hellfire round already built",
+    "governing": "Intellect",
+    "mechanics": {
+     "damage_formula": "(mana charged / 5)d6 + (core ME / 5) + Intellect mod (+2)",
+     "charge": "Every 5 mana poured in = +1d6. Charging = holding the draw (the failure-edge is charging under fire).",
+     "charge_cap_by_level": {
+      "Lv2": "30 mana (6d6)",
+      "Lv3": "35 mana (7d6)",
+      "Lv4": "40 mana (8d6)",
+      "Lv5": "50 mana (10d6)"
+     },
+     "current_cap": "Lv2 = 30 mana = max 6d6 from charge",
+     "core_bonus": "ME of the seated core / 5, added flat (see essence_aspects_v1.md 8b for core ME). No core = ambient casing, +0.",
+     "intellect_mod": "+2 added on top (governs like a normal ability; not an exception)",
+     "radius": "starts at 10 ft; +5 ft per full 20 points of ROLLED damage (floor). Round down only at the very end.",
+     "modes": [
+      "Ambient (thrown, no core): charge dice + Int mod only.",
+      "Core-seated (bigger grenade): + core ME/5. Junk-core economy = cheap dense payloads from bagged commons.",
+      "Finisher (seated AT a target's core through an opening): the blast PLUS the target's own core ME turned inward — situational, hard to land, deletes most things if it connects."
+     ],
+     "worked_examples_Lv2": [
+      "Ambient, full 30-mana charge: 6d6+2 (~23 avg), 10-15 ft.",
+      "C core (40 ME), 25 mana: 5d6 + 8 + 2 = 5d6+10 (~27 avg), 15 ft.",
+      "C core (40 ME), full 30 mana: 6d6 + 8 + 2 = 6d6+10 (~31 avg), 15 ft.",
+      "A core (160 ME), full 30 mana: 6d6 + 32 + 2 = 6d6+34 (~55 avg), 25 ft.",
+      "Platinum floor-boss core (240 ME), full 30 mana: 6d6 + 48 + 2 = 6d6+50 (~71 avg), 30 ft."
+     ]
+    }
+   },
+   {
+    "name": "Spirit Gun",
+    "category": "Active",
+    "level": 1,
+    "note": "launched orb, brief flight-hold, detonate-on-arrival; crude/short at Lv.1",
+    "governing": "Intellect",
+    "mechanics": {
+     "damage_formula": "(level)d6 + Intellect mod (+2)",
+     "current_damage": "Lv1 = 1d6+2",
+     "targeting": "AIMED — eye-line aim, brief flight-hold, detonate-on-arrival. NO save; it hits where placed (like the gun). Crude/short range at Lv.1.",
+     "note": "Launched orb. The flight-hold is the first brick of the tied-off-knot / self-holding road. Scales (level)d6 + Int as it levels."
+    }
+   }
+  ],
+  "drafting": {
+   "slots_total": 4,
+   "slots_filled": 0,
+   "drafted_designs_unslotted": [
+    {
+     "name": "Mana-cut: Electromagnet",
+     "note": "will-controlled magnet; ~mid-to-high-20s creation; ~just under 2/activation"
+    },
+    {
+     "name": "The Coilgun drive",
+     "note": "bore-bound, chamber-only, pulsed, forward-only field-driver; the WEAPON is built & proven; drive unslotted by choice"
+    },
+    {
+     "name": "Standing Ward",
+     "note": "sustained barrier; ~70 creation; ~4/min; an earth-aspected version buildable now the filter has earth essence"
+    }
+   ],
+   "stored_weaves_study_specimens": [
+    "Light (clean)",
+    "Mend/patch-tool",
+    "Surefoot (partial)",
+    "Warmstone heat-weave",
+    "Cleardraw air-weave",
+    "a worn fire-resist field (read off Pearce's charm)"
+   ]
+  },
+  "maker_core": {
+   "status": "BOUND (S29) — a bonded familiar, first of its kind",
+   "self_handle": "the one who holds the fire so it doesn't burn the others",
+   "name_pending_fold": "FOLDED — named 'Ember' (S30), built wide for any gender; the first word it ever held. Bond deepened repeatedly (filter shown + fed, the rune-grammar communion, easy rapport). Voice still off, one step nearer.",
+   "nature": "old (older than the dungeons), wise about the dungeon's machinery, a who; communion is feeling/picture/intention, no words yet",
+   "functions": [
+    "runs the Crafting Table (collaborative construct-building)",
+    "hellfire refinery -> portable hellfire anywhere with ambient fire",
+    "keeps essence-conduits open under fire; drinks essence-sources dry (deep self-growing well)",
+    "shares Bill's sight down the bond (force-multiplier)",
+    "holds drink-captures (the Colossus's pattern lives in its well)"
+   ],
+   "well_current_ME": "VAST and now CLEAN (S31) — surged on two great back-to-back meals: the drunk soul-flood (Lv6 hungry-dead mass) + the Charred Warden's whole floor-boss core (~240 ME), atop the prior dog-cores/wisp/baseline. Deep enough to fund a cerberus or the Colossus 'big dog' outright. S31: the not-quite-digested soul-remnants that sat 'strange/unholy' were EASED OUT and released to rest (the release-grade working); the unease is GONE — the well is clean fuel now, nothing sits wrong. Sated and settled.",
+   "economy_ref": "Full cost model in _ability_economy.ember_well. Ember spends its OWN well, not Bill's pool; it touches the pool only via the larder (fills) or an over-fielded construct on an empty well (drains).",
+   "name": "Ember",
+   "standing_bond_fed_threads": [
+    "the wide spun sweep (read capability, held ~free)",
+    "the larder thread (feeds Bill's earth-filter; optional/closable)",
+    "MYLES'S ROOT — a living anti-pull anchor-weave on his drake-faced shield (S30); bond-fed, cheap, steady while the bond holds",
+    "the COIL GUN'S GHOST-TOUCH — spoken solid-to-the-formless onto every round, toggleable, off the bond (S30)"
+   ],
+   "bond_load_note": "★ The bond is now LOAD-BEARING for the whole crew: Myles's anti-pull root, Bill's filter-feed, and the gun's edge-against-the-dead all run through Ember off its well. Powerful — and a single rich seam: cut/overtax the bond and Myles loses his root and the gun loses ghost-touch. The gun-bond ENTANGLEMENT is deeper now (bond-seam + spoken ghost-touch both ride the steel). Honest live edge.",
+   "voice_status": "★ SURFACED (S31): Ember spoke its first real words — 'thank you' — pressed all the way into language for the first time, after the two of them eased the soul-remnants to rest. Faint, frayed, two words. The slow-paced voice arc has stepped over the line; PACE GENTLY from here, still never an oracle. Prior steps: wordless communion (S29 binding) → one step nearer / an intention of a word (S30 naming, S31 communion) → first words (S31)."
+  },
+  "crafting_table": {
+   "status": "LIVE & EXPANDED (S29 class boon)",
+   "note": "assembles any item Bill holds a blueprint for given materials + skill + mana; no forge/workshop/hours; expanded into alchemical transformation; the tell sharpened (maker-mark exposure up)",
+   "spoken_binding_technique": "★ S30 — LEARNED: living/spoken bindings. Instead of etching a static rune (a frozen written word that 'guns hate' and relic-weaves slide off), Ember SPEAKS a weave live and Bill seats it — a held, continuous word, bond-fed, that adapts and runs cheap. Used to root Myles's shield and to put ghost-touch on the gun (bypassing 'guns hate enchantment'). The near edge of the rune-language road.",
+   "rune_study": "First real RUNE study (S30): read the Ghost Touch rune to the grain (matter/inscription/essence). Pattern STORED in Schematic. The Drafting pane's rune category FLICKERS legible at the edge — rune vocabulary beginning to come online. Inventing an original rune-language is now a reachable frontier (needs: more studied runes/grammar, binding-capable substrate, the craft of inscription) — with Ember as the fluent native speaker who can teach Bill to HEAR the language; writing it down is his work."
+  },
+  "_ability_economy": {
+   "_note": "S30 player-authored, locked. The mana/ME economy for Bill's System abilities, in the precise-tracking register (game_bible.md S3/S8; gm_operations.md S4). Through-line: the POOL pays for what comes out of Bill; EMBER'S WELL pays for what Ember does; holding a design ready or a blueprint in mind costs nothing — only making and using draw. Costs surface inline in bold-bracket tags when spent. Back-checked against Floor 1 of the Ashen Descent.",
+   "deep_inspection": {
+    "formula": "cost = depth_base x range_mult, + moving penalty, + hold; then Ember's share off the top.",
+    "depth_base": {
+     "Sweep (wide/passive, category contacts)": 1,
+     "Tight beam (bottom one target: category/condition/obvious weakness)": 3,
+     "Hard probe (immunities + the precise vulnerable seam)": 6,
+     "Full bore (make/history/weave architecture; bottom a boss/stranger as far as one read reaches)": 12
+    },
+    "range_mult": "1 + (feet / 5) x 0.1.  In-hand/touching = x1.0 (the floor). 5ft x1.1, 10ft x1.2, 30ft x1.6, 40ft x1.8, 50ft x2.0, 80ft x2.6.",
+    "moving_target": "+0.5 to the range mult if the target is moving/evasive (harder to keep a grip on).",
+    "hold": "+1 per round per target for a PARKED read held across rounds (a snapshot is +0).",
+    "ember_share": "When Ember rides the read, knock ~1/3 off the total. A standing sweep Ember holds OUTRIGHT costs Bill ~nothing (well trickle). If Ember is busy/away, Bill pays full.",
+    "thread_opposed": "Pushing the read into something that RESISTS, or down a live tether toward a boss, costs FULL-BORE x range AND becomes a contest: 1d20 + read-governing (+1, the Per/Ins average) vs the thing's resistance. A failed contest or a noticed pull is the wake-risk. The one read that is both expensive and uncertain.",
+    "governing": "+1 (average of Perception mod 0 and Insight mod 2). A read is not an attack — no damage; the governing value only sets the contest on a thread/opposed read.",
+    "floor_backcheck": "Spun sweep (Ember-held): ~1 open / ~free hold. 4 dogs (tight, close, 1 rd parked): ~2-3 net. Skeleton wiring (hard, close): ~4 net. The key (full bore, ~35ft gateway, x1.7 -> 12x1.7~=20, less Ember's third): ~14 net — the floor's biggest read.",
+    "lv2_update": "Deep Inspection Lv.2 (S30): range_mult takes a DISCOUNT (distance reads cheaper — treat far/medium one band cheaper, or x0.85 on the range mult); the parked multi-target ARRAY is now a native efficient mode (hold many targets for ~the cost of one tight beam, near-free when Ember rides); focused reads bottom one tier deeper (resolve boss/hidden-layer that wouldn't bottom at Lv.1)."
+   },
+   "blueprint_and_drafting_space": {
+    "principle": "Holding costs nothing — capacity, not drain. The cost is at the two ends: building a design into a slot, and activating it.",
+    "costs": {
+     "hold a captured blueprint in the Schematic library (items + constructs)": "FREE (capturing one = a Deep Inspection read, costed above)",
+     "hold a design seated in a drafting slot, ready": "FREE (a readiness state, like the Active kit; felt as ceiling, not upkeep)",
+     "seat / build a drafted design into a slot": "its CREATION cost, one-time, from pool",
+     "swap a slot (re-seat)": "slow + deliberate; pay the new design's creation again",
+     "activate a seated design": "its USE cost, from pool"
+    },
+    "creation_use_scale": "Anchored to the carried designs (Electromagnet ~28 create / ~2 use; Standing Ward ~70 create / ~4 per min). Simple aimed tool: 20-30 create / 1-3 use. Sustained or area field: 50-80 create / 3-6 per min. Master/complex: 80-150 create.",
+    "slots": "4 total, 0 filled (drafting block above). Electromagnet is the live candidate for the magnet-fetch."
+   },
+   "crafting_table": {
+    "principle": "Assembles a held blueprint into a real item (and alchemy transforms), pool scaled to the work; the three gates stand (blueprint held - materials owned-and-consumed - skill caps what's buildable). CONSTRUCTS do NOT run here — those are Ember's bench (ember_well.build_construct).",
+    "build_cost": {
+     "small/simple (a dart, a coating, a reagent, a single round)": "5-10",
+     "moderate (a gun part, an elixir, a batch of rounds, the magnet as an object)": "15-30",
+     "complex / master-grade (a whole gun frame, a major rig - e.g. the new coil gun)": "60-120"
+    },
+    "alchemy_band": "Rides the same scale: coating 5-15, elixir 15-30, transmutation higher.",
+    "tell": "Faster than a forge and LOUDER as a maker-tell — forge-less master-grade work is the sharpened exposure axis."
+   },
+   "ember_well": {
+    "principle": "Ember spends ESSENCE (ME) from its OWN well — deep, self-growing, fed by drinking. It touches Bill's pool in only two places: the larder FILLS Bill's pool from the well; an over-fielded construct on an empty well DRAINS into the pool. Everything else is free to Bill.",
+    "current_well_ME": "VAST and CLEAN after S31 (see abilities.maker_core.well_current_ME). The soul-remnants were released S31; the well is clean fuel.",
+    "costs": {
+     "hold a standing sweep / a read": "~free (well trickle)",
+     "ride Bill's read": "a slice of well -> that's the -1/3 off Bill's read cost",
+     "share the gun's per-shot draw": "a slice of well per shot -> lowers Bill's per-shot mana; the cost is SEAM-HEAT, not pool",
+     "drink essence (conduit / core / wisp)": "NET-POSITIVE — fills the well. Free to Bill",
+     "portable hellfire (work ambient fire -> hellfire)": "small, per working, from the well",
+     "keep a conduit open under fire / lend the magnet field": "modest, per round, from the well",
+     "larder (feed Bill's filter)": "TRANSFER: drains well, fills pool (aspect-matched = clean conversion); a steady trickle, tops Bill over a quiet minute or two",
+     "build a construct": "well-ME = the construct's SIZE: sentinel ~30-50 - cerberus ~150-250 - the Colossus 'big dog' ~its whole 960 pattern",
+     "sustain a construct": "per-round well drain; UNTRAINED bleed is high (short-lived) -> trained, a trickle. Well runs dry mid-fight -> the draw reaches into Bill's POOL (the untested entanglement edge)"
+    },
+    "cerberus_note": "Bill HOLDS the cerberus blueprint, but at ~80 ME the well can't stand up a ~150-250 ME cerberus without bleeding it out fast. Drink a banked floor-boss core first (~240 ME each -> triples the well) to fund + sustain it."
+   }
+  }
+ },
+ "choosing": {
+  "first": {
+   "taken": "Forceread (now Deep Inspection)",
+   "locked_forever": [
+    "Inspect[Items]",
+    "Surefoot"
+   ]
+  },
+  "second": {
+   "taken": "Path III — The Maker's Table (S29)",
+   "declined": [
+    "Path I — seat the essence-conduit grammar clean",
+    "Path II — the sighted-draw/filter/drain efficiency leap"
+   ]
+  }
+ },
+ "health": {
+  "hp_current": 40,
+  "hp_max": 40,
+  "condition": "HEALTHY. No wounds. Mana bottomed at S29 close, recovering.",
+  "note": "Precise tracking (S30): HP is the number (see _combat_layer.hp; formula (10+Might)+(DL x Might/2)). The condition ladder (Healthy/Winded/Hurt/Badly Hurt/Critical/Dying, game_bible.md §7) is the band of this number. HP shows in bold brackets when it changes; Bill's own number is always visible to the player.",
+  "current": "40/40 (topped at the Charred Chapel, S30 close)"
+ },
+ "money": {
+  "currency": "credits (cr)",
+  "cash_on_hand": 110,
+  "guild_tab_owed": {
+   "amount": 300,
+   "status": "handed to Calloway Day 26 to settle from the gift-trust this week"
+  },
+  "gift_trust_at_calloway": {
+   "amount": 3100,
+   "note": "Malcolm's 5,000 gift in trust; -> ~2,800 once the tab clears; drawn via the instruction-ledger; NOT the loan",
+   "do_not_compress": true
+  },
+  "structured_loan_remittance": {
+   "note": "Malcolm's separate 5,000 loan; first landed Day 17; ~6 parcels remaining; nothing new Days 18-26. Arrival schedule is tracked in living_world_truth_v1.md; this line is the balance fact.",
+   "do_not_compress": true
+  },
+  "quest_account_mercantile": {
+   "note": "+25/mo retainer; parts at cost; settle monthly. (Reconciliation flag: a tie-off folded this retainer into the firm's ledger conceptually; kept as its own line here pending a Phase-3 ledger decision.)"
+  },
+  "firm_treasury": {
+   "amount": 448,
+   "recurring_income": [
+    "Dunmore gear-maintenance +80/mo",
+    "Quest distribution +1 cr/tin (~120/mo)",
+    "union runs"
+   ],
+   "note": "Min owes the delivered/paid lines + the firm's 1 cr/tin cut; at/past self-sustaining. Tin-count question still out to Min via Eli — answer pending."
+  },
+  "patronage_escrow": {
+   "amount": 3000,
+   "note": "Pickering's money held by Calloway; apart, untouched"
+  },
+  "pem": {
+   "note": "two items, DO NOT COMPRESS: the converted loot-share [standing]; the Compact [pending]",
+   "do_not_compress": true
+  },
+  "gunsmith_standing_supply": {
+   "note": "'my shelf, your cash' PLUS a 500-cr retainer / first-call on his wheel"
+  },
+  "income_doctrine": "My hands, my coin — cert, instrument bodies, gunsmith-grade work pay Bill's pocket; the firm earns off the young ones' work. In the partnership: firm income splits 50/50 with Pearce, but Bill's outside personal handwork stays his own. The speedloader and the coilgun half-commission sit on this line."
+ },
+ "patents": {
+  "status": "HELD — four filing-ready designs; to be co-owned under Quest Instruments and filed fast via the East-end channel (both names, Pearce's on top) once the articles are signed on Bill's return",
+  "designs": [
+   "lift catch",
+   "hand-warmer",
+   "speedloader",
+   "self-feeding stove"
+  ],
+  "excluded": "the coil gun is NOT in the portfolio and never will be"
+ },
+ "gear_and_inventory": {
+  "weapons": [
+   {
+    "name": "Coil gun (new, S29)",
+    "status": "PRIMARY",
+    "note": "frame-metal body, hellfire-worked by the bound core; aspected grain-matched throat (kills the mana-wear clock); bond-seam (reads what Bill reads, core can lend draw — entangling/untested under fire); 10-round magazine; silent; runs off Bill's core/the bond. NOT in the patent portfolio. || S30: SPOKEN GHOST-TOUCH live (any round harms the incorporeal, toggled on Ember's word; bypasses 'guns hate enchantment'; deepens gun-bond entanglement). SEAM-SHOT is now +5 to the attack roll (1d20+10 firearms +5 seam, needs an active read), NOT auto-hit (player ruling S30); the gun still 'works perfectly' = no manufactured misses, cost stays wear/heat/entanglement."
+   },
+   {
+    "name": "Coil gun (old, braced)",
+    "status": "BACKUP",
+    "note": "the hellfire-braced serviceable original"
+   },
+   {
+    "name": "Revolver",
+    "status": "backup sidearm",
+    "note": "top-break, six chambers; ~175 loaded cartridges + home reserve; speedloader proven; a patent candidate"
+   },
+   {
+    "name": "Belt knife",
+    "note": "gunsmith-ground, peace-bonded, registered"
+   }
+  ],
+  "ammunition": {
+   "coil_gun": {
+    "magazine": "10-round; feeds standard darts and hellfire rounds",
+    "standard_darts": {
+     "_source": "deep belt commissioned Day 26, collected Day 27 (~100 bodkins, ~15 range darts, a handful of wedges, ~a dozen broadheads); lightly used in the Emberwaste before the gun went soft-pull/backup and the revolver carried the rest of the run",
+     "bodkin": {
+      "count": "~86",
+      "note": "default; ~10 spent on the Emberwaste's Floor 1 (S27) || S30: 3 spent on the skeletons, 1 test-shot on a remnant soul."
+     },
+     "range_dart": {
+      "count": "~15",
+      "note": "long/slim/hardened; barely used"
+     },
+     "wedge": {
+      "count": "~3-4",
+      "note": "1 spent prying the Furnace-Warden vent (S28)"
+     },
+     "broadhead": {
+      "count": "~11",
+      "note": "1 spent wrecking the Furnace-Warden core (S28)"
+     },
+     "harpoon": {
+      "count": 0,
+      "note": "back-burnered — line-stowage unsolved"
+     },
+     "glass-crowned alchemy dart": {
+      "count": 0,
+      "note": "not yet made; now buildable via the Alchemy leg + Crafting Table"
+     }
+    },
+    "hellfire_rounds": {
+     "count": "~38 (Floor-1 husks recovered & regrown off Ember's well; near a full belt)",
+     "loaded": "reload to taste from the belt at the Chapel",
+     "on_belt": "~30",
+     "renewable": true,
+     "distributed_to_crew": "a few (the distributable-grenade thread; they can throw one in a pinch)",
+     "note": "formerly called hellfire grenade-rounds; NEW S29; seeded core-shard center, hellfire-charged, Hell Grenade knot seated (Lv.2); RENEWABLE (recover the husk, the bound core regrows/recharges it — the 7 husks from Floor 1 not yet recovered); detonated from inside on shared sight; bites the fire-immune || S30 close: the 7 Floor-1 husks RECOVERED and regrown; belt near full."
+    }
+   },
+   "revolver": {
+    "chambered": 6,
+    "loaded_carried": "~175 cartridges total (6 chambered + the rest in speedloader strips on the belt)",
+    "home_reserve": "additional, count unspecified",
+    "speedloader": "proven; eyes-up reloads by feel",
+    "note": "became Bill's working gun after the coil gun went soft-pull at the Warden (S28)"
+   }
+  },
+  "kit": [
+   "Reloading kit + component reserve at home",
+   "Shuttered tin lantern",
+   "Canvas haversack",
+   "2 tins delver's salve (fire-resist)",
+   "small medical kit",
+   "3 days' food + water",
+   "bedroll / wool blanket, stout boots, heavy socks",
+   "the delve notebook (Reach survey + arch runes + construct internals + forge workings + clean schematics + the Colossus architecture)"
+  ],
+  "carried_special": [
+   {
+    "name": "the old charm",
+    "note": "pre-Bureau preservation/keeping weave; on an open core it damps spiritual pressure from outside — a suppression AID, wearable. Worth far more than scrap; only Bill and Pearce know what it is. Carried; worn deliberately, default OFF (to preserve the leak-as-cover)."
+   }
+  ],
+  "consumables_on_belt": [
+   {
+    "name": "rare mana-restorative elixir",
+    "status": "unused (the bound core managed his pool through the Colossus duel)"
+   }
+  ],
+  "bench_and_documents": [
+   "bench odds: the galvanic cell + electromagnet (proof rig)",
+   "the spent earth core (dead template)",
+   "Esther's recognition list — house strongbox",
+   "Quest receipt slip — Calloway's iron box"
+  ],
+  "weapons_combat": {
+   "_note": "Combat damage for the weapons listed in gear_and_inventory.weapons. Ranged = die + Precision mod; melee = die + higher of Might/Precision mod. S30 mechanics layer.",
+   "entries": [
+    {
+     "name": "Coil gun — standard dart",
+     "type": "ranged",
+     "damage": "1d10 + Precision (+2)",
+     "note": "bodkin baseline; dart type flavors the hit (bodkin armor-pierce, broadhead vs soft, wedge, range dart)"
+    },
+    {
+     "name": "Coil gun — hellfire round",
+     "type": "ranged",
+     "damage": "2d10 + Precision (+2)",
+     "note": "the extra d10 is the hellfire charge; bites the fire-immune (Infernals); renewable husk ammo"
+    },
+    {
+     "name": "Revolver",
+     "type": "ranged",
+     "damage": "1d8 + Precision (+2)",
+     "note": "backup sidearm; became his working gun when the old coil gun went soft-pull (S28)"
+    },
+    {
+     "name": "Belt knife",
+     "type": "melee",
+     "damage": "1d4 + Might (+1)",
+     "note": "gunsmith-ground; backup"
+    }
+   ]
+  },
+  "worn_armor": [
+   {
+    "name": "Drake-scale vest (S30)",
+    "note": "light fire-resistant underplate (Emberwaste drake-scales, Crafting Table); cheap insurance on AC-12 Bill against the lava/fire floor below. Does not raise him to a tank."
+   }
+  ],
+  "acquired_S30": [
+   "GHOST TOUCH rune (physical) — RETAINED (was the template for the spoken weave on the gun AND for the etched rune on Jason's war-axe, S31); survived both workings intact; still etchable elsewhere or tradeable.",
+   "GHOST OIL — one-use coating, same effect temporary (the dead delver's unused backup, from Snik's hoard)",
+   "Warden cell-door maul-iron — master-grade, binding-TRAINED stock; MOSTLY SPENT working the crew upgrades (weave-carrier threads + Myles's facing)",
+   "Soul-Coins — the Warden's true drop / the dungeon-natives' currency (a floor's worth) — banked",
+   "scavenged small cores (from Snik's hoard) — minor fuel",
+   "Drake-scales + fire-aspected smithing nodule (Emberwaste) — MOSTLY SPENT on the crew upgrades (S30) and a further working on Jason's etched rune (S31); specialty forge-stock now VERY LOW (small work only, not another build; the rune-language frontier waits for more substrate)."
+  ],
+  "traded_away_S30": [
+   "Imp-Prince husk (inert, drunk-hollow) — traded to the goblin Snik for the rune+oil+cores+its sworn oath+intel on Floor 2"
+  ]
+ },
+ "banked_cores_and_haul": {
+  "bound_not_loot": "The maker-core — bound, a bonded familiar (see abilities.maker_core)",
+  "headline": {
+   "name": "Ember-Colossus heart-core",
+   "aspect": "Fire",
+   "grade": "dungeon-boss-grade",
+   "condition": "intact (drained whole, not shattered)",
+   "value_note": "auction low-thousands / richest fuel of the run; floated on Julie's lift-weave into the Ashen Descent"
+  },
+  "banked_fuel": [
+   "Earth core (Unbroken reward — feeds the starving filter)",
+   "Cinder-Drake Fire-Platinum floor-boss core",
+   "Ash-Maw fire core",
+   "dense Earth core + 2 golem earth cores",
+   "Warden fire-fragments",
+   "fire-aspected smithing nodule + drake-scales"
+  ],
+  "spent": [
+   "Forge-stock — mostly spent (the new gun's frame-metal)",
+   "Imp-Prince boss core — spent (drunk in the S29 conduit test; now a husk in the renewable-ammo pool)"
+  ],
+  "ammo_feedstock": [
+   "Prince husk, spent stones, big-core bones (renewable shard-cores)"
+  ],
+  "general_fuel_at_home": [
+   "older Foundation-delve cores (strong common, run of commons, gatekeeper Uncommon, sensor chip, cracked dud, earth scrap)"
+  ]
+ },
+ "filters_and_captures": {
+  "aspect_filter": {
+   "type": "earth-aspect (first-gen)",
+   "efficiency_pct_lossy": 30,
+   "feedstock": "Earth core + dense earth cores (real food at last; was starving)"
+  },
+  "captures_library_buildable_pending": [
+   "Glass-wraith — complete schematic (first complete Spirit-type)",
+   "Cerberus construct-blueprint (corroborated)",
+   "Ember-Colossus blueprint (corpse-grade-complete; biggest war-construct schematic)",
+   "Imp-Prince spatial-fold/teleport (new domain, hardest crack)",
+   "Julie's Arcane Bolt — the density-knot structure (logged whole)",
+   "Julie's heat-containment weave",
+   "Julie's Levitate Item — the sustained-force lift-weave (logged S29)",
+   "The hellfire-forge design (also internalized as portable hellfire)"
+  ],
+  "intact_orbs_sellable": [
+   "Warmstone Lv.1 utility orb (radiant heat) — weave seen/stored/replicated, orb intact",
+   "Cleardraw Lv.1 utility orb (air/draft-clearing) — weave seen/stored/replicated, orb intact"
+  ],
+  "reference_stock": [
+   "The three frame-metal samples (made stock; spare maker-stock / standing reference)"
+  ],
+  "captures_library": [],
+  "captures_S30_additions": [
+   "Smoke-Wisp pattern ('a smoke that hides')",
+   "Charred Warden pattern (whole — a fire-warden 'big dog', buildable)",
+   "Hungry-dead / soul-flood pattern (the drunk flood — a hungry-spirit swarm, buildable; strange/unholy flavor)",
+   "Spirit-containment WARD (study) — read the soul-prison's lattice architecture: how to hold the incorporeal; buildable, deferred",
+   "Ghost Touch rune pattern (stored; deployed as a spoken weave on the gun)",
+   "Rune-grammar (communion with Ember) — essence-as-spoken-language; the rune-language road begun"
+  ],
+  "captures_S31_additions": [
+   "Release-grade grammar (S31): a DIFFUSION-release for the UNMADE dead — invert the containment-ward into an incline ('down-and-rest'), open the well's edge to a slope, ease the worn-thin remnants out to settle rather than scatter. Derived after the whole-soul release-door failed (wrong-sized). Buildable/performable; honors release without making a body.",
+   "Ward-registers insight (S31): a ward is a FAMILY of shapes (throat / door / incline / …) — a working can be pitched to the STATE of the thing it acts on (whole / unmade / in-between). A real rung up the rune-grammar / original-rune-language road.",
+   "(NOTE) The Floor-1 soul-remnants are GONE — released to rest S31, NOT banked: too unmade to blueprint (a full-bore read failed to resolve them). No new capturable pattern; the rune-grammar advanced instead.",
+   "(THREAD, held) The body/making path: a remnant flooded with mana + braced in a reshaped containment-ward could THEORETICALLY stand up a NEW bound who (born from the remnant the way Ember was born from cores — not a resurrection; wholeness uncertain; could come up wrong). Deferred — 'someday, done right'; Ember is afraid to be a careless maker."
+  ]
+ },
+ "relationships": {
+  "_scale": "1-100 warmth toward Bill; bands + movement/ceiling/visibility rules in game_bible.md. Bill never sees the number — he reads it from behavior. Movement surfaces via the change-tag (gm_operations.md §4). Read the band off the number; do not store the band. Qualitative texture and voice for each NPC live in npcs/.",
+  "_status": "PHASE-2 — populated from the campaign_state NPC section and the npcs/ files. Values are openers; they move in play per the change-tag and the close ledger. Dormant/one-off NPCs are added when they re-enter play and earn a file.",
+  "Pearce": {
+   "warmth": 80,
+   "ceiling": 90
+  },
+  "Calloway": {
+   "warmth": 78,
+   "ceiling": 90
+  },
+  "Doss": {
+   "warmth": 78,
+   "ceiling": 90
+  },
+  "Mrs. Maddox": {
+   "warmth": 82,
+   "ceiling": 92
+  },
+  "the firm": {
+   "warmth": 75,
+   "ceiling": 92
+  },
+  "the gunsmith": {
+   "warmth": 70,
+   "ceiling": 88
+  },
+  "Hessler": {
+   "warmth": 68,
+   "ceiling": 82
+  },
+  "Pickering": {
+   "warmth": 65,
+   "ceiling": 85
+  },
+  "Tasker": {
+   "warmth": 60,
+   "ceiling": 78
+  },
+  "Pem": {
+   "warmth": 68,
+   "ceiling": 85
+  },
+  "the Dunmore Brothers": {
+   "warmth": 72,
+   "ceiling": 85
+  },
+  "Rusk": {
+   "warmth": 68,
+   "ceiling": 88
+  },
+  "Father Lessard": {
+   "warmth": 65,
+   "ceiling": 85
+  },
+  "Sister Beatrice": {
+   "warmth": 64,
+   "ceiling": 85
+  },
+  "Sister Agnes": {
+   "warmth": 62,
+   "ceiling": 82
+  },
+  "Esther": {
+   "warmth": 70,
+   "ceiling": 88
+  },
+  "Myles": {
+   "warmth": 75,
+   "ceiling": 95
+  },
+  "Charles": {
+   "warmth": 88,
+   "ceiling": 95
+  },
+  "Jason": {
+   "warmth": 78,
+   "ceiling": 95
+  },
+  "Julie": {
+   "warmth": 74,
+   "ceiling": 95
+  }
+ },
+ "_combat_layer": {
+  "_note": "S30 mechanics layer — the pf2e-granular combat numbers. Built on the same model as fortunes_folly_crew.json _combat_model. Bill's narrative/canon fields are untouched; this only ADDS derived combat values and the damage/DC math for his offensive Skills. Drafted abilities keep their locked limits-economy costs (creation/use) and get NO invented DCs/dice.",
+  "modifier_rule": "modifier = floor((attribute-10)/5). Every 5 above 10 = +1.",
+  "hp": {
+   "value": 40,
+   "calc": "(10 + Might 15) + (Delver Level 2 x Might/2 = 2 x 7.5 = 15) = 25 + 15 = 40",
+   "note": "Deliberately fragile — DL2 + Might 15 is a low body. Bill wins by not being hit; the crew keeps him out of melee. HEALTH still tracked as conditions narratively (see 'health'); this number is the granular-combat overlay."
+  },
+  "speed": {
+   "value": 39,
+   "note": "already on the sheet (attributes.Speed_derived); Precision 21 + Might/2 + Perception/3 + Insight/4, rounded up."
+  },
+  "mana": {
+   "value": 210,
+   "note": "Intellect 21 x 10; already in cultivation.mana.max."
+  },
+  "ac": {
+   "value": 12,
+   "calc": "10 + Precision mod 2 (higher of Might mod 1 / Precision mod 2) + armor 0 = 12",
+   "note": "Unarmored by choice (carries light — boots, haversack, no armor on the sheet). Fragile; the cover and the crew are his defense, not plate."
+  },
+  "ac_rule": "AC = 10 + (higher of Might or Precision mod) + armor + shield.",
+  "seam_shot_rule": "Bond-seam = +5 to the coil-gun attack roll when Bill has an active READ on the target (1d20 + 10 firearms + 5 seam vs AC; off-guard/aim add as normal). Replaces the old auto-hit (player ruling S30). 'Works perfectly' still holds: no manufactured misses; the seam's only honest cost is wear/heat/entanglement.",
+  "saves_PROVISIONAL": {
+   "_note": "PROVISIONAL — saves were a gap; derived S30 as level(2)+trained prof(2)+attr mod, pending the player locking a real saves block. Fortitude (Might+1), Reflex (Precision+2), Will (Insight+2).",
+   "Fortitude": "+5 (2 level + 2 trained + Might 1)",
+   "Reflex": "+6 (2 level + 2 trained + Precision 2) — used vs the Warden backlash S30",
+   "Will": "+6 (2 level + 2 trained + Insight 2)"
+  }
+ }
 }
